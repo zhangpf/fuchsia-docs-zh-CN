@@ -4,12 +4,7 @@
 
 欢迎来到Fuchsia的世界！该文档包含你上手Fuchsia的方方面面。
 
-
->注意：Fuchsia同时包含其底层核心平台
-[Zircon](zircon/README.md)的代码，并且在
-构建Fuchsia时，也将一起构建Zircon。如果你仅想专注于Zircon开发，请阅读和关注Zircon的
-[入门](https://github.com/fuchsia-mirror/zircon/blob/master/docs/getting_started.md)
-文档。
+>注意：Fuchsia同时包含其底层核心平台[Zircon](zircon/README.md)的代码，并且在构建Fuchsia时，也将一起构建Zircon。如果你仅想专注于Zircon开发，请阅读和关注Zircon的[入门](https://github.com/fuchsia-mirror/zircon/blob/master/docs/getting_started.md)文档。
 
 
 ## 构建前准备
@@ -52,19 +47,16 @@ port install autoconf automake libtool libpixman pkgconfig glib2
 
 ### 构建
 
-如果在获取代码步骤中，如果你已将`.jiri_root/bin`目录加到你的`PATH`中，那么`fx`命令就已在你的路径中。如果不是，也可以通过`scripts/fx`
-命令来执行。
+如果在获取代码步骤中，如果你已将`.jiri_root/bin`目录加到你的`PATH`中，那么`fx`命令就已在你的路径中。如果不是，也可以通过`scripts/fx`命令来执行。
 
 ```
 fx set x86-64
 fx full-build
 ```
 
-第一条命令选择你想构建的配置类型，然后在输出目录（例如`out/debug-x86-64`）
-中生成构建所需的文件。
+第一条命令选择你想构建的配置类型，然后在输出目录（例如`out/debug-x86-64`）中生成构建所需的文件。
 
-实际执行构建的是第二条命令，它将源代码转换为构建后的产品。在以后如果你更改了源代码，可通过重新
-执行`fx full-build`命令进行增量式构建。
+实际执行构建的是第二条命令，它将源代码转换为构建后的产品。在以后如果你更改了源代码，可通过重新执行`fx full-build`命令进行增量式构建。
 
 另外，你也可以直接使用[底层构建系统](build_system.md)来执行构建。
 
@@ -99,9 +91,7 @@ fx set x86-64 --release    # 构建x86-64的release版本
 
 可以通过以下三种方式在硬件上启动Fuchsia：网络启动（见后）、USB启动（见后）或者在存储设备上[安装](https://github.com/fuchsia-mirror/install-fuchsia/blob/master/README.md)Fuchsia。无论哪种方式，你都需要先拷贝一些启动代码到目标硬件上，为此，使用USB驱动器是一个不错的选择。
 
-如果你想采取网络启动或者USB启动的方式，而不是安装Fuchsia，可使用
-[build-bootable-usb-gigaboot.sh脚本](https://github.com/fuchsia-mirror/scripts/blob/master/build-bootable-usb-gigaboot.sh)。
-特别地，如果你采取网络启动方式，请传递 `-m`和`-f`选项以跳过拷贝Zircon内核和Fuchsua系统镜像这两步，因为后面步骤中引导服务器将会完成这两步。
+如果你想采取网络启动或者USB启动的方式，而不是安装Fuchsia，可使用[build-bootable-usb-gigaboot.sh脚本](https://github.com/fuchsia-mirror/scripts/blob/master/build-bootable-usb-gigaboot.sh)。特别地，如果你采取网络启动方式，请传递 `-m`和`-f`选项以跳过拷贝Zircon内核和Fuchsua系统镜像这两步，因为后面步骤中引导服务器将会完成这两步。
 
 查看下列特定硬件的指引文档将会非常有用，其中Raspberry Pi 3需特别不同的步骤，而其他的指引文档对这些硬件的配置固件会有帮助。
 
@@ -113,9 +103,7 @@ fx set x86-64 --release    # 构建x86-64的release版本
 
 ### 从QEMU启动
 
-如果没有已支持的硬件，你也可以通过
-[QMEU](https://github.com/fuchsia-mirror/zircon/blob/master/docs/qemu.md)仿真的方式
-运行Fuchsia。Fuchsia在`buildtools/qemu`目录下同时也包含了QEMU的二进制可执行文件。
+如果没有已支持的硬件，你也可以通过[QMEU](https://github.com/fuchsia-mirror/zircon/blob/master/docs/qemu.md)仿真的方式运行Fuchsia。Fuchsia在`buildtools/qemu`目录下同时也包含了QEMU的二进制可执行文件。
 
 可以通过`fx run`命令在QEMU中启动Zircon，同时使用构建好的`user.bootfs`：
 
@@ -173,8 +161,7 @@ Fuchsia在启动后显示多个标签页（Tab），其中当前选中Tab在屏�
 
 ### 启动图形应用程序
 
-由于QEMU不支持Vulkan，所以尚不能在QEMU上运行图形化程序。
-大多数Fuchsia图形应用程序使用[Mozart](https://github.com/fuchsia-mirror/garnet/tree/master/bin/ui)框架，通常可以在`/system/apps`目录下找到， 你可以启动这些程序，例如：
+由于QEMU不支持Vulkan，所以尚不能在QEMU上运行图形化程序。大多数Fuchsia图形应用程序使用[Mozart](https://github.com/fuchsia-mirror/garnet/tree/master/bin/ui)框架，通常可以在`/system/apps`目录下找到， 你可以启动这些程序，例如：
 
 ```
 launch spinning_square_view
