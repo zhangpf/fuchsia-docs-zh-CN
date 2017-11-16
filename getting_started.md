@@ -6,7 +6,7 @@
 
 
 >注意：Fuchsia同时包含其底层核心平台
-[Zircon](https://github.com/fuchsia-mirror/zircon/blob/master/README.md)的代码，并且在
+[Zircon](zircon/README.md)的代码，并且在
 构建Fuchsia时，也将一起构建Zircon。如果你仅想专注于Zircon开发，请阅读和关注Zircon的
 [入门](https://github.com/fuchsia-mirror/zircon/blob/master/docs/getting_started.md)
 文档。

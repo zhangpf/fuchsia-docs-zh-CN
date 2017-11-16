@@ -32,7 +32,7 @@ Fuchsia文档
 
 + [一本介绍Fuchsia的书](book.md)
 
-[zircon]: https://github.com/fuchsia-mirror/zircon/blob/master/README.md "Zircon"
+[zircon]: zircon/README.md "Zircon"
 [getting_started]: getting_started.md "Getting started"
 [build_system]: build_system.md "Build system"
 [acer_12]: https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/acer12.md "Acer 12"
