@@ -8,7 +8,7 @@ Fuchsia使用`jiri`工具来管理git仓库（
 
 ## 创建工作目录（和下载源码）
 
-该自举过程需要系统已经安装了Go（版本为1.6或者更新）和git，并且已经加入到PATH环境变量中。
+该初始化过程需要系统已经安装了Go（版本为1.6或者更新）和git，并且已经加入到PATH环境变量中。
 
 首先，选择你想要构建的[layer](layers.md)（如果不知道如何选择，那么请选择`topaz`，它也同时包含了它下面的所有layer），然后运行如下命令：
 
@@ -16,7 +16,7 @@ Fuchsia使用`jiri`工具来管理git仓库（
 curl -s "https://fuchsia.googlesource.com/scripts/+/master/bootstrap?format=TEXT" | base64 --decode | bash -s <layer>
 ```
 
-该命令将自举创建出一个以该layer命名的目录作为开发环境，如果脚本运行成功，将会在最后打印一段消息，内容是建议你将`.jiri_root/bin`加入到系统的PATH变量中
+该命令将初始化一个以该layer命名的目录作为开发环境，如果脚本运行成功，将会在最后打印一段消息，内容是建议你将`.jiri_root/bin`加入到系统的PATH变量中
 
 ### 不改变PATH变量的工作方式
 
