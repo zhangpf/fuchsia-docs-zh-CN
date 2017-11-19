@@ -29,5 +29,5 @@ Zircon的系统调用通常是非阻塞方式的（non-blocking），但值得�
 + [测试](https://github.com/fuchsia-mirror/zircon/tree/master/docs/testing.md)
 + [Hacking notes](https://github.com/fuchsia-mirror/zircon/tree/master/docs/hacking.md)
 + [内存使用分析工具](https://github.com/fuchsia-mirror/zircon/tree/master/docs/memory.md)
-+ [与LK的关系](https://github.com/fuchsia-mirror/zircon/tree/master/docs/zx_and_lk.md)
++ [与LK的关系](zx_and_lk.md)
 + [微观benchmark测试](https://github.com/fuchsia-mirror/zircon/tree/master/docs/benchmarks/microbenchmarks.md)
