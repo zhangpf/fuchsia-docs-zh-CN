@@ -8,7 +8,7 @@ LK是为嵌入式程序等小型系统设计的内核。对于[FreeRTOS](http://
 
 更具体地讲，一些可见的区别在于：
 
-+ Zircon对用户态具有头等的支持，但LK却没有；
++ Zircon对用户模式具有头等的支持，但LK却没有；
 + Zircon具有object和handle系统，而LK对两者都不支持；
 + Zircon有基于capability的安全模型，而在LK中，所有的代码都是完全授信的。
 
