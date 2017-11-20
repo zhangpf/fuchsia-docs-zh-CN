@@ -19,7 +19,7 @@ sudo apt-get install texinfo libglib2.0-dev autoconf libtool libsdl-dev build-es
 
 ### macOS
 
-安装Xcode命令行工具（Command Line Tools）:
+安装Xcode命令行工具（Command Line Tools）：
 ```
 xcode-select --install
 ```
