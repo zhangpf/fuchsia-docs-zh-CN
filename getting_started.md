@@ -97,7 +97,6 @@ fx set x86-64 --release    # 构建x86-64的release版本
 
 * [Acer Switch Alpha 12](https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/acer12.md)
 * [Intel NUC](https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/nuc.md)
-* Raspberry Pi 3（*译者注：原链接已失效*）
 
 一旦配置好硬件，你可以通过运行`fx boot`来启动引导服务器。
 
