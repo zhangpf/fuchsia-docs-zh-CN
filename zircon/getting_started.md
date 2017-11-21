@@ -169,14 +169,14 @@ $BUILDDIR/tools/bootserver $BUILDDIR/zircon.bin
 $BUILDDIR/tools/bootserver $BUILDDIR/zircon.bin /path/to/extra.bootfs
 ```
 
-启动服务器默认将一直运行，一旦检测出有网络启动的请求，它就会将内核（包括bootfs，如果有的话）发送到该请求设备上。如果在启动服务时传递-1选项，那么它将在执行一次成功的启动后停止服务并退出。
+引导服务器默认将一直运行，一旦检测出有网络启动的请求，它就会将内核（包括bootfs，如果有的话）发送到该请求设备上。如果在启动引导服务时传递-1选项，那么它将在执行一次成功的启动后停止服务并退出。
 
 
 ### 通过Zirconboot启动
 
 Zirconboot是一种允许Zircon系统充当启动Zircon自身的bootloader机制，而且Zirconboot使用和前文提到的Gigaboot相同的启动协议。
 
-为了使用Zirconboot，请通过在kernel命令行种传递`netsvc.netboot=true`选项到Zircon的方式。当Zirconboot启动时，它将试图从挂载于开发主机的启动服务器上获取并启动zircon系统。
+为了使用Zirconboot，请通过在kernel命令行种传递`netsvc.netboot=true`选项到Zircon的方式。当Zirconboot启动时，它将试图从挂载于开发主机的引导服务器上获取并启动zircon系统。
 
 ## 通过网络查看日志
 
