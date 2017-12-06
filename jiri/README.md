@@ -350,9 +350,9 @@ jiri upload # 发送功能B的新补丁集
 [jiri-wiki]: https://en.wikipedia.org/wiki/Ji%C5%99%C3%AD "Jiří"
 [manifests]: #清单 "manifests"
 [minimal manifest]: https://github.com/fuchsia-mirror/manifest/blob/master/minimal "minimal manifest"
-[manifest doc]:/manifest.md "Jiri manifest"
-[filesystem doc]:/filesystem.md "Jiri filesystem"
-[hacking doc]:/HACKING.md "Jiri local updates"
-[behaviour]:/behaviour.md
-[build jiri]:/BUILD.md "Build jiri"
-[how do i]:/howdoi.md
+[manifest doc]: /jiri/manifest.md "Jiri manifest"
+[filesystem doc]: /jiri/filesystem.md "Jiri filesystem"
+[hacking doc]: /jiri/HACKING.md "Jiri local updates"
+[behaviour]: /jiri/behaviour.md
+[build jiri]: /jiri/BUILD.md "Build jiri"
+[how do i]: /jiri/howdoi.md
