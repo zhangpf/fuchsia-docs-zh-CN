@@ -22,7 +22,7 @@
 
 ### 停止jiri更新我的项目
 
-使用`jiri project-config`。对于预期的行为请[查看](/behaviour.md#intended-project-config)
+使用`jiri project-config`。对于预期的行为请[查看](/jiri/behaviour.md#项目配置)
 
 使用`jiri project-config`命令可显示当前配置信息。
 
@@ -32,7 +32,7 @@ jiri project-config [-flag=true|false]
 ```
 这里的-flag可以是`-ignore`、`no-rebase`或`no-update`。
 
-### 检查我的所有项目是否处于``JIRI_HEAD`状态 ##{#use-jiri-status}
+### 检查我的所有项目是否处于``JIRI_HEAD`状态
 
 为此请运行`jiri status`，该命令返回所有不在`JIRI_HEAD`状态上、有尚未merge的提交或有未commit的变更的项目。
 
@@ -82,7 +82,7 @@ jiri status -changes=false -commits=false
 
 ### 上传push CL
 
-请[查看](/README.md#Gerrit&nbsp;CL工作流)
+请[查看](/jiri/README.md#gerrit-cl工作流)
 
 ### 获得项目的JIRI_HEAD的版本号
 
@@ -94,7 +94,7 @@ jiri status -changes=false -commits=false
 
 ### 清理项目
 
-运行`jiri project [-clean|clean-all] [project-name]`。请查看[预期的行为](/behaviour.md#intended-project-clean)。
+运行`jiri project [-clean|clean-all] [project-name]`。请查看[预期的行为](/jiri/behaviour.md#清理项目)。
 
 ### 获得帮助
 
