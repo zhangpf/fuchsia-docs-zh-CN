@@ -21,7 +21,7 @@
 * 如果一个项目从清单中被删除，除非使用`-gc`选项运行命令，它将不会被删除。
 * 如果一个项目包含未提交的变更，jiri将其不变，不会快进或merge/rebase该分支。
 * 有时项目在清单上被固定为特定的版本，在这种情况下，如果该项目在本地分支上，jiri会根据上述规则更新它们，而不会对这些项目显示警告。
-  * 请注意，这可能会导致项目处于除JIRI_HEAD之外的其他版本状态上，进而引发构建失败。在这种情况下，用户可以运行[`jiri status`](/howdoi.md＃use-jiri-status)，它将输出所有发生变更或不处于`JIRI_HEAD`版本的项目。用户可以在项目中运行`git checkout JIRI_HEAD`从而手动checkout出`JIRI_HEAD版本`。
+  * 请注意，这可能会导致项目处于除JIRI_HEAD之外的其他版本状态上，进而引发构建失败。在这种情况下，用户可以运行[`jiri status`](/jiri/howdoi.md#use-jiri-status)，它将输出所有发生变更或不处于`JIRI_HEAD`版本的项目。用户可以在项目中运行`git checkout JIRI_HEAD`从而手动checkout出`JIRI_HEAD版本`。
 * 如果用户不再想让jiri更新项目，他/她可以使用`jiri project-config`命令。
 * 始终更新jiri工具到最新版本。
 

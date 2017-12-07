@@ -32,7 +32,7 @@ jiri project-config [-flag=true|false]
 ```
 这里的-flag可以是`-ignore`、`no-rebase`或`no-update`。
 
-### 检查我的所有项目是否处于``JIRI_HEAD`状态{#use-jiri-status}
+### 检查我的所有项目是否处于``JIRI_HEAD`状态 ##{#use-jiri-status}
 
 为此请运行`jiri status`，该命令返回所有不在`JIRI_HEAD`状态上、有尚未merge的提交或有未commit的变更的项目。
 
