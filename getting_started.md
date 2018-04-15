@@ -50,7 +50,7 @@ port install autoconf automake libtool libpixman pkgconfig glib2
 如果在获取代码步骤中，如果你已将`.jiri_root/bin`目录加到你的`PATH`中，那么`fx`命令就已在你的路径中。如果不是，也可以通过`scripts/fx`命令来执行。
 
 ```
-fx set x86-64
+fx set x64
 fx full-build
 ```
 
@@ -67,9 +67,9 @@ fx full-build
 运行`fset-usage`可以得到已支持构建类型的列表，例如：
 
 ```
-fx set x86-64              # 构建x86-64的debug版本
+fx set x64                 # 构建x86-64的debug版本
 fx set arm64               # 构建arm64的debug版本
-fx set x86-64 --release    # 构建x86-64的release版本
+fx set x64 --release       # 构建x86-64的release版本
 ```
 
 #### [可选项] 使用`ccache`和`goma`来加速构建
