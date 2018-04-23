@@ -46,14 +46,14 @@ port install autoconf automake libtool libpixman pkgconfig glib2
 如果你的开发环境是Linux或macOS，已有预编译的工具链可直接进行下载，只需在Zircon的工作目录下运行下列脚本即可：
 
 ```
-./scripts/download-toolchain
+./scripts/download-prebuilt
 ```
 
 如果你想自己构建工具链，请依照本文档后面的步骤执行。
 
 ## 构建Zircon
 
-构建生成的文件位于`$SRC/zircon/build-{qemu-arm64,pc-x86-64}`下。
+构建生成的文件位于`$SRC/zircon/build-{arm64,x64}`下。
 
 对于特定的构建目标，下面示例中的`$BUILDDIR`变量指向构建的输出目录。
 
@@ -61,10 +61,10 @@ port install autoconf automake libtool libpixman pkgconfig glib2
 cd $SRC/zircon
 
 # 对于aarch64
-make -j32 zircon-qemu-arm64
+make -j32 arm64
 
-# 对于x86-64
-make -j32 zircon-pc-x86-64
+# 对于x64
+make -j32 x64
 ```
 
 ### 使用Clang
@@ -75,10 +75,10 @@ make -j32 zircon-pc-x86-64
 cd $SRC/zircon
 
 # 对于aarch64
-make -j32 USE_CLANG=true zircon-qemu-arm64
+make -j32 USE_CLANG=true arm64
 
 # 对于x86-64
-make -j32 USE_CLANG=true zircon-pc-x86-64
+make -j32 USE_CLANG=true x64
 ```
 
 ## 为所有目标体系结构构建Zircon
@@ -127,10 +127,10 @@ export PATH=$PATH:$SRC/toolchains/x86_64-elf-5.3.0-Darwin-x86_64/bin
 若本地IPv6网络配置成功，便可以使用主机工具`./build-zircon-ARCH/tools/netcp`来拷贝文件。
 
 ```
-# 拷贝myprogram文件到zircon
+# 拷贝myprogram文件到Zircon
 netcp myprogram :/tmp/myprogram
 
-# 拷贝zircon的myprogram文件到开发主机
+# 拷贝Zircon的myprogram文件到开发主机
 netcp :/tmp/myprogram myprogram
 ```
 
@@ -154,7 +154,7 @@ $BUILDDIR/tools/mkbootfs -o extra.bootfs manifest
 
 有两种机制支持网络启动Zircon：Gigaboot和Zirconboot。Gigaboot是基于EFI的bootloader，而Zirconboot则是允许一个最小化的zircon系统来充当启动zircon自身的bootloader。
 
-在支持通过EFI启动的硬件设备上，上述两种方式都是支持的。而对于其他系统，zirconboot可能是网络启动的唯一选项。
+在支持通过EFI启动的硬件设备（如Acer和NUC）上，上述两种方式都是支持的。而对于其他系统，zirconboot可能是网络启动的唯一选项。
 
 ### 通过Gigaboot启动
 基于[GigaBoot20x6](https://github.com/fuchsia-mirror/zircon/tree/master/bootloader)的bootloader使用一种简单的基于IPV6的UDP网络启动协议，它不需要特殊的服务器配置和使用权限设置。

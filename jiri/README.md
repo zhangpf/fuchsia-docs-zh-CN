@@ -331,7 +331,10 @@ jiri upload # 发送功能B的新补丁集
 
 ### 为什么要使用“jiri”这个名字？
 
+该工具是由[Vanadium][vanadium]项目的工程师提出，用于简化多仓库管理的项目需求。最初，它被称为”v23”。不久，在其项目创建者（Jiří）离开这个项目和谷歌后，被改名为“jiri”。
+
 [Jiří][jiri-wiki]在捷克是一个非常受欢迎的男孩名字。
+
 
 ### “jiri”如何发音？
 我们把“jiri”发音像“yiree”。
@@ -356,3 +359,4 @@ jiri upload # 发送功能B的新补丁集
 [behaviour]: /jiri/behaviour.md
 [build jiri]: /jiri/BUILD.md "Build jiri"
 [how do i]: /jiri/howdoi.md
+[vanadium]: https://v.io/

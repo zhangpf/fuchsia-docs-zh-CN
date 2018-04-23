@@ -38,6 +38,27 @@ git branch -d branch_name
 更多细节请查看Gerrit的文档：
 [https://gerrit-documentation.storage.googleapis.com/Documentation/2.12.3/intro-user.html#upload-change](https://gerrit-documentation.storage.googleapis.com/Documentation/2.12.3/intro-user.html#upload-change)
 
+### 变更的描述性tag
+
+当向Zircon、Garnet、Peridot或Topaz提交变更时候，请在commit的主题中标识被影响的module、library和app相关的[tag]。这种风格稍微有点非正式，因此请查看如下的变更示例来了解它们是如何使用的。
+
+* https://fuchsia-review.googlesource.com/c/zircon/+/112976
+* https://fuchsia-review.googlesource.com/c/garnet/+/110795
+* https://fuchsia-review.googlesource.com/c/peridot/+/113955
+* https://fuchsia-review.googlesource.com/c/topaz/+/114013
+
+如果变更未指明这些[tag]，Gerrit将会用`Needs Label: Commit-Message-has-tags`来标识该变更。
+
+例如：
+
+```
+# 提交准备
+[parent][component] Update component in Topaz.
+
+# Needs Label: Commit-Message-has-tags
+Update component in Topaz.
+```
+
 ## [仅针对非Googlers] 签署Google贡献者许可证协议（CLA）
 
 在上传代码变更之前，请首先签署Google贡献者许可证协议（[Google CLA](https://cla.developers.google.com/))。
@@ -142,6 +163,12 @@ git branch -d add_feature_foo
 ```
 
 变更的多个部分在Gerrit中通过相同话题进行追踪，并且也会一起进行测试，也可以通过`Submit Whole Topic`向Gerrit提交它们。另外，还可以通过网页编辑话题。
+
+
+## 跨多个layer的变更
+
+请查看[该文档](http://github.com/fuchsia-mirror/docs/blob/master/development/workflows/multilayer_changes.md)来了解如何处理跨[layer](http://github.com/fuchsia-mirror/docs/blob/master/development/source_code/layers.md)。
+
 
 ## 消解合并冲突
 

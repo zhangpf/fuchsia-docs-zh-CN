@@ -1,42 +1,25 @@
+# Fuchsia documents in Zh-CN
+-----------------------------------
 
-Fuchsia文档
-=======================================
+本项目的目的是翻译和提供Fuchsia操作系统项目中Markdown文档的中文版本。
 
-（*译者注：建议来自中国大陆的朋友使用Fuchsia项目在github的[镜像](https://github.com/fuchsia-mirror)*）
+因为Fuchsia是一个多仓库项目，为了便于查找和组织，我们保持了它们在[官方网站](https://fuchsia.googlesource.com)上的层次关系。并同时建议来自中国大陆的朋友使用Fuchsia项目在github的[镜像](https://github.com/fuchsia-mirror)。
 
-该仓库包含了Fuchsia项目的文档
+## 翻译贡献和协作
 
-# 我该如何做？
+欢迎各种issue，以及按照如下方式的Pull Request
 
-+ [如何上手Fuchsia？][getting_started]
+* [协作方式](contribution.md)
 
-+ [如何使用构建系统？][build_system]
+## 快速访问
 
-+ [如何配置持续集成？][ci_guide]
+## TODO LIST
 
-+ 如何在下列设备上启动
-  + [Acer Switch Alpha 12？][acer_12]
-  + [Intel NUC？][intel_nuc]
+下列工作按优先级递减排序：
 
-+ [如何编写flutter模块？][flutter_module]
+* 翻译[the-book](https://github.com/fuchsia-mirror/docs/tree/master/the-book)
+* 完成zircon的文档
 
-+ [如何贡献代码变更？][contributing]
+## LICENSE
 
-# 独立项目文档
-
-+ [Zircon][zircon]
-
-  Zircon是Fuchsia底层的微内核。除此之外，Zircon还包含核心驱动和针对Fuchsia实现的libc。
-
-# 参考资料
-
-+ [一本介绍Fuchsia的书](book.md)
-
-[zircon]: zircon/README.md "Zircon"
-[getting_started]: getting_started.md "Getting started"
-[build_system]: build_system.md "Build system"
-[acer_12]: https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/acer12.md "Acer 12"
-[intel_nuc]: https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/nuc.md "Intel NUC"
-[flutter_module]: https://github.com/fuchsia-mirror/modular/blob/master/examples/HOWTO_FLUTTER.md "Flutter modules"
-[ci_guide]: https://github.com/fuchsia-mirror/infra-config/blob/master/README.md "Continuous integration guide"
-[contributing]: CONTRIBUTING.md "Contributing changes"
+因为本项目是Fuchsia的衍生品，因此各个仓库的中文翻译使用与原项目完全相同的LICENSE，你可以在每个子目录下找到这些LICENSE的副本。
