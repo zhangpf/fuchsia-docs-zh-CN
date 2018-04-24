@@ -1,5 +1,9 @@
 # Jiri
+---
 
+[*英文原文快照*](https://github.com/fuchsia-mirror/jiri/blob/6ddcc1e3e9d9c4aba2eb0446b5b1345924c823af/behaviour.md)
+
+---
 [目录]
 
 ## 反馈

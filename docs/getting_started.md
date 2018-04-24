@@ -1,5 +1,9 @@
 # Fuchsia
+---
 
+[*英文原文快照*](https://github.com/fuchsia-mirror/docs/blob/d6693145a6db79ef6db798683c743e640f7d4f96/getting_started.md)
+
+---
 粉红 + 紫色 == 紫红色 （全新的操作系统）
 
 欢迎来到Fuchsia的世界！该文档包含你上手Fuchsia的方方面面。

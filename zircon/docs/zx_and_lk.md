@@ -1,5 +1,12 @@
 # Zircon和LK
 
+---
+
+[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/zx_and_lk.md)
+
+---
+
+
 LK是为嵌入式程序等小型系统设计的内核。对于[FreeRTOS](http://www.freertos.org/)和[ThreadX](http://rtos.com/products/threadx/)等商业系统，它是不错的开源替代品。这些小型系统通常具有非常有限的内存大小，固定的外围设备和处理的任务规模。
 
 而另一方面，Zircon面向的是当前主流的手机和个人电脑，它们通常具备较高性能的处理器，可观的内存容量和丰富的外设以完成各种开放型应用。

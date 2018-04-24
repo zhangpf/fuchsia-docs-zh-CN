@@ -1,4 +1,9 @@
 # 千层Fuchsia蛋糕
+---
+
+[*英文原文快照*](https://github.com/fuchsia-mirror/docs/blob/d6693145a6db79ef6db798683c743e640f7d4f96/development/source_code/layers.md)
+
+---
 
 Fuchsia是本开源项目的项目名和本项目完整技术产生品的名字，所以“Fuchsia”这个名字出现在代码库中的很多地方，同时也会出现在暴露给第三方开发商的API名中。而下面的单独层的名称（除了Zircon）体现我们开发Fuchsia的实现细节，但我们也应避免将这些名称暴露给公共API中。
 

@@ -1,4 +1,9 @@
 # Jiri文件系统
+---
+
+[*英文原文快照*](https://github.com/fuchsia-mirror/jiri/blob/6ddcc1e3e9d9c4aba2eb0446b5b1345924c823af/filesystem.md)
+
+---
 
 所有jiri工具管理的数据都位于文件系统的一个[root]目录下，通俗地称该目录为jiri根目录。文件系统布局如下所示：
 ```

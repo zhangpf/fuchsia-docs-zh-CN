@@ -1,5 +1,9 @@
-贡献代码变更
-====================
+# 贡献代码变更
+---
+
+[*英文原文快照*](https://github.com/fuchsia-mirror/docs/blob/d6693145a6db79ef6db798683c743e640f7d4f96/CONTRIBUTING.md)
+
+---
 
 Fuchsia通过[Gerrit](https://fuchsia-review.googlesource.com)来管理代码提交。需要说明的是并非所有的子项目都接收补丁（patch），具体详情请查看每个子项目的CONTRIBUTING.md文档。
 

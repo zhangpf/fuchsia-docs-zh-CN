@@ -1,5 +1,11 @@
 # Zircon
 
+---
+
+[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/README.md)
+
+---
+
 Zircon是驱动Fuchsia操作系统运行的核心平台，它由一个底层微内核（代码位于kernel/...），以及一系列用于包括系统启动，与硬件交互，加载和运行用户态进程的用户态服务、驱动和运行库（代码位于system/...）组成。Fuchsia正是在Zircon的基础上构建了一个更丰富的操作系统。
 
 Zircon官方git仓库位于：https://fuchsia.googlesource.com/zircon

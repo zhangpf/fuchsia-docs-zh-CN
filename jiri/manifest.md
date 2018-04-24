@@ -1,4 +1,9 @@
 # Jiri清单
+---
+
+[*英文原文快照*](https://github.com/fuchsia-mirror/jiri/blob/6ddcc1e3e9d9c4aba2eb0446b5b1345924c823af/manifest.md)
+
+---
 
 Jiri清单文件描述了运行“jiri update”时发生同步的项目集合。
 

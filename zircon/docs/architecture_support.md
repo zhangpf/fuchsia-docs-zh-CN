@@ -1,4 +1,9 @@
 # 硬件架构支持
+---
+
+[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/architecture_support.md)
+
+---
 
 Fuchsia支持两种指令集结构：arm64和x86-64。
 

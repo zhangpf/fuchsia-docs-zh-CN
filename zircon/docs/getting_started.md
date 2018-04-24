@@ -1,4 +1,9 @@
 # 快速入门指南
+---
+
+[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/getting_started.md)
+
+---
 
 ## 检出Zircon代码
 
