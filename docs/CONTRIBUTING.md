@@ -1,3 +1,6 @@
+<!---
+Contributing Changes
+--->
 # 贡献代码变更
 ---
 
@@ -5,15 +8,58 @@
 
 ---
 
+<!---
+Fuchsia manages commits through Gerrit at
+https://fuchsia-review.googlesource.com. Not all projects accept patches;
+please see the CONTRIBUTING.md document in individual projects for
+details.
+--->
 Fuchsia通过[Gerrit](https://fuchsia-review.googlesource.com)来管理代码提交。需要说明的是并非所有的子项目都接收补丁（patch），具体详情请查看每个子项目的CONTRIBUTING.md文档。
 
-
+<!---
+## Submitting changes
+--->
 ## 提交代码变更
 
+<!---
+To submit a patch to Fuchsia, you may first need to generate a cookie to
+authenticate you to Gerrit. To generate a cookie, log into Gerrit and click
+the "Generate Password" link at the top of https://fuchsia.googlesource.com.
+Then, copy the generated text and execute it in a terminal.
+--->
 为了向Fuchsia提交patch，需要首先生成授权你到Gerrit的cookie项。为此，请首先登录到Gerrit，然后点击位于[https://fuchsia.googlesource.com](https://fuchsia.googlesource.com)顶部的“Generate Password”的链接。然后拷贝生成的命令到终端并执行。
 
+<!---
+Once authenticated, follow these steps to submit a patch to a repo in Fuchsia:
+--->
 一旦授权成功，便可通过以下的步骤向Fuchsia的某个子项目提交patch。
 
+<!---
+```
+# create a new branch
+git checkout -b branch_name
+
+# write some awesome stuff, commit to branch_name
+# edit some_file ...
+git add some_file
+# if specified in the repo, follow the commit message format
+git commit ...
+
+# upload the patch to Gerrit
+# `jiri help upload` lists flags for various features, e.g. adding reviewers
+jiri upload # Adds default topic - ${USER}-branch_name
+# or
+jiri upload -topic="custom_topic"
+# or
+git push origin HEAD:refs/for/master
+
+# at any time, if you'd like to make changes to your patch, use --amend
+git commit --amend
+
+# once the change is landed, clean up the branch
+git branch -d branch_name
+```
+--->
 ```
 # 创建新的分支
 git checkout -b branch_name
@@ -38,21 +84,52 @@ git commit --amend
 # 一旦上传成功，请删除该分支
 git branch -d branch_name
 ```
-
+<!---
+See the Gerrit documentation for more detail:
+[https://gerrit-documentation.storage.googleapis.com/Documentation/2.12.3/intro-user.html#upload-change](https://gerrit-documentation.storage.googleapis.com/Documentation/2.12.3/intro-user.html#upload-change)
+--->
 更多细节请查看Gerrit的文档：
 [https://gerrit-documentation.storage.googleapis.com/Documentation/2.12.3/intro-user.html#upload-change](https://gerrit-documentation.storage.googleapis.com/Documentation/2.12.3/intro-user.html#upload-change)
 
+<!---
+### Change description tags
+
+If submitting a change to Zircon, Garnet, Peridot or Topaz, include [tags] in
+the commit subject flagging which module, library, app, etc, is affected by the
+change. The style here is somewhat informal. Look at these example changes to
+get a feel for how these are used.
+--->
 ### 变更的描述性tag
 
 当向Zircon、Garnet、Peridot或Topaz提交变更时候，请在commit的主题中标识被影响的module、library和app相关的[tag]。这种风格稍微有点非正式，因此请查看如下的变更示例来了解它们是如何使用的。
 
+<!---
+* https://fuchsia-review.googlesource.com/c/zircon/+/112976
+* https://fuchsia-review.googlesource.com/c/garnet/+/110795
+* https://fuchsia-review.googlesource.com/c/peridot/+/113955
+* https://fuchsia-review.googlesource.com/c/topaz/+/114013
+--->
 * https://fuchsia-review.googlesource.com/c/zircon/+/112976
 * https://fuchsia-review.googlesource.com/c/garnet/+/110795
 * https://fuchsia-review.googlesource.com/c/peridot/+/113955
 * https://fuchsia-review.googlesource.com/c/topaz/+/114013
 
+<!---
+Gerrit will flag your change with
+`Needs Label: Commit-Message-has-tags` if these are missing.
+--->
 如果变更未指明这些[tag]，Gerrit将会用`Needs Label: Commit-Message-has-tags`来标识该变更。
 
+<!---
+Example:
+```
+# Ready to submit
+[parent][component] Update component in Topaz.
+
+# Needs Label: Commit-Message-has-tags
+Update component in Topaz.
+```
+--->
 例如：
 
 ```
@@ -63,54 +140,61 @@ git branch -d branch_name
 Update component in Topaz.
 ```
 
+<!---
+## [Non-Googlers only] Sign the Google CLA
+
+In order to land your change, you need to sign the [Google CLA](https://cla.developers.google.com/).
+--->
 ## [仅针对非Googlers] 签署Google贡献者许可证协议（CLA）
 
 在上传代码变更之前，请首先签署Google贡献者许可证协议（[Google CLA](https://cla.developers.google.com/))。
 
-## 在层之间切换
+<!---
+## Cross-repo changes
 
-在初始化开发环境（详情请查看[获取代码](getting_source.md)）步骤中，你已选择了一个层（layer）进行开发。该层的代码处于最新版本，而它下面的层则处于过去的某个历史版本中（*译者注：类似于git中的submodule，子模块并不会直接更新到最新版本*）。
-
-如果你想切换到其他层，要么在代码树中获取更高层的源代码，要么当前查看的是更低层的的某个历史版本，对此你有两个选择：
-
-1. 采用和之前一样初始化的方式，[为该层初始化新的开发环境](getting_source.md)。
-2. 通过`fx set-layer <layer>`命令切换现有的开发环境。该命令通过改变代码树`jiri`元信息来指向新的层，并显示如何真正获取代码和构建新配置层的说明。
-
-## 跨层的代码变更
-
-因为Fuchsia被分成多[层](layers.md)，每层看到的它下面的层其实是被固定到某个特定的历史版本，也就是说一个层更新后的代码并不会立即被上方的层看到。
-
-当创建层的变更时，你需要考虑清楚在何时不同层会看到变更的不同部分，例如，当你想改变Zircon的接口，并且影响到Gernet的上层客户代码时，其他开发者在构建Gernet时并不会立刻看到Zircon的提交。相反，只有在Gernet更新了它指向Zricon的版本时才会看到这些更新。
-
-### 软变换（推荐）
-
-对于跨层变更的一种较好方式是使用*软变换*。在这种方式下，你提交到较低层（例如Zircon）的代码变更会同时支持新旧两种接口使用方式。例如，如果你想替换某个函数，你可以增加该函数的新版本，并用新版本来封装旧版本。
-
-采用如下的步骤来进行软变换：
-
-1. 提交较低层层（例如Zircon）的代码变更，在不破坏上层（例如Garnet）使用的旧接口前提下，引入新的接口；
-2. 等待自动回滚bot更新上层指向的下层的版本号；
-3. 提交更改上层的代码，迁移到新的接口；
-4. 提交底层的变更，删掉旧接口。
-
-### 硬变换
-
-对于某些变更，创建软变换是非常困难或者根本不可行的，对此，你可以使用*硬变换*方式。在这种方式下，你创建破坏性变更来更新底层代码，并手动更新上层代码。
-
-采用如下的步骤来进行硬变换：
-
-1. 上传底层（例如Zircon）破坏上层使用接口的变更。此时，自动回滚bot的更新上层操作将会失败；
-2. 上传上层的变更，迁移到新的接口，以及通过编辑上层的`//<layer>/manifest/<layer>` 清单文件中底层的`revision`属性来更新指向底层的版本号。
-
-进行硬变换比软变换会产生更大的压力，因为在步骤1和步骤2之间将会阻止其他代码变更的发生。
-
+Changes in two or more separate repos will be automatically tracked for you by
+Gerrit if you use the same topic.
+--->
 ## 跨仓库变更
 
 对于两个或多个不同的子项目仓库的变更，如果你使用了相同的话题，Gerrit会为你自动进行跟踪。
 
+<!---
+### Using jiri upload
+Create branch with same name on all repos and upload the changes
+--->
 ### 使用jiri进行上传
 
 在所有的子项目上创建相同名字的分支，然后提交变更
+<!---
+```
+# make and commit the first change
+cd fuchsia/bin/fortune
+git checkout -b add_feature_foo
+* edit foo_related_files ... *
+git add foo_related_files ...
+git commit ...
+
+# make and commit the second change in another repository
+cd fuchsia/build
+git checkout -b add_feature_foo
+* edit more_foo_related_files ... *
+git add more_foo_related_files ...
+git commit ...
+
+# Upload all changes with the same branch name across repos
+jiri upload -multipart # Adds default topic - ${USER}-branch_name
+# or
+jiri upload -multipart -topic="custom_topic"
+
+# after the changes are reviewed, approved and submitted, clean up the local branch
+cd fuchsia/bin/fortune
+git branch -d add_feature_foo
+
+cd fuchsia/build
+git branch -d add_feature_foo
+```
+--->
 ```
 # 创建和提交第一个变更
 cd fuchsia/bin/fortune
@@ -138,9 +222,37 @@ git branch -d add_feature_foo
 cd fuchsia/build
 git branch -d add_feature_foo
 ```
-
+<!---
+### Using Gerrit commands
+--->
 ### 使用Gerrit的命令
 
+<!---
+```
+# make and commit the first change, upload it with topic 'add_feature_foo'
+cd fuchsia/bin/fortune
+git checkout -b add_feature_foo
+* edit foo_related_files ... *
+git add foo_related_files ...
+git commit ...
+git push origin HEAD:refs/for/master%topic=add_feature_foo
+
+# make and commit the second change in another repository
+cd fuchsia/build
+git checkout -b add_feature_foo
+* edit more_foo_related_files ... *
+git add more_foo_related_files ...
+git commit ...
+git push origin HEAD:refs/for/master%topic=add_feature_foo
+
+# after the changes are reviewed, approved and submitted, clean up the local branch
+cd fuchsia/bin/fortune
+git branch -d add_feature_foo
+
+cd fuchsia/build
+git branch -d add_feature_foo
+```
+--->
 ```
 # 使用名为'add_feature_foo'的话题，创建和提交第一个变更
 cd fuchsia/bin/fortune
@@ -165,17 +277,46 @@ git branch -d add_feature_foo
 cd fuchsia/build
 git branch -d add_feature_foo
 ```
-
+<!---
+Multipart changes are tracked in Gerrit via topics, will be tested together,
+and can be landed in Gerrit at the same time with `Submit Whole Topic`. Topics
+can be edited via the web UI.
+--->
 变更的多个部分在Gerrit中通过相同话题进行追踪，并且也会一起进行测试，也可以通过`Submit Whole Topic`向Gerrit提交它们。另外，还可以通过网页编辑话题。
 
+<!---
+## Changes that span layers
+--->
+## 跨多个层的变更
 
-## 跨多个layer的变更
+<!---
+See [Changes that span layers](development/workflows/multilayer_changes.md) on
+how to work across [layers](development/source_code/layers.md).
+--->
 
-请查看[该文档](http://github.com/fuchsia-mirror/docs/blob/master/development/workflows/multilayer_changes.md)来了解如何处理跨[layer](http://github.com/fuchsia-mirror/docs/blob/master/development/source_code/layers.md)。
+请查看[该文档](development/workflows/multilayer_changes.md)来了解如何处理跨[layer](development/source_code/layers.md)。
 
-
+<!---
+## Resolving merge conflicts
+--->
 ## 消解合并冲突
 
+<!---
+```
+# rebase from origin/master, revealing the merge conflict
+git rebase origin/master
+
+# resolve the conflicts and complete the rebase
+* edit files_with_conflicts ... *
+git add files_with_resolved_conflicts ...
+git rebase --continue
+jiri upload
+
+# continue as usual
+git commit --amend
+jiri upload
+```
+--->
 ```
 # 在origin/master进行rebase操作， 显示合并冲突
 git rebase origin/master
@@ -191,10 +332,23 @@ git commit --amend
 jiri upload
 ```
 
+<!---
+## Github integration
+
+While Fuchsia's code is hosted at https://fuchsia.googlesource.com, it is also
+mirrored to https://github.com/fuchsia-mirror. To ensure Fuchsia contributions
+are associated with your Github account:
+--->
 ## Github集成
 
 除了部署于[https://fuchsia.googlesource.com](https://fuchsia.googlesource.com)的Fuchsia代码之外，同时在Gihub也有Fuchsia的镜像[https://github.com/fuchsia-mirror](https://github.com/fuchsia-mirror)。为了保证Fuchsia的贡献同时也关联到你的Github账号：
 
+<!---
+1. [Set your email in Git](https://help.github.com/articles/setting-your-email-in-git/).
+2. [Adding your email address to your GitHub account](https://help.github.com/articles/adding-an-email-address-to-your-github-account/).
+3. Star the project for your contributions to show up in your profile's
+Contribution Activity.
+--->
 1. [在git中设置好邮箱](https://help.github.com/articles/setting-your-email-in-git/)；
 2. [将你的邮箱地址加入到Github账号中](https://help.github.com/articles/adding-an-email-address-to-your-github-account/)；
 3. 为了使你的贡献出现在主页的贡献活动（Contribution Activity）中，请标星该子项目。
