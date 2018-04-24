@@ -13,6 +13,10 @@
 
 ## 快速访问
 
+* [Fuchsia快速入门](docs/getting_started.md) 
+* [Zircon快速入门](zircon/docs/getting_started.md) 
+* [如何使用Jiri](jiri/README.md)
+
 ## TODO LIST
 
 下列工作按优先级递减排序：
