@@ -13,6 +13,7 @@
 
 ## 快速访问
 
+* [如何下载Fuchsia源码](docs/development/source_code/README.md)
 * [Fuchsia快速入门](docs/getting_started.md) 
 * [Zircon快速入门](zircon/docs/getting_started.md) 
 * [如何使用Jiri](jiri/README.md)
