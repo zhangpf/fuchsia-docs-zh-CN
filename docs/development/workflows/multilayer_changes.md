@@ -4,7 +4,7 @@
 # 跨多个层的变更
 ---
 
-[*英文原文快照*](https://raw.githubusercontent.com/fuchsia-mirror/docs/a774512b9d926ee438a77ddc6a5f362b71e0cc4b/development/workflows/multilayer_changes.md)
+[*英文原文快照*](https://github.com/fuchsia-mirror/docs/blob/a774512b9d926ee438a77ddc6a5f362b71e0cc4b/development/workflows/multilayer_changes.md)
 
 ---
 <!---
