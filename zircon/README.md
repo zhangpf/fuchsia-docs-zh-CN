@@ -23,7 +23,7 @@ Zircon的系统调用通常是非阻塞方式的（non-blocking），但值得�
 + [入门](getting_started.md)
 + [提交代码补丁](https://github.com/fuchsia-mirror/zircon/tree/master/docs/contributing.md)
 
-+ [概念总览](https://github.com/fuchsia-mirror/zircon/tree/master/docs/concepts.md)
++ [概念总览](docs/concepts.md)
 + [内核（Kernel）对象](https://github.com/fuchsia-mirror/zircon/tree/master/docs/objects.md)
 + [进程（Process）对象](https://github.com/fuchsia-mirror/zircon/tree/master/docs/objects/process.md)
 + [进程（Thread）对象](https://github.com/fuchsia-mirror/zircon/tree/master/docs/objects/thread.md)

@@ -123,7 +123,7 @@ and then return to this document.
 --->
 ### 获取代码
 
-在[获取Fuchsia源代码](getting_source.md)后回到本文档。
+在[获取Fuchsia源代码](development/source_code/README.md)后回到本文档。
 
 <!---
 ### Build
