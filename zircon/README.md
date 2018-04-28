@@ -30,7 +30,7 @@ Zircon的系统调用通常是非阻塞方式的（non-blocking），但值得�
 + [句柄（Handles）](https://github.com/fuchsia-mirror/zircon/tree/master/docs/handles.md)
 + [系统调用](docs/syscalls.md)
 
-+ [驱动开发工具](https://github.com/fuchsia-mirror/zircon/tree/master/docs/ddk/overview.md)
++ [驱动开发工具](docs/ddk/overview.md)
 
 + [测试](https://github.com/fuchsia-mirror/zircon/tree/master/docs/testing.md)
 + [Hacking notes](https://github.com/fuchsia-mirror/zircon/tree/master/docs/hacking.md)
