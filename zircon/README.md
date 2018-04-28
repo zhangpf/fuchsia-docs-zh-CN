@@ -28,7 +28,7 @@ Zircon的系统调用通常是非阻塞方式的（non-blocking），但值得�
 + [进程（Process）对象](https://github.com/fuchsia-mirror/zircon/tree/master/docs/objects/process.md)
 + [进程（Thread）对象](https://github.com/fuchsia-mirror/zircon/tree/master/docs/objects/thread.md)
 + [句柄（Handles）](https://github.com/fuchsia-mirror/zircon/tree/master/docs/handles.md)
-+ [系统调用](https://github.com/fuchsia-mirror/zircon/tree/master/docs/syscalls.md)
++ [系统调用](docs/syscalls.md)
 
 + [驱动开发工具](https://github.com/fuchsia-mirror/zircon/tree/master/docs/ddk/overview.md)
 

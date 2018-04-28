@@ -24,7 +24,7 @@ Zircon内核管理许多不同类型的对象。本质上讲，这些对象是�
 <!---
 ## [System Calls](syscalls.md)
 --->
-## [系统调用](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls.md)
+## [系统调用](syscalls.md)
 
 <!---
 Userspace code interacts with kernel objects via system calls, and almost exclusively
