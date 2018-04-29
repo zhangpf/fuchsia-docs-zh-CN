@@ -48,7 +48,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 
  - 设备管理器 & 设备主机
  - [设备驱动管理（DDK）][zircon-ddk]
- - [C系统库（libc）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/libc.md)
+ - [C系统库（libc）](libc.md)
  - [POSIX I/O（libfdio）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/life_of_an_open.md)
  - [进程启动/ELF加载（liblaunchpad）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/launchpad.md) 
 --->
