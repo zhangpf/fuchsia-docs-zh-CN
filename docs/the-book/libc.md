@@ -112,7 +112,7 @@ thread to jump off its thread of execution). Fuchsia's libc does not,
 therefore, have a notion of signal-safe functions, and is not
 implemented internally to be aware of mechanisms like signals.
 --->
-Fuchsia中不包含Unix风格的信号，因为Zircon无法直接实现它们（内核无法提供手段是的另一线程跳出当前的执行状态）。因此，Fuchsia的libc也不打算提供signal安全的功能，并且在实现时也不将signal等机制考虑在内。
+Fuchsia中不包含Unix风格的信号，因为Zircon无法直接实现它们（内核没办法提供手段使得当前线程控制另一线程跳出其执行状态）。因此，Fuchsia的libc也不打算提供signal安全的功能，并且在实现时也不将signal等机制考虑在内。
 
 <!---
 Because of this fact, libc functions will not `EINTR`, and it is not
