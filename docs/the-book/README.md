@@ -205,7 +205,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 [zircon-concepts]: /zircon/docs/concepts.md
 [zircon-syscalls]: /zircon/docs/syscalls.md
 [zircon-ddk]: /zircon/docs/ddk/overview.md
-[FIDL]: https://github.com/fuchsia-mirror/zircon/blob/master/docs/fidl/index.md
+[FIDL]: /zircon/docs/fidl/index.md
 [framework-story]: https://github.com/fuchsia-mirror/peridot/blob/master/docs/modular/story.md
 [framework-module]: https://github.com/fuchsia-mirror/peridot/blob/master/docs/modular/module.md
 [framework-agent]: https://github.com/fuchsia-mirror/peridot/blob/master/docs/modular/agent.md

@@ -1,7 +1,7 @@
-abbrlink: 1
-title: 'FIDL: 概述'
-date: 2018-05-06 21:10:00
----
+<!--
+# FIDL: Overview
+-->
+FIDL概述
 ----
 
 [*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/index.md)
@@ -11,25 +11,41 @@ date: 2018-05-06 21:10:00
 This document is a description of the Fuchsia Interface Definition Language
 (FIDL) purpose, high-level goals, and requirements.
 -->
-这个文档的目的是用来描述Fuchsia接口定义语言（FIDL）的高层次的目标与需求。
+本文档的目的是用来描述Fuchsia接口定义语言（FIDL）的高层目标与需求。
 <!-- 
- Related Documents
-   [FIDL: Wire Format Specification]
-   [FIDL: Language Specification]
-   [FIDL: Compiler Specification]
-   [FIDL: C Language Bindings]
-   [FIDL: C++ Language Bindings]
-   [FIDL Examples]: Some small example code used during development
+ ## Related Documents
+
+*   [FIDL: Wire Format Specification]
+*   [FIDL: Language Specification]
+*   [FIDL: Compiler Specification]
+*   [FIDL: C Language Bindings]
+*   [FIDL: C++ Language Bindings]
+*   [FIDL Examples]: Some small example code used during development
+
+<!-- Reference links because these are used again below. -->
+<!--
+[FIDL: Wire Format Specification]: wire-format/index.md
+[FIDL: Language Specification]: language.md
+[FIDL: Compiler Specification]: compiler.md
+[FIDL: C Language Bindings]: c-language-bindings.md
+[FIDL: C++ Language Bindings]: c++-language-bindings.md
+[FIDL Examples]: ../../system/host/fidl/examples
 -->
 ## 相关文档
 
-*   [FIDL: 数据格式说明书]
-*   [FIDL: 语言说明书]
-*   [FIDL: 编译说明书]
-*   [FIDL: 绑定C语言]
-*   [FIDL: 绑定C++语言]
-*   [FIDL 例子]: 开发中的一些小例子
+*   [FIDL: 传输格式规范][FIDL: Wire Format Specification]
+*   [FIDL: 语言规范][FIDL: Language Specification]
+*   [FIDL: 编译规范][FIDL: Compiler Specification]
+*   [FIDL: 绑定C语言][FIDL: C Language Bindings]
+*   [FIDL: 绑定C++语言][FIDL: C++ Language Bindings]
+*   [FIDL示例][FIDL Examples]
 
+[FIDL: Wire Format Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/wire-format/index.md
+[FIDL: Language Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/language.md
+[FIDL: Compiler Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/compiler.md
+[FIDL: C Language Bindings]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/c-language-bindings.md
+[FIDL: C++ Language Bindings]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/c++-language-bindings.md
+[FIDL Examples]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/host/fidl/examples
 
 [TOC]
 
@@ -37,7 +53,7 @@ This document is a description of the Fuchsia Interface Definition Language
 Overview
 -->
 
-## 概述
+# 概述
 <!--
 The Fuchsia Interface Definition Language (FIDL) is the language used to
 describe interprocess communication (IPC) protocols used by programs running on
@@ -45,12 +61,12 @@ the Fuchsia Operating System. FIDL is supported by a toolchain (compiler) and
 runtime support libraries (bindings) to help developers use IPC effectively.
 -->
 
-Fuchsia接口定义语言（FIDL）是用来描述Fuchsia操作系统中进程间通信协议（IPC）的语言。FIDL支持工具链（编译）并且支持时支持库(绑定)来帮助开发者高效的使用IPC。
+Fuchsia接口定义语言（FIDL）是用来描述Fuchsia操作系统中进程间通信协议（IPC）的语言。FIDL的工具链（编译   器）和运行时支持库(绑定)用于帮助开发者高效的使用IPC。
 
 <!--
 Goals
 -->
-目标
+# 目标
 
 <!--
 Fuchsia extensively relies on IPC since it has a microkernel architecture
@@ -58,7 +74,7 @@ wherein most functionality is implemented in user space outside of the kernel,
 including privileged components such as device drivers. Consequently the IPC
 mechanism must be efficient, deterministic, robust, and easy to use.
 -->
-自从Fuchsia有微内核(大部分功能在用户空间实现)后，Fuchsia广泛依赖IPC，包括就像设备驱动的特权组件。因此,IPC机制必须有高效性，确定性，稳健性，易用性。
+由于Fuchsia是微内核操作系统，其中大部分的功能在用户空间中实现，包括设备驱动等特权组件，所以它大量地依赖IPC进行通信。因此，IPC机制在设计上必须具有高效性、确定性、稳健性和易用性。
 
 <!--
 **IPC efficiency** pertains to the computational overhead required to generate,
@@ -67,7 +83,7 @@ aspects of system operation so it must be efficient. The FIDL compiler must
 generate tight code without excess indirection or hidden costs. It should be at
 least as good as hand-rolled code would be where it matters most.
 -->
-**IPC 高效性** 考虑生成，传输，进程间使用消息所需的计算开销. IPC将涉及所有的系统操作，所以它必须高效。FIDL的编译器必须生成严谨的代码，没有额外的迂回或者隐形成本。 这是最重要的，它应该至少要你hand-rolled代码一样好。
+**IPC的高效性**衡量生成、传输和处理进程间消息所需的计算开销。IPC将参与所有的系统操作，所以它必须高效。FIDL的编译器必须生成紧凑的代码，没有额外的间接跳转或者隐形开销。最重要的是，它应该至少要你特定优化的代码一样好。
 <!--
 **IPC determinism** pertains to the ability to perform transactions within a
 known resource envelope. IPC will be used extensively by critical system
@@ -76,7 +92,8 @@ predictable ways. The FIDL wire format must offer strong static guarantees such
 as ensuring that structure size and layout is invariant thereby alleviating the
 need for dynamic memory allocation or complex validation rules.
 -->
-**IPC 确定性** 考虑已有封装资源的执行事务的能力。IPC将被广泛的用于关键系统服务，就像有许多客户端的文件系统，必须照预想的方式工作。FIDL的协议格式必须提供强保证，确保结构体大小与布局是不变的，从而减轻了对动态内存分配或者是复杂验证规则的需求。
+**IPC的确定性**衡量在已知的封装资源大小的执行事务能力。IPC将被广泛的用于关键系统服务，例如，服务于许多客户端的文件系统，必须按照可预测的方式进行工作。FIDL的传输格式必须对确保结构体大小与布局的不变性提供强静态保证，从而减轻对动态内存分配或复杂验证规则的需求。
+
 <!--
 **IPC robustness** pertains to the need to consider IPC as an essential part of
 the operating system's ABI. Maintaining binary stability is crucial. Mechanisms
@@ -85,33 +102,34 @@ invariants of existing services and their clients, particularly when the need
 for determinism is also considered. The FIDL bindings must perform effective,
 lightweight, and strict validation.
 -->
-**IPC 稳健性** 考虑IPC作为操作系统ABI的重要组成部分。保持二进制稳定性至关重要. 协议演变的机制必须保守设计，以便使现在服务与他们的客户端保持不变，特别是稳健性的需求也要考虑。 FIDL绑定必须高效，轻量并且经过严格验证。
+**IPC的鲁棒性**衡量考虑IPC作为操作系统ABI的重要组成部分的需要。保持二进制的稳定性至关重要，协议演变的机制必须谨慎设计，以便使现在的服务与他们的客户端不违反不变性，特别是在确定性的需求也被考虑其中时。FIDL的绑定也必须高效，轻量并且经过严格验证。
+
 <!--
 **IPC ease of use** pertains to the fact that IPC protocols are an essential
 part of the operating system's API. It is important to provide good developer
 ergonomics for accessing services via IPC. The FIDL code generator removes the
 burden of writing IPC bindings by hand. Moreover, the FIDL code generator can
 produce different bindings to suit the needs of different audiences and their
-idioms.
+    .
 -->
-**IPC 易用性** 考虑IPC作为操作系统API的重要组成部分。通过IPC访问服务提供好的开发者生物工程学是很重要的。FIDL生成器减轻了手工编写IPC绑定代码的负担。 此外，FIDI代码生成器可以提供不同的绑定来适应不同开发者以及他们的风格。
+**IPC的易用性**衡量IPC协议作为操作系统API的重要组成部分，为通过IPC访问服务提供好的开发者使用方法是很重要的。FIDL的代码生成器减轻了手工编写IPC绑定代码的负担。此外，FIDL的代码生成器可以提供不同的绑定来适应不同开发者以及他们的习惯。
 <!--
 TODO: express goal of meeting the needs of different audiences using
 appropriately tailored bindings, eg. system programming native vs. event-driven
 dispatch vs. async calls, etc... say more things about FIDL as our system API,
 SDK concerns, etc.
 -->
-TODO: 解释不同受众的目标 使用合适的定制绑定,例如 本地系统编程 vs. 事件驱动调度 vs. 异步调用, 等等... 关于更多FIDI作为我们系统API,影响SDK等.
+TODO: 解释为满足不同受众使用合适的定制化绑定的目标是什么，例如，本地系统编程 vs.事件驱动调度 vs. 异步调用等... 以及关于更多FIDL的介绍，例如系统API，SDK的关注点等。
 
 <!--
 Requirements
 -->
-需求
+# 需求
 <!--
-Purpose
+# Purpose
 -->
+## 目的
 
-# 目标
 <!--
 *   Describe data structures and interfaces used by IPC protocols on Zircon.
 *   Optimized for interprocess communication only; FIDL must not be persisted to
@@ -126,17 +144,17 @@ Purpose
 *   Perform sufficient validation to maintain protocol invariants (but no more
     than that).
 -->
-*   描述用于Zircon的IPC协议的数据结构与接口。
-*   只对进程间通信进行优化; FIDL一定不能用于磁盘或者跨设备边界的网络传输。
+*   描述用于Zircon上使用的IPC协议的数据结构与接口。
+*   针对特定于进程间通信的优化; FIDL不能用于磁盘上的持久化操作或者跨设备的网络传输。
 *   同一设备上进程间的有效传输消息由数据(字节)与Zircon中处理通道的能力组成。
-*   专为Zircon原语的有效使用而设计；不打算在其它平台上使用，不可移植。
-*   为创建，发送，接收与消费消息提供方便的API。
-*   执行足够的验证来维护协议不变。
+*   专为促进Zircon原语的有效使用而设计；不打算在其它平台上使用，并且不可移植。
+*   为创建、发送、接收与消费消息提供方便的API。
+*   执行足够的验证来维护协议不变性（并仅是如此而已）。
 <!--
 # Efficiency
 -->
 
-# 性能
+## 性能
 <!--
 *   Just as efficient (speed and memory) as using hand-rolled data structures
     would be.
@@ -157,23 +175,23 @@ Purpose
     for protocol evolution.
 -->
 
-*   与使用手动定义数据结果一样高效（速度与内存）。
-*   Wire format使用未压缩的本地数据类型，与主机大小端无关并且正确数据对齐来支持消息随时访问。
-*   当消费消息时，如果消息大小已确定或者已知最大值，不需要动态内存分配.
-*   Explicitly handle ownership with move-only semantics.
-*   数据结构打包顺序是规范的，明确没有歧义的，并且是最小的。
-*   避免反向修改指针.
-*   避免损耗性能的验证.
-*   避免可能溢出的计算.
-*   利用异步操作接口操作管道。
-*   结构体固定大小；可变大小的数据被存储在外.
-*   结构体不能自我描述；FIDL文件将描述结构体的内容.
-*   结构没有版本，但是根据协议接口可以扩展。
+*   与使用手动定义数据的方式一样（在速度与内存使用上）高效。
+*   在传输格式上，使用未压缩的本地主机大小端数据类型，并纠正数据对齐来支持消息内容的原地访问。
+*   如果消息大小静态已知或者有界时，无需分配动态内存以产生或消费消息。
+*   利用move-only语义来显式处理所有权
+*   数据结构打包顺序是规范的，无歧义的，并且是最小对齐的。
+*   避免反向修改指针。
+*   避免高性能损耗的验证操作。
+*   避免可能栈溢出的计算。
+*   将接口请求流水化实现异步操作。
+*   结构体固定大小；将可变大小的数据存储在外部。
+*   结构体不能自描述；FIDL文件用于描述结构体的内容。
+*   结构没有版本控制，但是接口可扩展新的方法来演化协议。
 
 <!--
 # Ergonomics
 -->
-# 人类工程学
+## 人类工程学
 <!--
 *   Programming language bindings maintained by Fuchsia team:
     *   C, C++ (native), C++ (idiomatic), Dart, Go, Rust
@@ -193,9 +211,9 @@ Purpose
     by all programming languages.
 -->
 
-*   Fuchsia团队来维护编程语言的绑定:
+*   Fuchsia团队维护的编程语言绑定:
     *   C, C++ (native), C++ (idiomatic), Dart, Go, Rust
-*   记住，我们希望去支持更多语言，就像:
+*   同时留意我们希望去支持更多语言，例如:
     *   Java, Javascript, etc.
 *   绑定与代码生成根据原定的用途适应原有的风格。
 *   在编译时生成代码，优化消息序列，反序列化，并且验证。
@@ -206,7 +224,7 @@ Purpose
 # Implementation
 -->
 
-# 实现性
+# 实现
 <!--
 *   Compiler is written in C++ to be usable by components built in Zircon.
 
@@ -215,9 +233,9 @@ Purpose
 *   We will not support FIDL bindings for any platform other than Fuchsia.
 -->
 
-*   编译器使用C++编写，用来在Zircon中构建组件。
+*   编译器使用C++编写，用于Zircon中的组件使用。
 
-*   编译是可移植的，并且可以和宿主工具来构建.
+*   编译器是可移植的，并可利用宿主工具链来构建它。
 
 *   我们不会在Fuchsia以外的平台支持FIDL绑定。
 <!--
@@ -226,21 +244,22 @@ Purpose
 
 ## 代码位置
 
-- [The compiler](../../system/host/fidl)
-- [C bindings](../../system/ulib/fidl)
-- [C++ bindings](https://fuchsia.googlesource.com/garnet/+/master/public/lib/fidl/cpp)
-- [Go bindings](https://fuchsia.googlesource.com/garnet/+/master/public/lib/fidl/go)
-- [Rust bindings](https://fuchsia.googlesource.com/garnet/+/master/public/lib/fidl/rust)
+- [编译器](https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/host/fidl)
+- [C绑定](https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/ulib/fidl)
+- [C++绑定](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/cpp)
+- [Go绑定](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/go)
+- [Rust绑定](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/rust)
 
 <!--
 ## Constituent Parts of Specification
 -->
-## 说明书的组成部分
+## 规范的组成部分
+
 <!--
 ### FIDL Wire Format
 -->
+### FIDL传输格式
 
-### FIDL线格式
 <!--
 The FIDL wire format specified how FIDL messages are represented in memory for
 transmission over IPC.
@@ -248,14 +267,14 @@ transmission over IPC.
 The fidl wire format is documented [FIDL: Wire Format Specification].
 -->
 
-FIDL线格式定义了为了IPC传输的FIDL消息是如何在内存中表示的。
+FIDL传输格式规范了FIDL消息是如何在内存中表示以支持IPC传输。
 
-FIDL数据格式的文档 [FIDL: Wire Format Specification].
+[FIDL传输格式的文档][FIDL: Wire Format Specification]
 
 <!--
 ### FIDL Language
 -->
-### FIDL 语言
+### FIDL语言
 <!--
 The FIDL language is the syntax by which interfaces are described in ***.fidl**
 files.
@@ -263,14 +282,15 @@ files.
 The fidl language is documented [FIDL: Language Specification].
 -->
 
-FIDL语言是***.fidl***文件语法来描述的接口。.
+FIDL语言是**fidl**文件来描述接口的语法。
 
-FIDL语言的文档 [FIDL: Language Specification].
+[FIDL语言的文档][FIDL: Language Specification].
+
 <!--
  FIDL Compiler
 -->
+### FIDL编译器
 
-### FIDL 编译器
 <!--
 The FIDL compiler generates code for programs to use and implement interfaces
 described by the FIDL language.
@@ -278,35 +298,37 @@ described by the FIDL language.
 The fidl compiler is documented [FIDL: Compiler Specification].
 -->
 
-FIDL编译器为使用与实现FIDL接口的程序生成代码.
+FIDL编译器的功能是为使用与实现FIDL语言描述的接口的程序生成代码。
 
-FIDL编译器的文档 [FIDL: Compiler Specification].
+[FIDL编译器的文档][FIDL: Compiler Specification].
+
 <!--
  FIDL Bindings
 -->
 
-### FIDL 绑定
+### FIDL绑定
+
 <!--
 FIDL bindings are language-specific runtime support libraries and code
 generators which provide APIs for manipulating FIDL data structures and
 interfaces.
 -->
+FIDL绑定是语言特定的运行时支持库与代码生成器，以提供用于操作FIDL数据结构和接口的API。
 
-FIDL绑定是特定于语言的运行时支持库与代码生成器，这些代码生成器提供用于操纵FIDL数据结构和接口的API。
 <!--
 Languages-specific topics:
 
 *   [FIDL: C Language Bindings]
 *   [FIDL: C++ Language Bindings]
 -->
-特定语言主题:
+语言相关的主题:
+*   [FIDL: C语言绑定][FIDL: C Language Bindings]
+*   [FIDL: C++语言绑定][FIDL: C++ Language Bindings]
 
-*   [FIDL: C Language Bindings]
-*   [FIDL: C++ Language Bindings]
 <!--
 Bindings are available in various flavors depending on the language:
 -->
-绑定的类型根据语言不同而不同:
+绑定的风格根据语言而有所不同:
 
 <!--
    Native bindings: designed for highly sensitive contexts such as device
@@ -314,7 +336,7 @@ Bindings are available in various flavors depending on the language:
     allocation, but may require somewhat more awareness of the constraints of
     the protocol on the part of the developer.
 -->
-*   **本地绑定**: 为高度敏感的上下文（如设备驱动与高吞吐量的服务器）设计，充分利用就地访问，避免内存分配，但是可能需要更多的了解开发者协议限制。
+*   **本地绑定**: 为高度敏感的上下文，如设备驱动与高吞吐量的服务器而设计，充分利用原地访问，避免内存分配，但是需要开发者了解更多关于协议上的限制。
 
 <!--
 	Idiomatic bindings: designed to be more developer-friendly by copying
@@ -322,7 +344,7 @@ Bindings are available in various flavors depending on the language:
     strings or vectors), but correspondingly somewhat less efficient as a
     result.
 -->
-*   **惯用绑定**: 通过将数据从线格式拷贝到易于使用的类型（就像堆备份定字符串或者vectors），因此设计更开发者友好，但是相应的效率较低。
+*   **惯用绑定**: 通过将数据从传输格式拷贝到易于使用的数据类型上（例如堆上字符串或者向量），来提供更开发者友好的放好似，但是这种方式对应的效率较低。
 
 <!--
 Bindings offer several various ways of invoking interface methods depending on
@@ -338,15 +360,15 @@ the language:
 	Port-based: received messages are delivered to a port or future (Rust)
 	Synchronous call**: waits for reply and return it (Go, C++ unit tests)
 -->
-*   **发送/接收**: 直接读写消息到通道，没有内部等待循环 (C)
-*   **基于回调**: 异步接收消息作为事件循环的回调 (C++, Dart)
-*   **基于端口**: 接收的消息传递到端口或下辈 (Rust)
-*   **同步调用**: 等待应答才返回 (Go, C++ unit tests)
+*   **发送/接收**: 直接通过channel读写消息，无内置等待循环（C）
+*   **基于回调**: 异步分配的方式接收消息，并作为事件循环的回调（C++，Dart）
+*   **基于端口**: 接收的消息传递到port或future上（Rust）
+*   **同步调用**: 等待应答后返回结果（Go，C++单元测试）
 
 <!--
 Bindings provide some or all of the following principal operations:
 -->
-绑定提供以下操作的部分或全部:
+绑定提供以下主要操作的部分或全部:
 
 <!--
 *   **Encode**: in-place transform native data structures into the wire format
@@ -361,37 +383,37 @@ Bindings provide some or all of the following principal operations:
     move-only types)
 *   **Call**: invoke interface method
 -->
-*   **编码**: 将本机数据结构转换为线格式 (与验证相结合)
-*   **解码**: 将线格式转换为本机数据结构 (与验证相结合)
-*   **复制/移动到惯用格式**: 把本机数据结构的内容复制到惯用数据结构中，操作会被移除。
-*   **复制/移动到本机格式**: 把惯用数据结构的内容复制到本机数据结构中，操作会被移除。
-*   **克隆**: 复制本机或惯用数据结构 (不包含只移动的类型)
+*   **编码**: 将本地数据结构原地转换为传输格式（与验证相结合）
+*   **解码**: 将传输格式原地转换为本地数据结构（与验证相结合）
+*   **复制/移动到惯用形式**: 把本地数据结构的内容复制为惯用数据结构中，同时移除handle。
+*   **复制/移动到本机格式**: 把惯用数据结构的内容复制为本地数据结构中，同时移除handle。
+*   **克隆**: 复制本地或惯用数据结构 (不包含只可移动的类型)
 *   **调用**: 调用接口方法
 
-<!--Workflow
+<!--
+## Workflow
 -->
 
-## 工作流
+# 工作流
 
 <!--
-
 This section describes the workflow of authors, publishers, and consumers of IPC
 protocols described using FIDL.
 -->
+本章节介绍了使用FIDL描述IPC协议的作者，发布者，使用者的工作流。
 
-这个章节介绍了IPC协议的作者，发布者，使用者的工作流。
 <!--
- Authoring FIDL
+# Authoring FIDL
 -->
 
 
-# 创作 FIDL
+## 创作 FIDL
 
 <!--
 The author of a FIDL based protocol creates one or more ***.fidl files** to
 describe their data structures and interfaces.
 -->
-作者基于FIDL协议创作一个或多个***.fidl 文件*** 来描述他们的数据结构与接口。
+基于FIDL协议的作者创建一个或多个**fidl文件**来描述他们的数据结构与接口。
 
 <!--
 FIDL files are grouped into one or more **FIDL libraries** by the author. Each
@@ -400,7 +422,7 @@ library name. FIDL files within the same library implicitly have access to all
 other declarations within the same library. The order of declarations within the
 FIDL files that make up a library is not significant.
 -->
-作者将FIDL文件分组为一个或多个**FIDL 库**。每个库表示一组逻辑相关的功能，并具有唯一命名。 在同一个库中的FIDL文件可以访问库中其它FIDL文件。FIDL文件中的声明顺序并不重要。
+作者将FIDL文件分组为一个或多个**FIDL库**。每个库表示一组逻辑相关的功能，并具有唯一命名。在同一个库中的FIDL文件可以访问库中所有其它的声明，并且FIDL文件中的声明顺序并不重要。
 
 <!--
 FIDL files of one library can access declarations within another FIDL library by
@@ -409,20 +431,20 @@ symbols available for use thereby enabling the construction of protocols derived
 from them. Imported symbols must be qualified by the library name or by an alias
 to prevent namespace collisions.
 -->
-一个FIDL库中的FIDL文件通过**importing**声明可以访问另一个库中的模块。导入其它库使他们的符号可供使用，从而可以构建他们的派生协议。导入的空号必须通过库名或加名来限定，以防止命名空间冲突。
+一个FIDL库中的FIDL文件通过**importing**声明可以访问另一个库中的模块。导入其它库使得它们的符号可供使用，从而可以构建它们的派生协议。导入的符号必须通过库名或别名来限定，以防止命名空间冲突。
 
 <!--
 # Publishing FIDL
 -->
 
-# 发布 FIDL
+## 发布 FIDL
 
 <!--
 The publisher of a FIDL based protocol is responsible for making FIDL libraries
 available to consumers. For example, the author may disseminate FIDL libraries in
 a public source repository or distribute them as part of an SDK.
 -->
-基于FIDL协议的发布者负责向使用者提供FIDL库。例如, 作者可以在公共源中分者FIDL库，或者将他们分发为SDK中的一部分。
+基于FIDL协议的发布者负责向使用者提供FIDL库。例如，作者可以在公共源仓库中分发FIDL库，或者将他们以SDK中的一部分的方式进行分发。
 
 <!--
 Consumers need only point the FIDL compiler at the directory which contains the
@@ -430,12 +452,12 @@ FIDL files for a library (and its dependencies) to generate code for that
 library. The precise details for how this is done will generally be addressed by
 the consumer's build system.
 -->
-使用者只需要在FIDL目录中指向FIDL编译器，该目录包含库中的FIDL文件(与他们的依赖项)。 这项工作的具体细节通常将由使用者的构建系统来解决。
+使用者只需向FIDL编译器指定包含FIDL库文件的目录（以及它们的依赖项）。这项工作的具体细节通常将由使用者的构建系统来解决。
 
 <!--
 # Consuming FIDL
 -->
-# 使用 FIDL
+## 使用FIDL
 
 <!--
 The consumer of a FIDL based protocol uses the FIDL compiler to generate code
@@ -444,17 +466,17 @@ language runtimes, the consumer may have a choice of a few different flavors of
 generated code all of which are interoperable at the wire format level but
 perhaps not at the source level.
 -->
-基于FIDL协议的使用者使用FIDL编译器生成适用于他们语言运行时特定绑定的代码。 对于某些语言运行时，使用者需要选择几种不同的代码开成类型，他们可以在线格式上相互操作，但可能不在源码级别。
+基于FIDL的协议使用者利用FIDL编译器生成适用于他们语言运行时特定绑定的代码。对于某些语言运行时，使用者可以选择几种不同风格来生成代码，他们可以传输格式上互操作，但可能在源码级别上可能不行。
 
 <!--
 In the Fuchsia world build environment, generating code from FIDL libraries will
 be done automatically for all relevant languages by individual FIDL build
 targets for each library.
 -->
-在Fuchsia世界构建环境中，FIDL库生成代码将自动为每个相关的语言通过每个FIDL构建目标自动完成。
+在Fuchsia的构建环境中，从FIDL库生成代码将自动为每个相关的语言通过每个FIDL构建目标自动完成。
 
 <!--
 In the Fuchsia SDK environment, generating code from FIDL libraries will be done
 as part of compiling the applications which use them.
 -->
-在Fuchsia SDK环境中，从FIDL库中生成代码将作为编译使用他们的应用程序的一部分。
+在Fuchsia的SDK环境中，从FIDL库中生成代码的过程将作为编译使用他们的应用程序的构建过程一部分。
