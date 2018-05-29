@@ -164,7 +164,7 @@ by re-running the `fx full-build` command alone.
 <!---
 Alternatively, you can use the [underlying build system directly](development/build/README.md).
 --->
-另外，你也可以直接使用[底层构建系统](https://github.com/fuchsia-mirror/docs/blob/d6693145a6db79ef6db798683c743e640f7d4f96/development/build/README.md)来执行构建。
+另外，你也可以直接使用[底层构建系统（英文原文）](https://github.com/fuchsia-mirror/docs/blob/d6693145a6db79ef6db798683c743e640f7d4f96/development/build/README.md)来执行构建。
 
 <!---
 #### [optional] Customize Build Environment
@@ -239,7 +239,7 @@ To override the default behaviors, pass flags to `fx set`:
 To get Fuchsia running on hardware requires using the paver, which these
 [instructions](/development/workflows/fuchsia_paver.md) will help you get up and running with.
 --->
-在硬件上运行Fuchsia需要使用paver，使用[该指南](https://github.com/fuchsia-mirror/docs/blob/master/development/workflows/fuchsia_paver.md)会帮助你上手使用它。
+在硬件上运行Fuchsia需要使用paver，使用[该指南（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/development/workflows/fuchsia_paver.md)会帮助你上手使用它。
 
 <!---
 ### Boot from QEMU
@@ -253,7 +253,7 @@ disk image:
 --->
 ### 从QEMU启动
 
-如果没有已支持的硬件，你也可以通过[QMEU](https://github.com/fuchsia-mirror/zircon/blob/master/docs/qemu.md)仿真的方式运行Fuchsia。Fuchsia在`buildtools/qemu`目录下同时也包含了QEMU的二进制可执行文件。
+如果没有已支持的硬件，你也可以通过[QMEU（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/docs/qemu.md)仿真的方式运行Fuchsia。Fuchsia在`buildtools/qemu`目录下同时也包含了QEMU的二进制可执行文件。
 
 可以通过`fx run`命令在QEMU中使用本地构建的磁盘镜像来启动Zircon：
 
@@ -316,7 +316,7 @@ a virtual interface for QEMU's use.
 
 Once this is done you can add the `-N` and `-u` flags to `fx run`:
 --->
-首先，为QEMU[配置](https://github.com/fuchsia-mirror/zircon/blob/master/docs/qemu.md#enabling-networking-under-qemu)一块虚拟网卡。完成此步骤后，在`fx run`传递`-N`和`-u`选项即可：
+首先，为QEMU[配置（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/docs/qemu.md#enabling-networking-under-qemu)一块虚拟网卡。完成此步骤后，在`fx run`传递`-N`和`-u`选项即可：
 
 <!---
 ```
@@ -427,7 +427,7 @@ If you would like to use a text shell inside a terminal emulator from within the
 you can launch the [term](https://fuchsia.googlesource.com/topaz/+/master/app/term) by selecting the
 "Ask Anything" box and typing `moterm`.
 --->
-如果你想在图形shell中使用字符shell的终端模拟器（Terminal），请选择"Ask Anything"模块，并输入`moterm`来启动[term](https://github.com/fuchsia-mirror/topaz/blob/master/app/term)。
+如果你想在图形shell中使用字符shell的终端模拟器（Terminal），请选择"Ask Anything"模块，并输入`moterm`来启动[term（英文原文）](https://github.com/fuchsia-mirror/topaz/blob/master/app/term)。
 
 
 <!---
@@ -483,6 +483,6 @@ fx run-test <test name> [<test args>]
 --->
 ## 其他一些有用的文档
 
-* 如何[使用Zircon](https://github.com/fuchsia-mirror/zircon/blob/master/docs/getting_started.md#copying-files-to-and-from-zircon)，包括拷贝文件，网络启动，查看日志等。
+* 如何[使用Zircon](/zircon/docs/getting_started.md#Zircon双向拷贝文件)，包括拷贝文件，网络启动，查看日志等。
 * [Fuchsia文档主页](README.md)。
-* 关于系统引导程序的[更多信息](https://github.com/fuchsia-mirror/garnet/blob/master/bin/sysmgr/)。
+* 关于系统引导程序的[更多信息（英文原文）](https://github.com/fuchsia-mirror/garnet/blob/master/bin/sysmgr/)。

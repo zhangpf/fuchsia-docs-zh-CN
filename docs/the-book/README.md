@@ -82,9 +82,9 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
  - 组件
  - [命名空间](https://github.com/fuchsia-mirror/docs/blob/master/the-book/namespaces.md)
  - [沙箱](https://github.com/fuchsia-mirror/docs/blob/master/the-book/sandboxing.md)
- - [Story][framework-story]
- - [Module][framework-module]
- - [Agent][framework-agent]
+ - [Story（英文原文）][framework-story]
+ - [Module（英文原文）][framework-module]
+ - [Agent（英文原文）][framework-agent]
  - 链接
 
 <!---
@@ -99,10 +99,10 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 --->
 ## 存储
 
- - [块设备](https://github.com/fuchsia-mirror/docs/blob/master/the-book/block_devices.md)
- - [文件系统](https://github.com/fuchsia-mirror/docs/blob/master/the-book/filesystems.md)
+ - [块设备（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/block_devices.md)
+ - [文件系统（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/filesystems.md)
  - 目录层次结构
- - [Ledger][ledger]
+ - [Ledger（英文原文）][ledger]
  - 文档存储
  - 应用cache
 
@@ -119,8 +119,8 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 ## 网络
 
  - 以太网
- - [无线网](https://github.com/fuchsia-mirror/docs/blob/master/the-book/wireless_networking.md)
- - [蓝牙][bluetooth]
+ - [无线网（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/wireless_networking.md)
+ - [蓝牙（英文原文）][bluetooth]
  - Sockets
  - HTTP
 
@@ -136,12 +136,12 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 --->
 ## 图形化
 
- - [Magma（vulkan驱动）][magma]
- - [Escher（基于物理的渲染器）][escher]
- - [Scenic（合成器）][scenic]
- - [输入管理器][input-manager]
- - [视图管理器][view-manager]
- - [Flutter（UI工具包）][flutter]
+ - [Magma（vulkan驱动）（英文原文）][magma]
+ - [Escher（基于物理的渲染器）（英文原文）][escher]
+ - [Scenic（合成器）（英文原文）][scenic]
+ - [输入管理器（英文原文）][input-manager]
+ - [视图管理器（英文原文）][view-manager]
+ - [Flutter（UI工具包）（英文原文）][flutter]
 
 <!-- 
 ## Media

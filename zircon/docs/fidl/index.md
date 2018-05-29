@@ -1,7 +1,7 @@
 <!--
 # FIDL: Overview
 -->
-FIDL概述
+# FIDL概述
 ----
 
 [*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/index.md)
@@ -33,12 +33,12 @@ This document is a description of the Fuchsia Interface Definition Language
 -->
 ## 相关文档
 
-*   [FIDL: 传输格式规范][FIDL: Wire Format Specification]
-*   [FIDL: 语言规范][FIDL: Language Specification]
-*   [FIDL: 编译规范][FIDL: Compiler Specification]
-*   [FIDL: 绑定C语言][FIDL: C Language Bindings]
-*   [FIDL: 绑定C++语言][FIDL: C++ Language Bindings]
-*   [FIDL示例][FIDL Examples]
+*   [FIDL: 传输格式规范（英文原文）][FIDL: Wire Format Specification]
+*   [FIDL: 语言规范（英文原文）][FIDL: Language Specification]
+*   [FIDL: 编译规范（英文原文）][FIDL: Compiler Specification]
+*   [FIDL: 绑定C语言（英文原文）][FIDL: C Language Bindings]
+*   [FIDL: 绑定C++语言（英文原文）][FIDL: C++ Language Bindings]
+*   [FIDL示例（英文原文）][FIDL Examples]
 
 [FIDL: Wire Format Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/wire-format/index.md
 [FIDL: Language Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/language.md
@@ -244,11 +244,11 @@ Requirements
 
 ## 代码位置
 
-- [编译器](https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/host/fidl)
-- [C绑定](https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/ulib/fidl)
-- [C++绑定](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/cpp)
-- [Go绑定](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/go)
-- [Rust绑定](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/rust)
+- [编译器（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/host/fidl)
+- [C绑定（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/ulib/fidl)
+- [C++绑定（英文原文）](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/cpp)
+- [Go绑定（英文原文）](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/go)
+- [Rust绑定（英文原文）](https://github.com/fuchsia-mirror/garnet/tree/master/public/lib/fidl/rust)
 
 <!--
 ## Constituent Parts of Specification
@@ -269,7 +269,7 @@ The fidl wire format is documented [FIDL: Wire Format Specification].
 
 FIDL传输格式规范了FIDL消息是如何在内存中表示以支持IPC传输。
 
-[FIDL传输格式的文档][FIDL: Wire Format Specification]
+[FIDL传输格式的文档（英文原文）][FIDL: Wire Format Specification]
 
 <!--
 ### FIDL Language
@@ -284,7 +284,7 @@ The fidl language is documented [FIDL: Language Specification].
 
 FIDL语言是**fidl**文件来描述接口的语法。
 
-[FIDL语言的文档][FIDL: Language Specification].
+[FIDL语言的文档（英文原文）][FIDL: Language Specification].
 
 <!--
  FIDL Compiler
@@ -300,7 +300,7 @@ The fidl compiler is documented [FIDL: Compiler Specification].
 
 FIDL编译器的功能是为使用与实现FIDL语言描述的接口的程序生成代码。
 
-[FIDL编译器的文档][FIDL: Compiler Specification].
+[FIDL编译器的文档（英文原文）][FIDL: Compiler Specification].
 
 <!--
  FIDL Bindings
@@ -322,8 +322,8 @@ Languages-specific topics:
 *   [FIDL: C++ Language Bindings]
 -->
 语言相关的主题:
-*   [FIDL: C语言绑定][FIDL: C Language Bindings]
-*   [FIDL: C++语言绑定][FIDL: C++ Language Bindings]
+*   [FIDL: C语言绑定（英文原文）][FIDL: C Language Bindings]
+*   [FIDL: C++语言绑定（英文原文）][FIDL: C++ Language Bindings]
 
 <!--
 Bindings are available in various flavors depending on the language:

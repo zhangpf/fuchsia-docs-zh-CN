@@ -19,7 +19,7 @@ Dispatcher interface. These are implemented in
 [kernel/object](../kernel/object). Many are self-contained higher-level Objects.
 Some wrap lower-level lk primitives.
 --->
-Zircon内核管理许多不同类型的对象。本质上讲，这些对象是能够通过系统调用直接访问，并实现了Dispatcher接口的C++类。对象的实现在[kernel/object](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/../kernel/object)目录下，它们中许多是自依赖的高层对象，而另外一些是对底层lk原始操作的封装。
+Zircon内核管理许多不同类型的对象。本质上讲，这些对象是能够通过系统调用直接访问，并实现了Dispatcher接口的C++类。对象的实现在[kernel/object（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/../kernel/object)目录下，它们中许多是自依赖的高层对象，而另外一些是对底层lk原始操作的封装。
 
 <!---
 ## [System Calls](syscalls.md)
@@ -55,9 +55,9 @@ and [*zx_port_queue()*](syscalls/port_queue.md).
 upon them) is controlled by the Job in which the calling Process is contained.
 --->
 
-1. 没有任何限制的调用。只有少部分调用是属于这一类，如[*zx_clock_get()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/clock_get.md)和[*zx_nanosleep()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/nanosleep.md)可以被任意线程调用。
-2. 以`Handle`作为首参数的调用，用以表示它们所操作的对象。绝大多数的调用都是这一类，例如[*zx_channel_write()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)和[*zx_port_queue()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md)。
-3. 创建新对象的系统调用，不需要以`Handle`作为参数。例如[*zx_event_create()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/event_create.md)和[*zx_channel_create()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_create.md)。这一类调用的访问是受调用`Process`进程所在的`Job`所控制的（这同时也是它们的限制）。
+1. 没有任何限制的调用。只有少部分调用是属于这一类，如[*zx_clock_get()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/clock_get.md)和[*zx_nanosleep()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/nanosleep.md)可以被任意线程调用。
+2. 以`Handle`作为首参数的调用，用以表示它们所操作的对象。绝大多数的调用都是这一类，例如[*zx_channel_write()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)和[*zx_port_queue()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md)。
+3. 创建新对象的系统调用，不需要以`Handle`作为参数。例如[*zx_event_create()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/event_create.md)和[*zx_channel_create()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_create.md)。这一类调用的访问是受调用`Process`进程所在的`Job`所控制的（这同时也是它们的限制）。
 
 <!---
 System calls are provided by libzircon.so, which is a "virtual" shared
@@ -66,7 +66,7 @@ library that the Zircon kernel provides to userspace, better known as the
 They are C ELF ABI functions of the form *zx_noun_verb()* or
 *zx_noun_verb_direct-object()*.
 --->
-系统调用由libzircon.so所提供。libzircon.so是由Zircon内核提供给用户空间的”虚拟“共享库，更有名的说法是[*虚拟动态共享库（ virtual Dynamic Shared Object）*或者简称为vDSO](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/vdso.md)，是由一系列以`zx_noun_verb()`或
+系统调用由libzircon.so所提供。libzircon.so是由Zircon内核提供给用户空间的”虚拟“共享库，更有名的说法是[*虚拟动态共享库（ virtual Dynamic Shared Object）*或者简称为vDSO（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/vdso.md)，是由一系列以`zx_noun_verb()`或
 `zx_noun_verb_direct-object()`为名的ELF ABI C函数所组成。
 
 <!---
@@ -74,12 +74,12 @@ The system calls are defined by [syscalls.abigen](../system/public/zircon/syscal
 and processed by the [abigen](../system/host/abigen/) tool into include files and glue
 code in libzircon and the kernel's libsyscalls.
 --->
-系统调用由[syscalls.abigen](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/../system/public/zircon/syscalls.abigen)所定义，并被[abigen](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/../system/host/abigen/)工具所处理。`abigen`将文件和胶水代码一起添加到`libzircon`中和内核的`libsyscalls`中。
+系统调用由[syscalls.abigen（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/../system/public/zircon/syscalls.abigen)所定义，并被[abigen（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/../system/host/abigen/)工具所处理。`abigen`将文件和胶水代码一起添加到`libzircon`中和内核的`libsyscalls`中。
 
 <!---
 ## [Handles](handles.md) and [Rights](rights.md)
 --->
-## 句柄（[Handle](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/handles.md)）和权限（[Right](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/rights.md)）
+## 句柄（[Handle（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/handles.md)）和权限（[Right（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/rights.md)）
 <!---
 Objects may have multiple Handles (in one or more Processes) that refer to them.
 --->
@@ -97,7 +97,7 @@ Handles may be moved from one Process to another by writing them into a Channel
 [*zx_process_start()*](syscalls/process_start.md) to pass a Handle as the argument
 of the first thread in a new Process.
 --->
-可以通过向`Channel`写入`Handle`的方式，将`Handle`从一个`Process`移动到另外一个`Process`（使用 [*zx_channel_write()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)函数），或通过使用[*zx_process_start()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md)函数，作为新`Process`的第一个线程的启动参数的形式传递一个`Handle`。
+可以通过向`Channel`写入`Handle`的方式，将`Handle`从一个`Process`移动到另外一个`Process`（使用 [*zx_channel_write()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)函数），或通过使用[*zx_process_start()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md)函数，作为新`Process`的第一个线程的启动参数的形式传递一个`Handle`。
 
 <!---
 
@@ -116,7 +116,7 @@ optionally with reduced Rights.  The [*zx_handle_close()*](syscalls/handle_close
 system call closes a Handle, releasing the Object it refers to, if that Handle is
 the last one for that Object.
 --->
-[*zx_handle_duplicate()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_duplicate.md)和[*zx_handle_replace()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_replace.md)调用可被用于获取指向`Object`的`Handle`参数的额外副本，并以缩小的权限作为可选项。 [*zx_handle_close()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_close.md)用于关闭`Handle`，如果它是所指向的`Object`的最后一个句柄，也将同时释放这个`Object`。
+[*zx_handle_duplicate()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_duplicate.md)和[*zx_handle_replace()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_replace.md)调用可被用于获取指向`Object`的`Handle`参数的额外副本，并以缩小的权限作为可选项。 [*zx_handle_close()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_close.md)用于关闭`Handle`，如果它是所指向的`Object`的最后一个句柄，也将同时释放这个`Object`。
 
 <!---
 ## Kernel Object IDs
@@ -156,7 +156,7 @@ owned by Jobs, which define various resource limitations.  Jobs are owned by
 parent Jobs, all the way up to the Root Job which was created by the kernel at
 boot and passed to [`userboot`, the first userspace Process to begin execution](userboot.md).
 --->
-`Thread`表示在拥有它们的`Process`的地址空间中线程的执行（CPU寄存器，运行栈等）。`Process`被`Job`所拥有，而后者定义了各种可用资源的上限。`Job`又被父`Job`所拥有，并一直可以追溯到根任务（`Root Job`）。根任务于内核在启动时所创建，并被传递到[第一个被执行的用户进程`userboot`](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/userboot.md)中。
+`Thread`表示在拥有它们的`Process`的地址空间中线程的执行（CPU寄存器，运行栈等）。`Process`被`Job`所拥有，而后者定义了各种可用资源的上限。`Job`又被父`Job`所拥有，并一直可以追溯到根任务（`Root Job`）。根任务于内核在启动时所创建，并被传递到[第一个被执行的用户进程`userboot`（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/userboot.md)中。
 
 <!---
 Without a Job Handle, it is not possible for a Thread within a Process to create another
@@ -169,7 +169,7 @@ Process or another Job.
 [Program loading](program_loading.md) is provided by userspace facilities and
 protocols above the kernel layer. 
 -->
-[程序的加载](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/program_loading.md)机制由用户空间设施和内核层之上的协议所提供。
+[程序的加载（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/program_loading.md)机制由用户空间设施和内核层之上的协议所提供。
 
 <!---
 See: [process_create](syscalls/process_create.md),
@@ -178,7 +178,7 @@ See: [process_create](syscalls/process_create.md),
 and [thread_start](syscalls/thread_start.md). 
 --->
 
-请查看：[process_create](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_create.md)，[process_start](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md)，[thread_create](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_create.md)和[thread_start](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_start.md)。 
+请查看：[process_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_create.md)，[process_start（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md)，[thread_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_create.md)和[thread_start（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_start.md)。 
 
 <!-- ## Message Passing: Sockets and Channels -->
 ## 消息传递：Socket和Channel
@@ -225,7 +225,7 @@ See: [channel_create](syscalls/channel_create.md),
 and [socket_write](syscalls/socket_write.md). 
 --->
 
-请查看：[channel_create](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_create.md)，[channel_read](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_read.md)，[channel_write](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)，[channel_call](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_call.md)，[socket_create](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_create.md)，[socket_read](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_read.md)和[socket_write](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_write.md)。
+请查看：[channel_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_create.md)，[channel_read（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_read.md)，[channel_write（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)，[channel_call（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_call.md)，[socket_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_create.md)，[socket_read（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_read.md)和[socket_write（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_write.md)。
 
 <!---
 ## Objects and Signals
@@ -246,7 +246,7 @@ See [signals](signals.md) for more information.
 --->
 线程可以等待一个或多个`Object`被信号激活。
 
-请查看[signals](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/signals.md)以了解更多的信息。
+请查看[signals（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/signals.md)以了解更多的信息。
 
 <!---
 ## Waiting: Wait One, Wait Many, and Ports
@@ -260,7 +260,7 @@ to wait for a signal to be active on a single handle or
 signals on multiple handles.  Both calls allow for a timeout after
 which they'll return even if no signals are pending.
 --->
-`Thread`可以使用[*zx_object_wait_one()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_one.md)来等待某个句柄被收到信号，或者使用[*zx_object_wait_many()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_many.md)方法来等待多个句柄收到信号。两种调用都允许设置超时点，即没有信号激活，它们也会因超时而返回。
+`Thread`可以使用[*zx_object_wait_one()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_one.md)来等待某个句柄被收到信号，或者使用[*zx_object_wait_many()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_many.md)方法来等待多个句柄收到信号。两种调用都允许设置超时点，即没有信号激活，它们也会因超时而返回。
 
 <!---
 If a Thread is going to wait on a large set of handles, it is more efficient to use
@@ -276,7 +276,7 @@ See: [port_create](syscalls/port_create.md),
 [port_wait](syscalls/port_wait.md),
 [port_cancel](syscalls/port_cancel.md).
 --->
-请查看：[port_create](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_create.md)，[port_queue](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md)，[port_wait](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_wait.md)和[port_cancel](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_cancel.md)。
+请查看：[port_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_create.md)，[port_queue（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md)，[port_wait（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_wait.md)和[port_cancel（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_cancel.md)。
 
 
 <!---
@@ -299,7 +299,7 @@ closed), the PEER_CLOSED signal is asserted on the other side.
 See: [event_create](syscalls/event_create.md),
 and [eventpair_create](syscalls/eventpair_create.md).
 --->
-请查看：[event_create](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/event_create.md)和[eventpair_create](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/eventpair_create.md)。
+请查看：[event_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/event_create.md)和[eventpair_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/eventpair_create.md)。
 
 
 <!---
@@ -319,7 +319,7 @@ They may be mapped into the address space of a Process with
 [*zx_vmar_unmap()*](syscalls/vmar_unmap.md).  Permissions of
 mapped pages may be adjusted with [*zx_vmar_protect()*](syscalls/vmar_protect.md).
 --->
-VMO可以通过[*zx_vmar_map()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)被映射到某个`Process`的地址空间，或者通过[*zx_vmar_unmap()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap.md)解除映射。这些映射页的权限可通过[*zx_vmar_protect()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_protect.md)函数进行调整。
+VMO可以通过[*zx_vmar_map()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)被映射到某个`Process`的地址空间，或者通过[*zx_vmar_unmap()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap.md)解除映射。这些映射页的权限可通过[*zx_vmar_protect()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_protect.md)函数进行调整。
 
 <!---
 VMOs may also be read from and written to directly with
@@ -327,7 +327,7 @@ VMOs may also be read from and written to directly with
 Thus the cost of mapping them into an address space may be avoided for one-shot operations
 like "create a VMO, write a dataset into it, and hand it to another Process to use."
 --->
-VMO可通过[*zx_vmo_read()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_read.md)和[*zx_vmo_write()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_write.md)操作对它们进行直接的读写操作。因此，通过一次合并操作可以避免映射到地址空间的开销，例如”创建VMO，向其写入数据集后，传入另一进程供其使用“。
+VMO可通过[*zx_vmo_read()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_read.md)和[*zx_vmo_write()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_write.md)操作对它们进行直接的读写操作。因此，通过一次合并操作可以避免映射到地址空间的开销，例如”创建VMO，向其写入数据集后，传入另一进程供其使用“。
 
 
 <!---
@@ -346,7 +346,7 @@ entire address space.  This space can be carved up via the
 VMARs (called subregions or children) which can be used to group together
 parts of the address space.
 --->
-虚拟内存地址区域（Virtual Memory Address Regions，即VMAR）提供了管理进程地址空间的抽象。在进程创建时，根VMAR的句柄被提供给进程的创建者。该句柄指向一个涵盖整个地址空间的VMAR，该空间可通过[*zx_vmar_map()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)和[*zx_vmar_allocate()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)接口进行分割操作。同时，[*zx_vmar_allocate()*](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)可以被用作生成新的VMAR（被称为子区域或子代）以将地址空间的多个部分组合在一起。
+虚拟内存地址区域（Virtual Memory Address Regions，即VMAR）提供了管理进程地址空间的抽象。在进程创建时，根VMAR的句柄被提供给进程的创建者。该句柄指向一个涵盖整个地址空间的VMAR，该空间可通过[*zx_vmar_map()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)和[*zx_vmar_allocate()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)接口进行分割操作。同时，[*zx_vmar_allocate()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)可以被用作生成新的VMAR（被称为子区域或子代）以将地址空间的多个部分组合在一起。
 
 <!---
 See: [vmar_map](syscalls/vmar_map.md),
@@ -355,7 +355,7 @@ See: [vmar_map](syscalls/vmar_map.md),
 [vmar_unmap](syscalls/vmar_unmap.md),
 [vmar_destroy](syscalls/vmar_destroy.md),
 --->
-请查看：[vmar_map](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)，[vmar_allocate](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)，[vmar_protect](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_protect.md)，[vmar_unmap](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap.md)和[vmar_destroy](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_destroy.md)。
+请查看：[vmar_map（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)，[vmar_allocate（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)，[vmar_protect（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_protect.md)，[vmar_unmap（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap.md)和[vmar_destroy（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_destroy.md)。
 
 <!---
 ## Futexes
@@ -376,4 +376,4 @@ See: [futex_wait](syscalls/futex_wait.md),
 [futex_wake](syscalls/futex_wake.md),
 [futex_requeue](syscalls/futex_requeue.md).
 --->
-请查看： [futex_wait](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wait.md)，[futex_wake](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wake.md)和[futex_requeue](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_requeue.md)。
+请查看： [futex_wait（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wait.md)，[futex_wake（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wake.md)和[futex_requeue（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_requeue.md)。

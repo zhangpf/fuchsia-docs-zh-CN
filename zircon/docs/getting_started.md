@@ -219,7 +219,7 @@ See [QEMU](qemu.md) for information on building and using QEMU with zircon.
 
 如果你使用真实硬件进行测试，那么可以跳过此步骤，但是模拟器可以很方便地进行快速本地测试，所以该步骤通常是值得进行的。
 
-对于在zircon中构建和使用QEMU，请查看[相应的文档](https://github.com/fuchsia-mirror/zircon/blob/master/qemu.md)。
+对于在zircon中构建和使用QEMU，请查看[相应的文档（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/qemu.md)。
 
 <!---
 ## Build Toolchains (Optional)
@@ -379,7 +379,7 @@ The [GigaBoot20x6](https://fuchsia.googlesource.com/zircon/+/master/bootloader) 
 which does not require any special host configuration or privileged access to use.
 --->
 ### 通过Gigaboot启动
-基于[GigaBoot20x6](https://github.com/fuchsia-mirror/zircon/tree/master/bootloader)的bootloader使用一种简单的基于IPV6的UDP网络启动协议，它不需要特殊的服务器配置和使用权限设置。
+基于[GigaBoot20x6（英文原文）](https://github.com/fuchsia-mirror/zircon/tree/master/bootloader)的bootloader使用一种简单的基于IPV6的UDP网络启动协议，它不需要特殊的服务器配置和使用权限设置。
 
 <!---
 It does this by taking advantage of IPV6 Link Local Addressing and Multicast,
@@ -393,7 +393,7 @@ If you have a device (for example a Broadwell or Skylake Intel NUC) running
 GigaBoot20x6 first create a USB drive [manually](https://fuchsia.googlesource.com/zircon/+/master/docs/targets/acer12.md#How-to-Create-a-Bootable-USB-Flash-Drive)
 or (Linux only) using the [script](https://fuchsia.googlesource.com/scripts/+/master/build-bootable-usb-gigaboot.sh).
 --->
-如果你有运行GigaBoot20x6的硬件设备（例如配备Broadwell或Skylake结构的CPU的Intel NUC），请首先[手动创建USB启动盘](https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/acer12.md#how-to-create-a-bootable-usb-flash-drive)，或使用[脚本](https://github.com/fuchsia-mirror/scripts/blob/master/build-bootable-usb-gigaboot.sh)（仅针对Linux）。然后运行：
+如果你有运行GigaBoot20x6的硬件设备（例如配备Broadwell或Skylake结构的CPU的Intel NUC），请首先[手动创建USB启动盘（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/docs/targets/acer12.md#how-to-create-a-bootable-usb-flash-drive)，或使用[脚本](https://github.com/fuchsia-mirror/scripts/blob/master/build-bootable-usb-gigaboot.sh)（仅针对Linux）。然后运行：
 <!---
 ```
 $BUILDDIR/tools/bootserver $BUILDDIR/zircon.bin
@@ -468,11 +468,11 @@ For random tips on debugging in the zircon environment see
 --->
 ## 调试
 
-关于在Zircon环境中进行调试的随机提示信息，请查看[调试](https://github.com/fuchsia-mirror/zircon/blob/master/docs/debugging/tips.md)部分。
+关于在Zircon环境中进行调试的随机提示信息，请查看[调试（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/docs/debugging/tips.md)部分。
 
 <!---
 ## Contribute changes
 * See [contributing.md](contributing.md).
 --->
 ## 贡献代码变更
-* 请查看[贡献代码](https://github.com/fuchsia-mirror/zircon/blob/master/docs/contributing.md)部分。
+* 请查看[贡献代码（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/docs/contributing.md)部分。

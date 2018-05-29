@@ -19,7 +19,7 @@ environment views that layer at the latest revision and views the lower layers
 at specific revisions in the past.
 --->
 
-在初始化开发环境（详情请查看[获取代码](https://github.com/fuchsia-mirror/docs/blob/a774512b9d926ee438a77ddc6a5f362b71e0cc4b/getting_source.md)）步骤中，你已选择了一个层（layer）进行开发。该层的代码处于最新版本，而它下面的层则处于过去的某个历史版本中（*译者注：类似于git中的submodule，子模块并不会直接更新到最新版本*）。
+在初始化开发环境（详情请查看[获取代码](/docs/development/source_code/README.md)）步骤中，你已选择了一个层（layer）进行开发。该层的代码处于最新版本，而它下面的层则处于过去的某个历史版本中（*译者注：类似于git中的submodule，子模块并不会直接更新到最新版本*）。
 
 <!---
 If you want to switch to working on a different layer, either to get the source
@@ -36,7 +36,7 @@ revisions, you have two choices:
    your source tree to refer to the new layer and prints instructions for how to
    actually get the source and build the newly configured layer.
 --->
-1. 采用和之前一样初始化的方式，[为该层初始化新的开发环境](https://github.com/fuchsia-mirror/docs/blob/a774512b9d926ee438a77ddc6a5f362b71e0cc4b/getting_source.md)。
+1. 采用和之前一样初始化的方式，[为该层初始化新的开发环境](/docs/development/source_code/README.md)。
 2. 通过`fx set-layer <layer>`命令切换现有的开发环境。该命令通过改变代码树`jiri`元信息来指向新的层，并显示如何真正获取代码和构建新配置层的说明。
 
 <!---

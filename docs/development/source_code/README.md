@@ -114,4 +114,4 @@ familiar with and can provide code review for the contents of the
 containing directory. See [maintainers.md](maintainers.md) for more
 discussion.**
 --->
-在每个仓库的根目录和许多其他目录下，有名为`MAINTAINERS`的文件，这些文件列出了熟悉该代码和为该目录下内容提供代码评阅的开发者邮箱列表。请查看[maintainers.md](https://github.com/fuchsia-mirror/docs/blob/d6693145a6db79ef6db798683c743e640f7d4f96/development/source_code/maintainers.md)以便进一步讨论。
+在每个仓库的根目录和许多其他目录下，有名为`MAINTAINERS`的文件，这些文件列出了熟悉该代码和为该目录下内容提供代码评阅的开发者邮箱列表。请查看[maintainers.md（英文原文）](https://github.com/fuchsia-mirror/docs/blob/d6693145a6db79ef6db798683c743e640f7d4f96/development/source_code/maintainers.md)以便进一步讨论。
