@@ -47,9 +47,9 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 ## Zircon核心
 
  - 设备管理器 & 设备主机
- - [设备驱动管理（DDK）][zircon-ddk]
+ - [设备驱动开发（DDK）][zircon-ddk]
  - [C系统库（libc）](libc.md)
- - [POSIX I/O（libfdio）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/life_of_an_open.md)
+ - [POSIX I/O（libfdio）（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/life_of_an_open.md)
  - [进程启动/ELF加载（liblaunchpad）](launchpad.md) 
 
 <!---
@@ -72,16 +72,16 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 --->
 ## Framework框架
 
- - [核心库](https://github.com/fuchsia-mirror/docs/blob/master/the-book/core_libraries.md)
+ - [核心库（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/core_libraries.md)
  - 应用模型
    - [接口描述语言（FIDL）][FIDL]
    - 服务
    - 上下文环境
- - [启动顺序](https://github.com/fuchsia-mirror/docs/blob/master/the-book/boot_sequence.md)
+ - [启动顺序（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/boot_sequence.md)
  - 设备，用户和story runner
  - 组件
- - [命名空间](https://github.com/fuchsia-mirror/docs/blob/master/the-book/namespaces.md)
- - [沙箱](https://github.com/fuchsia-mirror/docs/blob/master/the-book/sandboxing.md)
+ - [命名空间（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/namespaces.md)
+ - [沙箱（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/sandboxing.md)
  - [Story（英文原文）][framework-story]
  - [Module（英文原文）][framework-module]
  - [Agent（英文原文）][framework-agent]
