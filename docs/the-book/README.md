@@ -72,7 +72,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 --->
 ## Framework框架
 
- - [核心库（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/core_libraries.md)
+ - [核心库](core_libraries.md)
  - 应用模型
    - [接口描述语言（FIDL）][FIDL]
    - 服务
