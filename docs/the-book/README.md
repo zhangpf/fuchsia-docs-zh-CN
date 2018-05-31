@@ -77,7 +77,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
    - [接口描述语言（FIDL）][FIDL]
    - 服务
    - 上下文环境
- - [启动顺序（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/boot_sequence.md)
+ - [启动顺序](boot_sequence.md)
  - 设备，用户和story runner
  - 组件
  - [命名空间（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/namespaces.md)
