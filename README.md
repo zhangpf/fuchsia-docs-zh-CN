@@ -26,6 +26,12 @@
 * 翻译[the-book](https://github.com/fuchsia-mirror/docs/tree/master/the-book)
 * 完成zircon的文档
 
+## 贡献者列表
+
+感谢支持:heart:
+
++ [feixhan](https://github.com/feixhan)
+
 ## LICENSE
 
 因为本项目是Fuchsia的衍生品，因此各个仓库的中文翻译使用与原项目完全相同的LICENSE，你可以在每个子目录下找到这些LICENSE的副本。
