@@ -177,7 +177,7 @@ Consequently clients are responsible for deciding how to present names
 which contain invalid, undisplayable, or ambiguous character sequences to
 the user. -->
 
-对象名是容器的`Open()`方法的有效参数。请参见[FIDL接口](#FIDL接口)一节。对象名称旨在可以编码并解释为UTF-8的人类可读序列，但此属性并不由命名空间本身强制执行。因此，客户端需要负责决定如何向用户呈现可能包含无效、不可显示的或模糊字符序列的对象名称。
+对象名是容器的`Open()`方法的有效参数。请参见[FIDL接口](#fidl接口)一节。对象名称旨在可以编码并解释为UTF-8的人类可读序列，但此属性并不由命名空间本身强制执行。因此，客户端需要负责决定如何向用户呈现可能包含无效、不可显示的或模糊字符序列的对象名称。
 
 <!-- _TODO(jeffbrown): Document a specific strategy for how to present names._ -->
 *TODO(jeffbrown)：记录如何呈现名称的具体策略.*
@@ -218,7 +218,7 @@ Object relative path expressions have the following additional constraints: -->
   
 <!-- Object relative path expressions are valid arguments to a container's `Open()`
 method.  See [FIDL Interfaces](#fidl-interfaces). -->
-对象相对路径表达式是容器的`Open()`方法的有效参数，具体请参见[FIDL接口](FIDL接口)。
+对象相对路径表达式是容器的`Open()`方法的有效参数，具体请参见[FIDL接口](#fidl接口)。
 
 <!-- ### Client Interpreted Path Expressions -->
 ### 客户端解释路径表达式
@@ -260,7 +260,7 @@ in file manipulation APIs such as `open()`, `stat()`, `unlink()`, etc. -->
 
 例如，在某些客户端指定的“root”容器内，`/places/house/box/../sofa/cat`指定了位于`places/house/sofa/cat`的封装对象。
 
-包含这些可选功能的客户端解释路径表达式不是容器的`Open()`方法的有效参数; 它们必须在与命名空间通信之前由客户端进行翻译。具体请参见[FIDL接口](#FIDL接口)。例如，`fdio`在文件操作API中实现了`..`路径的客户端解释，例如这些操作包括`open()`、`stat()`和`unlink()`等。
+包含这些可选功能的客户端解释路径表达式不是容器的`Open()`方法的有效参数; 它们必须在与命名空间通信之前由客户端进行翻译。具体请参见[FIDL接口](#fidl接口)。例如，`fdio`在文件操作API中实现了`..`路径的客户端解释，例如这些操作包括`open()`、`stat()`和`unlink()`等。
 
 <!-- ## Namespace Transfer -->
 ## 命名空间传输
