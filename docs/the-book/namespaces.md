@@ -295,7 +295,7 @@ _For more information about the namespace your component can expect to
 receive from its environment, please consult the documentation related to
 the component type you are implementing._ -->
 
-本节描述了在Fuchsia上运行的典型组件的常规命名空间布局。相对于其他部件和权限，组件命名空间的准确内容和组织，根据组件的角色、类型、标识和作用域不同而有很大差异。有关如何使用命名空间为组件创建沙箱的信息，请参见[sandboxing.md（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/sandboxing.md)。
+本节描述了在Fuchsia上运行的典型组件的常规命名空间布局。相对于其他部件和权限，组件命名空间的准确内容和组织，根据组件的角色、类型、标识和作用域不同而有很大差异。有关如何使用命名空间为组件创建沙箱的信息，请参见[Fuchsia沙箱文档](sandboxing.md)。
 
 *有关组件可以从其环境接收的命名空间的更多信息，请参见与你正在实现的组件类型相关的文档。*
 
