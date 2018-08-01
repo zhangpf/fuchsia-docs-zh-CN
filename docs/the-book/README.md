@@ -83,8 +83,8 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
  - [命名空间](namespaces.md)
  - [沙箱](sandboxing.md)
  - [Story][framework-story]
- - [Module（英文原文）][framework-module]
- - [Agent（英文原文）][framework-agent]
+ - [Module][framework-module]
+ - [Agent][framework-agent]
  - 链接
 
 <!---
@@ -207,8 +207,8 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 [zircon-ddk]: /zircon/docs/ddk/overview.md
 [FIDL]: /zircon/docs/fidl/index.md
 [framework-story]: /peridot/docs/modular/story.md
-[framework-module]: https://github.com/fuchsia-mirror/peridot/blob/master/docs/modular/module.md
-[framework-agent]: https://github.com/fuchsia-mirror/peridot/blob/master/docs/modular/agent.md
+[framework-module]: /peridot/docs/modular/module.md
+[framework-agent]: /peridot/docs/modular/agent.md
 [ledger]: https://github.com/fuchsia-mirror/peridot/blob/master/docs/ledger/README.md
 [bluetooth]: https://github.com/fuchsia-mirror/garnet/blob/master/bin/bluetooth/README.md
 [magma]:  https://github.com/fuchsia-mirror/garnet/blob/master/lib/magma/

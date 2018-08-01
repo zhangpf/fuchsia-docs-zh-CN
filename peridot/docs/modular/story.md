@@ -22,5 +22,6 @@ Story是根应用程序及其关联数据的逻辑容器。系统可以响应用
 <!-- ## See also: -->
 ## 请查看
 
-[fuchsia::modular::StoryProvider](https://github.com/fuchsia-mirror/peridot/blob/master/public/fidl/fuchsia.modular/story/story_provider.fidl)和
+[fuchsia::modular::StoryProvider](https://github.com/fuchsia-mirror/peridot/blob/master/public/fidl/fuchsia.modular/story/story_provider.fidl)
+
 [fuchsia::modular::StoryController](https://github.com/fuchsia-mirror/peridot/blob/master/public/fidl/fuchsia.modular/story/story_controller.fidl)
