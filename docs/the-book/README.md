@@ -99,7 +99,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 --->
 ## 存储
 
- - [块设备（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/block_devices.md)
+ - [块设备](block_devices.md)
  - [文件系统（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/filesystems.md)
  - 目录层次结构
  - [Ledger（英文原文）][ledger]
