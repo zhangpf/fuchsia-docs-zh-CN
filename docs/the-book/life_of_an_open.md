@@ -304,7 +304,7 @@ vnode that has an attached “remote” handle. For now, we will ignore mountpoi
 vnodes, although they are discussed in a section on [filesystem
 mounting](filesystems.md#Mounting). -->
 
-要打开服务器端资源，服务器会提供一些起始点（由被调用句柄表示）和一个字符串路径，该路径被“/”字符分割成段，并且每个组件都通过对底层文件系统的回调来进行“查找”。如果查找成功则返回vnode，并且检测到另一个“/”段，则该过程继续直到（1）`lookup`找不到组件，（2）路径处理到达路径中的最后一个组件，或者（3） `lookup`找到一个**vnode挂载点**，这是一个具有附加的“远程”句柄的vnode。 现在，我们将忽略挂载点vnode，尽管它们在[文件系统挂载（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/filesystems.md#mounting)一节中讨论。
+要打开服务器端资源，服务器会提供一些起始点（由被调用句柄表示）和一个字符串路径，该路径被“/”字符分割成段，并且每个组件都通过对底层文件系统的回调来进行“查找”。如果查找成功则返回vnode，并且检测到另一个“/”段，则该过程继续直到（1）`lookup`找不到组件，（2）路径处理到达路径中的最后一个组件，或者（3） `lookup`找到一个**vnode挂载点**，这是一个具有附加的“远程”句柄的vnode。 现在，我们将忽略挂载点vnode，尽管它们在[文件系统挂载](filesystems.md#挂载)一节中讨论。
 
 <!-- Let’s assume `lookup` successfully found the “foo” Vnode. The filesystem server
 will proceed to call the VFS interface “Open”, verifying that the requested
