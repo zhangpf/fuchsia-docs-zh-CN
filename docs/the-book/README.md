@@ -102,7 +102,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
  - [块设备](block_devices.md)
  - [文件系统](filesystems.md)
  - 目录层次结构
- - [Ledger（英文原文）][ledger]
+ - [Ledger][ledger]
  - 文档存储
  - 应用cache
 
@@ -209,7 +209,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 [framework-story]: /peridot/docs/modular/story.md
 [framework-module]: /peridot/docs/modular/module.md
 [framework-agent]: /peridot/docs/modular/agent.md
-[ledger]: https://github.com/fuchsia-mirror/peridot/blob/master/docs/ledger/README.md
+[ledger]: /peridot/docs/ledger/README.md
 [bluetooth]: https://github.com/fuchsia-mirror/garnet/blob/master/bin/bluetooth/README.md
 [magma]:  https://github.com/fuchsia-mirror/garnet/blob/master/lib/magma/
 [escher]:  https://github.com/fuchsia-mirror/garnet/blob/master/public/lib/escher/
