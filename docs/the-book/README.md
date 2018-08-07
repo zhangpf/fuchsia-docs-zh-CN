@@ -119,7 +119,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 ## 网络
 
  - 以太网
- - [无线网（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/the-book/wireless_networking.md)
+ - [无线网络](wireless_networking.md)
  - [蓝牙（英文原文）][bluetooth]
  - Sockets
  - HTTP
