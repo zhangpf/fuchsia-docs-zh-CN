@@ -120,7 +120,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 
  - 以太网
  - [无线网络](wireless_networking.md)
- - [蓝牙（英文原文）][bluetooth]
+ - [蓝牙][bluetooth]
  - Sockets
  - HTTP
 
@@ -210,7 +210,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 [framework-module]: /peridot/docs/modular/module.md
 [framework-agent]: /peridot/docs/modular/agent.md
 [ledger]: /peridot/docs/ledger/README.md
-[bluetooth]: https://github.com/fuchsia-mirror/garnet/blob/master/bin/bluetooth/README.md
+[bluetooth]: /garnet/bin/bluetooth/README.md
 [magma]:  https://github.com/fuchsia-mirror/garnet/blob/master/lib/magma/
 [escher]:  https://github.com/fuchsia-mirror/garnet/blob/master/public/lib/escher/
 [scenic]:  https://github.com/fuchsia-mirror/garnet/blob/master/docs/ui_scenic.md
