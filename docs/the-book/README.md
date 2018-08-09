@@ -138,7 +138,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 
  - [Magma（vulkan驱动）][magma]
  - [Escher（基于物理的渲染器）][escher]
- - [Scenic（合成器）（英文原文）][scenic]
+ - [Scenic（合成器）][scenic]
  - [输入管理器（英文原文）][input-manager]
  - [视图管理器][view-manager]
  - [Flutter（UI工具包）][flutter]
@@ -213,7 +213,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 [bluetooth]: /garnet/bin/bluetooth/README.md
 [magma]:  https://github.com/fuchsia-mirror/garnet/blob/master/lib/magma/
 [escher]:  https://github.com/fuchsia-mirror/garnet/blob/master/public/lib/escher/
-[scenic]:  https://github.com/fuchsia-mirror/garnet/blob/master/docs/ui_scenic.md
+[scenic]:  /garnet/docs/ui_scenic.md
 [input-manager]:  https://github.com/fuchsia-mirror/garnet/blob/master/docs/ui_input.md
 [view-manager]:  https://github.com/fuchsia-mirror/garnet/blob/master/bin/ui/view_manager/
 [flutter]: https://flutter.io/
