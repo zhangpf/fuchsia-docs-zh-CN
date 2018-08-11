@@ -73,7 +73,7 @@ Escher也可以在Linux上构建。为此，你需要：
     fx set x64 --packages garnet/packages/experimental/disabled/dev_escher_linux --args escher_use_null_vulkan_config_on_host=false
     ```
     <!-- * See `$FUCHSIA_DIR/docs/getting_source.md` for how to set up the `fx` tool. -->
-    * 有关如何设置`fx`工具，请参阅 [`$FUCHSIA_DIR/docs/getting_source.md`（*译者注：应该是在getting_started.md文档下的`fx`文档*）](/docs/getting_started.md)。
+    * 有关如何设置`fx`工具，请参阅 [`$FUCHSIA_DIR/docs/getting_source.md`（*译者注：应该是在getting_started.md文档下的`fx`文档*）](/docs/getting_started.md)。
   <!-- * Do this once only (then you can skip to the next step for iterative development): -->
   * 执行一次（然后可以在迭代开发中跳过此步骤）：
     ```

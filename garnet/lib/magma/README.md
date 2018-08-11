@@ -7,7 +7,7 @@ Magma：Zircon的图形系统
 
 ---
 <!-- Magma is a framework for graphics drivers on the Zircon kernel. Magma drivers are logically divided into a 'System Driver' which runs as a userspace Zircon driver service, and an 'Application Driver' which runs in the application's address space (this mirrors the architecture of the 'Kernel Mode Driver' and 'User Mode Driver' in traditional graphics stack for monolithic kernels, but here both components run in userspace). -->
-Magma是Zircon内核上图形驱动程序的框架。Magma驱动程序在逻辑上被划分为“系统驱动”（以Zircon中用户空间驱动程序服务运行）和“应用程序驱动”（在应用程序的地址空间中运行）（这其实是“内核模式驱动”和“用户模式驱动”的体系结构在宏内核的传统图形堆栈中的反映，但这里两种组件都在用户空间中运行）。
+Magma是Zircon内核上图形驱动程序的框架。Magma驱动程序在逻辑上被划分为“系统驱动”（以Zircon中用户空间驱动程序服务运行）和“应用程序驱动”（在应用程序的地址空间中运行）（这其实是“内核模式驱动”和“用户模式驱动”的体系结构在宏内核的传统图形堆栈中的反映，但这里两种组件都在用户空间中运行）。
 
 <!-- Magma itself is the body of software that sits between the Application Driver and the System Driver and facilitates communication between the two over Zircon IPC, and provides core buffer sharing logic which underlies the system compositing mechanism.  -->
 Magma本身是位于应用驱动和系统驱动之间的软件，通过Zircon的IPC完成两者之间的通信。Magma提供了系统组合机制的基础——核心缓冲区共享逻辑。
