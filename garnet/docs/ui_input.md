@@ -15,7 +15,7 @@
 `/dev/class/input`. Those are HID devices and there are associated ioctls to
 retrieve the description report and simple reads on those devices will return
 the event reports. -->
-Zircon通过`/dev/class/input`下的文件系统提供对设备的访问功能。该目录下都是HID设备，并且有相关的ioctl操作来获取这些设备的描述报告信息，通过向文件系统的简单读取可以返回事件报告。
+Zircon通过`/dev/class/input`下的文件系统提供对设备的访问功能。该目录下都是HID设备，并且有相关的ioctl操作来获取这些设备的描述报告信息，通过向文件系统的简单读取可以返回事件报告。
 
 <!-- ## HID Reports to `InputEvent`. -->
 ## HID向`InputEvent`报告。
@@ -26,7 +26,7 @@ When launching an application through the sysmgr process,
 will monitor the `/dev/class/input` directory for new devices and discover
 existing devices if they are already present. -->
 
-当通过sysmgr进程启动应用程序时，`src/root_presenter`作为单例启动，以创建`Presentation`的根。在启动的过程中，root_presenter启动`src/input_reader`，它将监视新设备的`/dev/class/input`目录并发现已存在的现有设备。
+当通过sysmgr进程启动应用程序时，`src/root_presenter`作为单例启动，以创建`Presentation`的根。在启动的过程中，root_presenter启动`src/input_reader`，它将监视新设备的`/dev/class/input`目录并发现已存在的现有设备。
 
 <!-- Any time a device is detected (or discovered the first time) `InputReader` reads
 the HID description report and converts it into a DeviceDescriptor. -->
@@ -74,7 +74,7 @@ implements the `InputDispatcher` service. -->
 <!-- There is one `InputDispatcherImpl` per view tree. The view tree is owned by
 `Presentation`. So the `InputEvent` is forwarded to each one of them. -->
 
-每个视图树具有一个`InputDispatcherImpl`。该视图树由`Presentation`拥有，因此`InputEvent`被转发到它们中的每一个。
+每个视图树具有一个`InputDispatcherImpl`。该视图树由`Presentation`拥有，因此`InputEvent`被转发到它们中的每一个。
 
 <!-- An `InputDispatcherImpl` will query the `ViewInspector` service to retrieve the
 input focus chain. It will then dispatch those events through the chain. It
@@ -91,7 +91,7 @@ starts at the deepest view in that chain and propagates the event until the
 using the `ViewInspector`, runs the `HitTest` on the scene graph. The result
 contains a tree of nodes that were hit. -->
 
-当`InputEvent`是触摸或鼠标按下事件时，使用`ViewInspector`的`InputDispatcherImpl`在场景图上运行`HitTest`，其结果包含一个被命中的节点树。
+当`InputEvent`是触摸或鼠标按下事件时，使用`ViewInspector`的`InputDispatcherImpl`在场景图上运行`HitTest`，其结果包含一个被命中的节点树。
 
 <!-- 
 `InputDispatcherImpl` uses `ViewInspector` to convert this list of nodes into
@@ -111,4 +111,4 @@ create focus chain, which is the branch that leads from that leaf to the root. -
 <!-- For now `InputDispatcherImpl` picks one of the chain but this will be changed in
 the future. It then tells the `ViewInspector` which chain is now in focus. -->
 
-当前的实现中，`InputDispatcherImpl`选择其中一个链（，但将来可能会改变），而后它告诉`ViewInspector`哪个链现在是处于聚焦状态。
+当前的实现中，`InputDispatcherImpl`选择其中一个链（，但将来可能会改变），而后它告诉`ViewInspector`哪个链现在是处于聚焦状态。
