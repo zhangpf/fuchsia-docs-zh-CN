@@ -212,7 +212,7 @@ Zircon是位于Fuchsia其余部分底层的微内核，Zircon还提供了核心�
 [ledger]: /peridot/docs/ledger/README.md
 [bluetooth]: /garnet/bin/bluetooth/README.md
 [magma]:  /garnet/lib/magma/
-[escher]:  https://github.com/fuchsia-mirror/garnet/blob/master/public/lib/escher/
+[escher]:  /garnet/public/lib/escher/
 [scenic]:  /garnet/docs/ui_scenic.md
 [input-manager]: /garnet/docs/ui_input.md
 [view-manager]:  https://github.com/fuchsia-mirror/garnet/blob/master/bin/ui/view_manager/
