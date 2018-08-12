@@ -14,6 +14,7 @@
 ## 快速访问
 
 * [如何下载Fuchsia源码](docs/development/source_code/README.md)
+* [术语表](docs/glossary.md)
 * [一本官方介绍Fuchsia技术细节的书](docs/the-book/)
 * [Fuchsia快速入门](docs/getting_started.md) 
 * [Zircon快速入门](zircon/docs/getting_started.md) 

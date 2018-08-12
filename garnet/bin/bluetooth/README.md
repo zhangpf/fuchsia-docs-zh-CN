@@ -87,7 +87,7 @@ bluetooth>
 that acts as a Bluetooth system menu based on this API at
 [topaz/app/bluetooth_settings](https://fuchsia.googlesource.com/topaz/+/master/app/bluetooth_settings/). -->
 
-我们还提供了一个Flutter[模块（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/glossary.md#module)，该模块在[topaz/app/bluetooth_settings](https://github.com/fuchsia-mirror/topaz/tree/master/app/bluetooth_settings)上充当基于此API的蓝牙系统菜单。
+我们还提供了一个Flutter[模块](/docs/glossary.md#module)，该模块在[topaz/app/bluetooth_settings](https://github.com/fuchsia-mirror/topaz/tree/master/app/bluetooth_settings)上充当基于此API的蓝牙系统菜单。
 
 <!-- ### Tools -->
 ### 工具

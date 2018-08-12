@@ -94,7 +94,7 @@ direct access to the input driver: -->
 <!-- In the current implementation, the [AppMgr](../glossary.md#AppMgr) grants all such
 requests, but that is likely to change as the system evolves. -->
 
-在当前的实现中，[AppMgr（英文原文）](https://github.com/fuchsia-mirror/docs/blob/master/glossary.md#appmgr)用于授权所有此类请求，但随着系统的演化，未来可能会发生变化。
+在当前的实现中，[AppMgr](/docs/glossary.md#appmgr)用于授权所有此类请求，但随着系统的演化，未来可能会发生变化。
 
 <!-- ## Building a package -->
 ## 构建程序包
