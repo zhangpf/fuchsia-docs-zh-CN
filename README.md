@@ -24,7 +24,6 @@
 
 下列工作按优先级递减排序：
 
-* 翻译[the-book](https://github.com/fuchsia-mirror/docs/tree/master/the-book)
 * 完成zircon的文档
 
 ## 贡献者列表
