@@ -133,9 +133,9 @@
 + [fifo_write](syscalls/fifo_write.md) - write data to a fifo
 --->
 ## 先进先出队列
-+ [fifo_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/fifo_create.md) - 创建队列
-+ [fifo_read（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/fifo_read.md) - 从队列中读取数据
-+ [fifo_write（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/fifo_write.md) - 写入数据到队列中
++ [fifo_create](syscalls/fifo_create.md) - 创建队列
++ [fifo_read](syscalls/fifo_read.md) - 从队列中读取数据
++ [fifo_write](syscalls/fifo_write.md) - 写入数据到队列中
 
 <!---
 ## Events and Event Pairs
