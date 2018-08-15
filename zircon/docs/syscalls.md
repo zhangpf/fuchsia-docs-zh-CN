@@ -109,11 +109,11 @@
 + [channel_write](syscalls/channel_write.md) - write a message to a channel
 --->
 ## Channel
-+ [channel_call（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_call.md) - 同步发送消息并接受响应
-+ [channel_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_create.md) - 创建新channel
-+ [channel_read（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_read.md) - 从channel中接受消息
-+ [channel_read_etc（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_read.md) - 从带句柄信息的channel中读取消息
-+ [channel_write（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md) - 向channel中读取消息
++ [channel_call](syscalls/channel_call.md) - 同步发送消息并接受响应
++ [channel_create](syscalls/channel_create.md) - 创建新channel
++ [channel_read](syscalls/channel_read.md) - 从channel中读取消息
++ [channel_read_etc](syscalls/channel_read.md) - 从channel中读取消息并返回带句柄信息的数组
++ [channel_write](syscalls/channel_write.md) - 向channel中读取消息
 
 <!---
 ## Sockets

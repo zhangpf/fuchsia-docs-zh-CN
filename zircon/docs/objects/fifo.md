@@ -8,7 +8,7 @@
 ## 名称
 
 <!-- FIFO - first-in first-out interprocess queue -->
-FIFO——先入先出的进程间通信队列
+FIFO —— 先入先出的进程间通信队列
 
 <!-- ## SYNOPSIS -->
 ## 概要

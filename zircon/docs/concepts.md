@@ -56,8 +56,8 @@ upon them) is controlled by the Job in which the calling Process is contained.
 --->
 
 1. 没有任何限制的调用。只有少部分调用是属于这一类，如[*zx_clock_get()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/clock_get.md)和[*zx_nanosleep()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/nanosleep.md)可以被任意线程调用。
-2. 以`Handle`作为首参数的调用，用以表示它们所操作的对象。绝大多数的调用都是这一类，例如[*zx_channel_write()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)和[*zx_port_queue()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md)。
-3. 创建新对象的系统调用，不需要以`Handle`作为参数。例如[*zx_event_create()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/event_create.md)和[*zx_channel_create()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_create.md)。这一类调用的访问是受调用`Process`进程所在的`Job`所控制的（这同时也是它们的限制）。
+2. 以`Handle`作为首参数的调用，用以表示它们所操作的对象。绝大多数的调用都是这一类，例如[*zx_channel_write()*](syscalls/channel_write.md)和[*zx_port_queue()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md)。
+3. 创建新对象的系统调用，不需要以`Handle`作为参数。例如[*zx_event_create()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/event_create.md)和[*zx_channel_create()*](syscalls/channel_create.md)。这一类调用的访问是受调用`Process`进程所在的`Job`所控制的（这同时也是它们的限制）。
 
 <!---
 System calls are provided by libzircon.so, which is a "virtual" shared
@@ -97,7 +97,7 @@ Handles may be moved from one Process to another by writing them into a Channel
 [*zx_process_start()*](syscalls/process_start.md) to pass a Handle as the argument
 of the first thread in a new Process.
 --->
-可以通过向`Channel`写入`Handle`的方式，将`Handle`从一个`Process`移动到另外一个`Process`（使用 [*zx_channel_write()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)函数），或通过使用[*zx_process_start()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md)函数，作为新`Process`的第一个线程的启动参数的形式传递一个`Handle`。
+可以通过向`Channel`写入`Handle`的方式，将`Handle`从一个`Process`移动到另外一个`Process`（使用 [*zx_channel_write()*](syscalls/channel_write.md)函数），或通过使用[*zx_process_start()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md)函数，作为新`Process`的第一个线程的启动参数的形式传递一个`Handle`。
 
 <!---
 
@@ -225,7 +225,7 @@ See: [channel_create](syscalls/channel_create.md),
 and [socket_write](syscalls/socket_write.md). 
 --->
 
-请查看：[channel_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_create.md)，[channel_read（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_read.md)，[channel_write（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_write.md)，[channel_call（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/channel_call.md)，[socket_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_create.md)，[socket_read（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_read.md)和[socket_write（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_write.md)。
+请查看：[channel_create](syscalls/channel_create.md)，[channel_read](syscalls/channel_read.md)，[channel_write](syscalls/channel_write.md)，[channel_call](syscalls/channel_call.md)，[socket_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_create.md)，[socket_read（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_read.md)和[socket_write（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_write.md)。
 
 <!---
 ## Objects and Signals

@@ -56,7 +56,7 @@ also includes constructs not present in the standard library but which
 are useful library code for kernel and device driver environments (for
 instance, slab allocation). -->
 
-包括内核和用户空间在内的相当部分Zircon代码，是由C++语言写成的。而对于内核这样的环境，链接C++标准库并不十分合适（因为太容易分配不可控的内存空间，并会抛出异常等，而且这些库本身体积也较大）。另一方面，标准库中又有一些我们想使用的，对我们有帮助的类型，如类型trait和unique指针等。但我们无法零散地只使用C++标准库这一部分的代码，因此我们构建了名为fbl的库，用于提供相似的功能函数。它同时也包含了不在标准库中的功能，但对内核和设备驱动环境有用的代码（如slab分配器等）
+包括内核和用户空间在内的相当部分Zircon代码，是由C++语言写成的。而对于内核这样的环境，链接C++标准库并不十分合适（因为太容易分配不可控的内存空间，并会抛出异常等，而且这些库本身体积也较大）。另一方面，标准库中又有一些我们想使用的，对我们有帮助的类型，如类型trait和unique指针等。但我们无法零散地只使用C++标准库这一部分的代码，因此我们构建了名为fbl的库，用于提供相似的功能函数。它同时也包含了不在标准库中但对内核和设备驱动环境有用的功能代码（如slab分配器等）。
 
 <!-- For more information about FBL,
 [read its overview](https://fuchsia.googlesource.com/zircon/+/master/docs/cxx.md#fbl). -->
