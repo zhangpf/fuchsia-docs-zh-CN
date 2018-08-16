@@ -84,7 +84,7 @@ including
 [Handles](#Handle). -->
 Channel是Zircon提供的基本IPC原语，它是一种双向的类似数据报(datagram)的传输通道，可以传输包含[Handle](#handle)的小型消息。
 <!-- - [Channel Overview](https://fuchsia.googlesource.com/zircon/+/master/docs/objects/channel.md) -->
-- [Channel概览（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/docs/objects/channel.md)
+- [channel概览](/zircon/docs/objects/channel.md)
 
 #### **DevHost**
 

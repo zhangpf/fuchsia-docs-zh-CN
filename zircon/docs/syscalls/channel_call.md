@@ -97,10 +97,10 @@ count of handles in the reply message are returned via *actual_bytes* and
 <!-- **ZX_ERR_BAD_HANDLE**  *handle* is not a valid handle, any element in
 *handles* is not a valid handle, or there are duplicates among the handles
 in the *handles* array. -->
-**ZX_ERR_BAD_HANDLE**：*handle*不是有效的句柄，*handles*中存在不是有效句柄的值，或*handles*数组中的句柄存在重复项。
+**ZX_ERR_BAD_HANDLE**：*handle*是无效句柄，*handles*中存在无效句柄，或*handles*数组中的句柄存在重复项。
 
 <!-- **ZX_ERR_WRONG_TYPE**  *handle* is not a channel handle. -->
-**ZX_ERR_WRONG_TYPE**：*handle*不是channel句柄。
+**ZX_ERR_WRONG_TYPE**：*handle*不是channel类型句柄。
 
 <!-- **ZX_ERR_INVALID_ARGS**  any of the provided pointers are invalid or null,
 or *wr_num_bytes* is less than four, or *options* is nonzero. -->
@@ -158,7 +158,7 @@ at some point in the future, the reply *could* match another outbound request (p
 2^31 **channel_call**()s have happened since the original request.  This syscall is designed
 around the expectation that timeouts are generally fatal and clients do not expect to continue
 communications on a channel that is timing out. -->
-如果**channel_call()** 由于**ZX_ERR_TIMED_OUT** 原因而返回，如果服务端在将来的某个时刻最终回复消息，则回复*可能*会匹配到另一个传出请求上（自原先求以来已经经历了大约2^31个**channel_call()**）。这我们的设计中，这是安全的，因为此系统调用的设计期望是，超时通常是致命错误导致的，所以客户端不太可能在超时的通道上继续通信。
+如果**channel_call()** 由于**ZX_ERR_TIMED_OUT** 原因而返回，如果服务端在将来的某个时刻最终回复消息，则回复*可能*会匹配到另一个传出请求上（自原先请求以来已经经历了大约2^31个**channel_call()**）。但这在我们的设计中，这是安全的，因为此系统调用的设计期望是，超时通常是致命错误导致的，所以客户端不太可能在超时的通道上继续通信。
 
 <!-- ## SEE ALSO -->
 ## 另见

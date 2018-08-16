@@ -76,15 +76,15 @@ Each of the handles in *handles* must have **ZX_RIGHT_TRANSFER**. -->
 <!-- **ZX_ERR_BAD_HANDLE**  *handle* is not a valid handle, any element in
 *handles* is not a valid handle, or there are duplicates among the handles
 in the *handles* array. -->
-**ZX_ERR_BAD_HANDLE**：*handle*不是有效的句柄，*handles*中存在不是有效句柄的值，或*handles*数组中的句柄存在重复项。
+**ZX_ERR_BAD_HANDLE**：*handle*是无效句柄，*handles*中存在无效句柄，或*handles*数组中的句柄存在重复项。
 
 
 <!-- **ZX_ERR_WRONG_TYPE**  *handle* is not a channel handle. -->
-**ZX_ERR_WRONG_TYPE**：*handle*不是channel句柄。
+**ZX_ERR_WRONG_TYPE**：*handle*是无效句柄。
 
 <!-- **ZX_ERR_INVALID_ARGS**  *bytes* is an invalid pointer, *handles*
 is an invalid pointer, or *options* is nonzero. -->
-**ZX_ERR_INVALID_ARGS**：提供的指针存在无效或为null的，或*num_bytes*小于4，或者*options*为非零。
+**ZX_ERR_INVALID_ARGS**：提供的指针存在无效的或为null的，或*num_bytes*小于4，或者*options*为非零。
 
 <!-- **ZX_ERR_NOT_SUPPORTED**  *handle* was found in the *handles* array, or
 one of the handles in *handles* was *handle* (the handle to the

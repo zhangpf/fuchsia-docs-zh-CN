@@ -80,7 +80,7 @@ to the element size of the fifo.
 
 **ZX_ERR_SHOULD_WAIT**  The fifo is empty. -->
 
-**ZX_ERR_BAD_HANDLE**： *handle*不是有效句柄。
+**ZX_ERR_BAD_HANDLE**： *handle*是无效句柄。
 
 **ZX_ERR_WRONG_TYPE**： *handle*不是fifo类型句柄。
 

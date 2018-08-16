@@ -57,7 +57,7 @@ TODO(ZX-2399)
 failure, one of the following values is returned. -->
 
 
-**fifo_create()** 函数执行成功则返回 **ZX_OK**，如果发生失败事件，将返回以下值之一。
+**fifo_create()** 函数执行成功则返回 **ZX_OK**，如果发生错误，将返回以下值之一。
 
 <!-- ## ERRORS -->
 

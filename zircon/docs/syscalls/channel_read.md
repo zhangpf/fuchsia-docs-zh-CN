@@ -93,7 +93,7 @@ and count of handles read. -->
 ## 错误码
 
 <!-- **ZX_ERR_BAD_HANDLE**  *handle* is not a valid handle. -->
-**ZX_ERR_BAD_HANDLE**：*handle*不是有效的句柄。
+**ZX_ERR_BAD_HANDLE**：*handle*是无效句柄。
 
 <!-- **ZX_ERR_WRONG_TYPE**  *handle* is not a channel handle. -->
 **ZX_ERR_WRONG_TYPE**：*handle*不是channel类型句柄。
@@ -110,7 +110,7 @@ and count of handles read. -->
 
 
 <!-- **ZX_ERR_PEER_CLOSED**  The other side of the channel is closed. -->
-**ZX_ERR_PEER_CLOSED**：channel的另一侧已关闭。
+**ZX_ERR_PEER_CLOSED**：channel的相对端点已关闭。
 
 
 <!-- **ZX_ERR_NO_MEMORY**  Failure due to lack of memory.
