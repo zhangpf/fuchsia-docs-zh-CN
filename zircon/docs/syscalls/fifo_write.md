@@ -93,6 +93,8 @@ to the element size of the fifo.
 <!-- ## SEE ALSO -->
 ## 另见
 
-[fifo_create](fifo_create.md)
+<!-- [fifo_create](fifo_create.md),
+[fifo_read](fifo_read.md). -->
 
-[fifo_read](fifo_read.md)
+[fifo_create](fifo_create.md)，[fifo_read](fifo_read.md)。
+

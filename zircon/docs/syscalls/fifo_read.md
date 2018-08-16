@@ -97,6 +97,7 @@ to the element size of the fifo.
 <!-- ## SEE ALSO -->
 ## 另见
 
-[fifo_create](fifo_create.md)
+<!-- [fifo_create](fifo_create.md),
+[fifo_write](fifo_write.md). -->
 
-[fifo_write](fifo_write.md)
+[fifo_create](fifo_create.md)，[fifo_write](fifo_write.md)。

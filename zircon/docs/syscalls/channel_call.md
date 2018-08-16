@@ -172,18 +172,4 @@ communications on a channel that is timing out. -->
 [channel_read](channel_read.md),
 [channel_write](channel_write.md). -->
 
-[handle_close](handle_close.md)
-
-[handle_duplicate](handle_duplicate.md)
-
-[handle_replace](handle_replace.md)
-
-[object_wait_one](object_wait_one.md)
-
-[object_wait_many](object_wait_many.md)
-
-[channel_create](channel_create.md)
-
-[channel_read](channel_read.md)
- 
-[channel_write](channel_write.md)
+[handle_close](handle_close.md)，[handle_duplicate](handle_duplicate.md)，[handle_replace](handle_replace.md)，[object_wait_one](object_wait_one.md)，[object_wait_many](object_wait_many.md)，[channel_create](channel_create.md)，[channel_read](channel_read.md)，[channel_write](channel_write.md)。

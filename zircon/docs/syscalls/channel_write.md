@@ -121,18 +121,15 @@ array, not its size in bytes. -->
 <!-- ## SEE ALSO -->
 ## 另见
 
-[handle_close](handle_close.md)
+<!-- 
+[handle_close](handle_close.md),
+[handle_duplicate](handle_duplicate.md),
+[handle_replace](handle_replace.md),
+[object_wait_one](object_wait_one.md),
+[object_wait_many](object_wait_many.md),
+[channel_call](channel_call.md),
+[channel_create](channel_create.md),
+[channel_read](channel_read.md). -->
 
-[handle_duplicate](handle_duplicate.md)
 
-[handle_replace](handle_replace.md)
-
-[object_wait_one](object_wait_one.md)
-
-[object_wait_many](object_wait_many.md)
-
-[channel_call](channel_call.md)
-
-[channel_create](channel_create.md)
-
-[channel_read](channel_read.md)
+[handle_close](handle_close.md)，[handle_duplicate](handle_duplicate.md)，[handle_replace](handle_replace.md)，[object_wait_one](object_wait_one.md)，[object_wait_many](object_wait_many.md)，[channel_call](channel_call.md)，[channel_create](channel_create.md)，[channel_read](channel_read.md)。
