@@ -225,7 +225,7 @@ See: [channel_create](syscalls/channel_create.md),
 and [socket_write](syscalls/socket_write.md). 
 --->
 
-请查看：[channel_create](syscalls/channel_create.md)，[channel_read](syscalls/channel_read.md)，[channel_write](syscalls/channel_write.md)，[channel_call](syscalls/channel_call.md)，[socket_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_create.md)，[socket_read（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_read.md)和[socket_write（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_write.md)。
+请查看：[channel_create](syscalls/channel_create.md)，[channel_read](syscalls/channel_read.md)，[channel_write](syscalls/channel_write.md)，[channel_call](syscalls/channel_call.md)，[socket_create](syscalls/socket_create.md)，[socket_read](syscalls/socket_read.md)和[socket_write](syscalls/socket_write.md)。
 
 <!---
 ## Objects and Signals

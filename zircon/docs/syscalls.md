@@ -122,9 +122,9 @@
 + [socket_write](syscalls/socket_write.md) - write data to a socket
 --->
 ## Socket
-+ [socket_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_create.md) - 创建socket
-+ [socket_read（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_read.md) - 从socket中读数据
-+ [socket_write（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/socket_write.md) - 向socket写入数据
++ [socket_create](syscalls/socket_create.md) - 创建socket
++ [socket_read](syscalls/socket_read.md) - 从socket中读数据
++ [socket_write](syscalls/socket_write.md) - 向socket写入数据
 
 <!---
 ## Fifos
