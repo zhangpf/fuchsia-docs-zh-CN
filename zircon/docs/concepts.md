@@ -116,7 +116,7 @@ optionally with reduced Rights.  The [*zx_handle_close()*](syscalls/handle_close
 system call closes a Handle, releasing the Object it refers to, if that Handle is
 the last one for that Object.
 --->
-[*zx_handle_duplicate()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_duplicate.md)和[*zx_handle_replace()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_replace.md)调用可被用于获取指向`Object`的`Handle`参数的额外副本，并以缩小的权限作为可选项。 [*zx_handle_close()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_close.md)用于关闭`Handle`，如果它是所指向的`Object`的最后一个句柄，也将同时释放这个`Object`。
+[*zx_handle_duplicate()*](syscalls/handle_duplicate.md)和[*zx_handle_replace()*](syscalls/handle_replace.md)调用可被用于获取指向`Object`的`Handle`参数的额外副本，并以缩小的权限作为可选项。 [*zx_handle_close()*](syscalls/handle_close.md)用于关闭`Handle`，如果它是所指向的`Object`的最后一个句柄，也将同时释放这个`Object`。
 
 <!---
 ## Kernel Object IDs

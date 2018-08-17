@@ -15,9 +15,9 @@
 + [handle_replace](syscalls/handle_replace.md) - create a new handle (optionally with reduced rights) and destroy the old one
 --->
 ## Handle
-+ [handle_close（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_close.md) - 关闭句柄
-+ [handle_duplicate（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_duplicate.md) - 创建句柄副本（可选项为缩减的权限值）
-+ [handle_replace（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/handle_replace.md) - 创建新句柄（可选项为缩减的权限值），并销毁旧句柄
++ [handle_close](syscalls/handle_close.md) - 关闭句柄
++ [handle_duplicate](syscalls/handle_duplicate.md) - 创建句柄副本（可选项为缩减的权限值）
++ [handle_replace](syscalls/handle_replace.md) - 创建新句柄（可选项为缩减的权限值），并销毁旧句柄
 
 <!---
 ## Objects
