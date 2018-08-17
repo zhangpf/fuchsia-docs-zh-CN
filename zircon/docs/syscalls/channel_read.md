@@ -110,7 +110,7 @@ and count of handles read. -->
 
 
 <!-- **ZX_ERR_PEER_CLOSED**  The other side of the channel is closed. -->
-**ZX_ERR_PEER_CLOSED**：channel的相对端点已关闭。
+**ZX_ERR_PEER_CLOSED**：channel的另一侧已关闭。
 
 
 <!-- **ZX_ERR_NO_MEMORY**  Failure due to lack of memory.
@@ -135,13 +135,18 @@ in the *handles* array, not its size in bytes. -->
 <!-- ## SEE ALSO -->
 ## 另见
 
-<!-- [handle_close](handle_close.md),
-[handle_duplicate](handle_duplicate.md),
-[handle_replace](handle_replace.md),
-[object_wait_one](object_wait_one.md),
-[object_wait_many](object_wait_many.md),
-[channel_call](channel_call.md),
-[channel_create](channel_create.md),
-[channel_write](channel_write.md). -->
+[handle_close](handle_close.md)
 
-[handle_close](handle_close.md)，[handle_duplicate](handle_duplicate.md)，[handle_replace](handle_replace.md)，[object_wait_one](object_wait_one.md)，[object_wait_many](object_wait_many.md)，[channel_call](channel_call.md)，[channel_create](channel_create.md)，[channel_write](channel_write.md)。
+[handle_duplicate](handle_duplicate.md)
+
+[handle_replace](handle_replace.md)
+
+[object_wait_one](object_wait_one.md)
+
+[object_wait_many](object_wait_many.md)
+
+[channel_call](channel_call.md)
+
+[channel_create](channel_create.md)
+
+[channel_write](channel_write.md)
