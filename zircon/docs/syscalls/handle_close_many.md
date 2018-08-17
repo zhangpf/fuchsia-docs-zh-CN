@@ -7,7 +7,7 @@
 ## 名称
 
 <!-- handle_close_many - close a number of handles -->
-handle_close_many —— 关闭多个句柄
+handle_close_many —— 关闭多个句柄
 
 <!-- ## SYNOPSIS -->
 ## 概览
@@ -56,7 +56,7 @@ similar to free(NULL) being a valid call. -->
 
 <!-- **ZX_ERR_BAD_HANDLE**  One of the *handles* isn't a valid handle, or the same handle is
 present multiple times. -->
-**ZX_ERR_BAD_HANDLE**：*handles*中存在无效句柄，或同一句柄在*handles*中出现多次。
+**ZX_ERR_BAD_HANDLE**：*handles*中存在无效句柄，或同一句柄在*handles*中出现多次。
 
 <!-- ## SEE ALSO -->
 ## 另见
