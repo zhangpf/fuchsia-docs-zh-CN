@@ -143,8 +143,8 @@
 + [eventpair_create](syscalls/eventpair_create.md) - create a connected pair of events
 --->
 ## Event和Event Pair
-+ [event_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/event_create.md) - 创建Event对象
-+ [eventpair_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/eventpair_create.md) - 创建一对Event Pair
++ [event_create](syscalls/event_create.md) - 创建Event对象
++ [eventpair_create](syscalls/eventpair_create.md) - 创建一对Event Pair
 
 <!---
 ## Ports
