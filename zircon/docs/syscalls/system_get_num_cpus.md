@@ -12,7 +12,7 @@
 system_get_num_cpus —— 获取系统中的逻辑处理器的数量 
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

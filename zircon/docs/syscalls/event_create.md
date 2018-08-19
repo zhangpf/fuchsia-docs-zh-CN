@@ -11,7 +11,7 @@ event_create - create an event -->
 event_create —— 创建event对象
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

@@ -10,7 +10,7 @@
 handle_close_many —— 关闭多个句柄
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

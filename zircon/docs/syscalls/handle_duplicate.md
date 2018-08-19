@@ -11,7 +11,7 @@
 handle_duplicate —— 复制句柄
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

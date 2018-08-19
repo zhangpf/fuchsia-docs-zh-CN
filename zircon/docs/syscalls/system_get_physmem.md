@@ -12,7 +12,7 @@ system_get_physmem —— 获取系统中的物理内存总量
 
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

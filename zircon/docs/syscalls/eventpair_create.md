@@ -11,7 +11,7 @@
 eventpair_create - 创建一对event pair。
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

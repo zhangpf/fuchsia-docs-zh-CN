@@ -11,7 +11,7 @@ eventpair - Mutually signalable pair of events for concurrent programming -->
 eventpair —— 用于并发编程的可相互通知的事件对
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 <!-- Event Pairs are linked pairs of user-signalable objects. The 8 signal
 bits reserved for userspace (*ZX_USER_SIGNAL_0* through

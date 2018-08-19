@@ -11,7 +11,7 @@
 zx_system_mexec —— 使用新内核和启动映像软启动系统
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

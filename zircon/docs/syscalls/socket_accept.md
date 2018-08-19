@@ -9,7 +9,7 @@
 socket_accept —— 通过socket接收另一个socket对象
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

@@ -11,7 +11,7 @@
 channel —— 进程间的双向通信
 
 <!-- ## SYNOPSIS -->
-## 概念
+## 概要
 
 <!-- A channel is a bidirectional transport of messages consisting of some
 amount of byte data and some number of handles. -->

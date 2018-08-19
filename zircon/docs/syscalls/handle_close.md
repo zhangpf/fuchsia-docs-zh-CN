@@ -11,7 +11,7 @@
 handle_close —— 关闭句柄
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

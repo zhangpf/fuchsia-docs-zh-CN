@@ -12,7 +12,7 @@
 system_get_features —— 获取支持的硬件功能
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

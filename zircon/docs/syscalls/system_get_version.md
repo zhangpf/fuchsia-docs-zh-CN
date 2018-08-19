@@ -11,7 +11,7 @@
 system_get_version —— 获取系统版本字符串
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

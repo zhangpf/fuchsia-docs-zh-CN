@@ -12,7 +12,7 @@
 socket_create —— 创建socket对象
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 
 ```
 #include <zircon/syscalls.h>

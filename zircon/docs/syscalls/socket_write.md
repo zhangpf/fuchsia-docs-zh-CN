@@ -12,7 +12,7 @@
 socket_write —— 写入数据到socket
 
 <!-- ## SYNOPSIS -->
-## 概念
+## 概要
 
 ```
 #include <zircon/syscalls.h>

@@ -11,7 +11,7 @@
 Log —— 内核调试日志
 
 <!-- ## SYNOPSIS -->
-## 概览
+## 概要
 <!-- 
 Log objects allow userspace to read and write to kernel debug logs. -->
 Log对象允许用户空间读取和写入内核调试日志。

@@ -11,7 +11,7 @@
 event —— 并发编程中可通知的event对象
 
 <!-- ## SYNOPSIS -->
-## 概念
+## 概要
 
 <!-- Events are user-signalable objects. The 8 signal bits reserved for
 userspace (*ZX_USER_SIGNAL_0* through *ZX_USER_SIGNAL_7*) may be set,
