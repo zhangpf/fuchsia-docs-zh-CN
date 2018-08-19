@@ -270,10 +270,10 @@
 + [system_get_version](syscalls/system_get_version.md) - get version string
 --->
 ## 全局系统信息
-+ [system_get_features（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/system_get_features.md) - 获取硬件相关功能
-+ [system_get_num_cpus（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/system_get_num_cpus.md) - 获取CPU核数
-+ [system_get_physmem（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/system_get_physmem.md) - 获取物理内存大小
-+ [system_get_version（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/system_get_version.md) - 获取版本信息字符串
++ [system_get_features](syscalls/system_get_features.md) - 获取硬件相关功能
++ [system_get_num_cpus](syscalls/system_get_num_cpus.md) - 获取CPU核数
++ [system_get_physmem](syscalls/system_get_physmem.md) - 获取物理内存大小
++ [system_get_version](syscalls/system_get_version.md) - 获取版本信息字符串
 
 <!---
 ## Logging
