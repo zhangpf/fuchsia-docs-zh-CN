@@ -376,4 +376,4 @@ See: [futex_wait](syscalls/futex_wait.md),
 [futex_wake](syscalls/futex_wake.md),
 [futex_requeue](syscalls/futex_requeue.md).
 --->
-请查看： [futex_wait（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wait.md)，[futex_wake（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wake.md)和[futex_requeue（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_requeue.md)。
+请查看： [futex_wait](syscalls/futex_wait.md)，[futex_wake](syscalls/futex_wake.md)和[futex_requeue](syscalls/futex_requeue.md)。

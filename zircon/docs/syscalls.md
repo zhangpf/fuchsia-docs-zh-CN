@@ -167,9 +167,9 @@
 --->
 
 ## Futex
-+ [futex_wait（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wait.md) - 等待futex变成可用
-+ [futex_wake（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wake.md) - 唤醒futex的等待者
-+ [futex_requeue（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_requeue.md) - 唤醒futex的一些等待者，并将其他等待者重新加入队列中
++ [futex_wait](syscalls/futex_wait.md) - 等待futex变成可用
++ [futex_wake](syscalls/futex_wake.md) - 唤醒futex的等待者
++ [futex_requeue](syscalls/futex_requeue.md) - 唤醒futex的一些等待者，并将其他等待者重新加入队列中
 
 <!---
 ## Virtual Memory Objects (VMOs)
