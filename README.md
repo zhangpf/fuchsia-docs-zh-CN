@@ -24,7 +24,10 @@
 
 下列工作按优先级递减排序：
 
-* 完成zircon的文档
+* FIDL语言相关文档
+* Zircon的syscall手册页
+* Fuchsia硬件启动指南
+* Zircon DDK文档
 
 ## 贡献者列表
 
