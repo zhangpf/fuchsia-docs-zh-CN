@@ -8,7 +8,7 @@
 ## 名称
 
 <!-- eventpair_create - create an event pair -->
-eventpair_create - 创建一对event pair。
+eventpair_create —— 创建一对event pair。
 
 <!-- ## SYNOPSIS -->
 ## 概要

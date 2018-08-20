@@ -293,7 +293,7 @@
 --->
 ## 操作合并函数
 + [vmar_unmap_handle_close_thread_exit（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap_handle_close_thread_exit.md) - 三合一操作（取消vmar映射，关闭句柄和退出线程）
-+ [futex_wake_handle_close_thread_exit（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/futex_wake_handle_close_thread_exit.md) - 三合一操作（唤醒futex，关闭句柄和退出线程）
++ [futex_wake_handle_close_thread_exit](syscalls/futex_wake_handle_close_thread_exit.md) - 三合一操作（唤醒futex，关闭句柄和退出线程）
 
 <!---
 ## DDK
