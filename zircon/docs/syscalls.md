@@ -222,10 +222,10 @@
 + [ticks_per_second](syscalls/ticks_per_second.md) - read the number of high-precision timer ticks in a second
 --->
 ## 时间
-+ [nanosleep（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/nanosleep.md) - 休眠一段时间（以ns为单位）
-+ [clock_get（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/clock_get.md) - 读取系统时钟
-+ [ticks_get（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/ticks_get.md) - 读取高精度计时器滴答数
-+ [ticks_per_second（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/ticks_per_second.md) - 读取一秒时间内高精度计时器滴答数
++ [nanosleep](syscalls/nanosleep.md) - 休眠一段时间（以ns为单位）
++ [clock_get](syscalls/clock_get.md) - 读取系统时钟
++ [ticks_get](syscalls/ticks_get.md) - 读取高精度计时器tick数
++ [ticks_per_second](syscalls/ticks_per_second.md) - 读取一秒时间内高精度计时器tick数
 
 <!---
 ## Timers
