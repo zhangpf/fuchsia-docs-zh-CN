@@ -234,9 +234,9 @@
 + [timer_cancel](syscalls/timer_cancel.md) - cancel a timer
 --->
 ## 计时器
-+ [timer_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/timer_create.md) - 创建计时器对象
-+ [timer_set（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/timer_set.md) - 启动计时器
-+ [timer_cancel（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/timer_cancel.md) - 取消计时器
++ [timer_create](syscalls/timer_create.md) - 创建计时器对象
++ [timer_set](syscalls/timer_set.md) - 启动计时器
++ [timer_cancel](syscalls/timer_cancel.md) - 取消计时器
 
 <!---
 ## Hypervisor guests
