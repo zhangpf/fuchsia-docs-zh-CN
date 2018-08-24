@@ -154,10 +154,10 @@
 + [port_cancel](syscalls/port_cancel.md) - cancel notifications from async_wait
 --->
 ## Port
-+ [port_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_create.md) - 创建端口
-+ [port_queue（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md) - 向端口发送数据包
-+ [port_wait（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_wait.md) - 等待端口接收到数据包
-+ [port_cancel（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_cancel.md) - 取消获取来自async_wait的通知
++ [port_create](syscalls/port_create.md) - 创建端口
++ [port_queue](syscalls/port_queue.md) - 向端口发送数据包
++ [port_wait](syscalls/port_wait.md) - 等待端口接收数据包
++ [port_cancel](syscalls/port_cancel.md) - 取消获取来自async_wait的通知
 
 <!---
 ## Futexes

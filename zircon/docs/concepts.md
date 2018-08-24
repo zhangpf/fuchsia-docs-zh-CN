@@ -56,7 +56,7 @@ upon them) is controlled by the Job in which the calling Process is contained.
 --->
 
 1. 没有任何限制的调用。只有少部分调用是属于这一类，如[*zx_clock_get()*](syscalls/clock_get.md)和[*zx_nanosleep()*](syscalls/nanosleep.md)可以被任意线程调用。
-2. 以`Handle`作为首参数的调用，用以表示它们所操作的对象。绝大多数的调用都是这一类，例如[*zx_channel_write()*](syscalls/channel_write.md)和[*zx_port_queue()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md)。
+2. 以`Handle`作为首参数的调用，用以表示它们所操作的对象。绝大多数的调用都是这一类，例如[*zx_channel_write()*](syscalls/channel_write.md)和[*zx_port_queue()*](syscalls/port_queue.md)。
 3. 创建新对象的系统调用，不需要以`Handle`作为参数。例如[*zx_event_create()*](syscalls/event_create.md)和[*zx_channel_create()*](syscalls/channel_create.md)。这一类调用的访问是受调用`Process`进程所在的`Job`所控制的（这同时也是它们的限制）。
 
 <!---
@@ -276,7 +276,7 @@ See: [port_create](syscalls/port_create.md),
 [port_wait](syscalls/port_wait.md),
 [port_cancel](syscalls/port_cancel.md).
 --->
-请查看：[port_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_create.md)，[port_queue（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_queue.md)，[port_wait（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_wait.md)和[port_cancel（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/port_cancel.md)。
+请查看：[port_create](syscalls/port_create.md)，[port_queue](syscalls/port_queue.md)，[port_wait](syscalls/port_wait.md)和[port_cancel](syscalls/port_cancel.md)。
 
 
 <!---
