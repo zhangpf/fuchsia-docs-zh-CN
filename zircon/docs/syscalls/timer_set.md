@@ -68,7 +68,7 @@ late firing with an effective interval of *deadline* - *slack* to
 
 <!-- **zx_timer_set**() returns **ZX_OK** on success.
 In the event of failure, a negative error value is returned. -->
-**zx_timer_set()** 调用成功则返回**ZX_OK**，如果发生错误，则返回负的错误码。
+**zx_timer_set()** 调用成功则返回**ZX_OK**。如果调用失败，则返回负的错误码。
 
 <!-- ## ERRORS -->
 ## 错误码

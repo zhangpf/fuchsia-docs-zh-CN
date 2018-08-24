@@ -40,7 +40,7 @@ TODO(ZX-2399)
 
 <!-- **socket_share**() returns **ZX_OK** on success.  In the event of failure,
 one of the following values is returned. -->
-**socket_share()** 执行成功则返回**ZX_OK**。如果发生错误，将返回以下值之一。
+**socket_share()** 执行成功则返回**ZX_OK**。如果调用失败，则返回下列错误码之一。
 
 <!-- ## ERRORS -->
 ## 错误码

@@ -36,7 +36,7 @@ TODO(ZX-2399)
 <!-- **socket_accept**() returns **ZX_OK** on success and the received handle
 is returned via *out_socket*.  In the event of failure, one of the following
 values is returned. -->
-**socket_accept()** 成功则返回**ZX_OK**，并通过*out_socket*返回接收的socket句柄。如果发生错误，将返回以下值之一。
+**socket_accept()** 成功则返回**ZX_OK**，并通过*out_socket*返回接收的socket句柄。如果调用失败，则返回下列错误码之一。
 
 <!-- ## ERRORS -->
 ## 错误码

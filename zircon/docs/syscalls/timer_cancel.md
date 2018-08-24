@@ -44,7 +44,7 @@ with the new deadline. -->
 
 <!-- **zx_timer_cancel**() returns **ZX_OK** on success.
 In the event of failure, a negative error value is returned. -->
-**zx_timer_cancel()** 调用成功则返回**ZX_OK**，如果发生错误，则返回负的错误码。
+**zx_timer_cancel()** 调用成功则返回**ZX_OK**。如果调用失败，则返回负的错误码。
 
 <!-- ## ERRORS -->
 ## 错误码
