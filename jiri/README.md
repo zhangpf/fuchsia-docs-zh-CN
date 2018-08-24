@@ -553,7 +553,7 @@ reference][android repo] or Go's [contributing instructions][go contrib] for
 examples of how intricate the workflow for resolving conflicts between the
 pending code change and the remote master is.
 --->
-Gerrit的特点之一是它认为一个变更列表仅由一个提交表示，因此这限制了开发人员使用git来处理变更的方式。特别地，他们必须使用--amend标志来进行除了第一个之外的其他git提交操作，并且需要使用git rebase来与远程主机同步他们待定（pending）状态的代码变更。请参阅Android的[repo命令参考][android repo]或Go的[贡献说明][go contrib]作为例子，来了解消解待定代码变更与远程主服务器之间冲突的工作流，是如何的错综复杂。
+Gerrit的特点之一是它认为一个变更列表仅由一个提交表示，因此这限制了开发人员使用git来处理变更的方式。特别地，他们必须使用--amend标志来进行除了第一个之外的其他git提交操作，并且需要使用git rebase来与远程主机同步他们待处理状态的代码变更。请参阅Android的[repo命令参考][android repo]或Go的[贡献说明][go contrib]作为例子，来了解消解待处理代码变更与远程主服务器之间冲突的工作流，是如何的错综复杂。
 
 <!---
 The rest of this section describes common development operations using `jiri

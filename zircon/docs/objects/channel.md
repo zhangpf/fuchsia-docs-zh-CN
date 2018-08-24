@@ -27,7 +27,7 @@ and a call to *zx_channel_read()* dequeues one message (if any are
 queued). A thread can block until messages are pending via
 *zx_object_wait_one()* or other waiting mechanisms. -->
 
-channel维护了一个有序的消息队列，以便在任一方向上传递由一些数据和句柄组成的消息。调用*zx_channel_write()* 会将一条消息加入队列，而调用*zx_channel_read()* 会使一条消息出列（如果队列中消息存在的话）。线程可以被阻塞并挂起，直到通过*zx_object_wait_one()* 或其他等待机制获得消息。
+channel维护了一个有序的消息队列，以便在任一方向上传递由一些数据和句柄组成的消息。调用*zx_channel_write()* 会将一条消息加入队列，而调用*zx_channel_read()* 会使一条消息出列（如果队列中消息存在的话）。线程可以被阻塞并挂起，直到通过*zx_object_wait_one()* 或其他等待机制获得待处理消息。
 
 <!-- Alternatively, a call to *zx_channel_call()* enqueues a message in one
 direction of the channel, waits for a corresponding response, and

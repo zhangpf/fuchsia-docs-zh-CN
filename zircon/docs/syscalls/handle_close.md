@@ -28,7 +28,7 @@ reclaimed by the kernel if no other handles to it exist. -->
 
 <!-- If the *handle* was used in a pending [object_wait_one](syscalls/object_wait_one.md) or a
 [object_wait_many](syscalls/object_wait_many.md) call, the wait will be aborted. -->
-如果*handle*在挂起的[object_wait_one](object_wait_one.md)或[object_wait_many](object_wait_many.md)调用中使用，则等待将被中止。
+如果*handle*在待处理的[object_wait_one](object_wait_one.md)或[object_wait_many](object_wait_many.md)调用中使用，则等待将被中止。
 
 <!-- It is not an error to close the special "never a valid handle" **ZX_HANDLE_INVALID**,
 similar to free(NULL) being a valid call. -->

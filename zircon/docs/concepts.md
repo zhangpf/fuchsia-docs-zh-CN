@@ -260,7 +260,7 @@ to wait for a signal to be active on a single handle or
 signals on multiple handles.  Both calls allow for a timeout after
 which they'll return even if no signals are pending.
 --->
-`Thread`可以使用[*zx_object_wait_one()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_one.md)来等待某个句柄被收到信号，或者使用[*zx_object_wait_many()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_many.md)方法来等待多个句柄收到信号。两种调用都允许设置超时点，即没有信号激活，它们也会因超时而返回。
+`Thread`可以使用[*zx_object_wait_one()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_one.md)来等待某个句柄被收到信号，或者使用[*zx_object_wait_many()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_many.md)方法来等待多个句柄收到信号。两种调用都允许设置超时点，即没有信号待处理，它们也会因超时而返回。
 
 <!---
 If a Thread is going to wait on a large set of handles, it is more efficient to use
@@ -268,7 +268,7 @@ a Port, which is an Object that other Objects may be bound to such that when sig
 are asserted on them, the Port receives a packet containing information about the
 pending Signals.
 --->
-如果`Thread`需要等待大量的句柄时，一种更高效的方式是使用`Port`。`Port`是一种其他对象可以加以绑定的`Object`，绑定的结果是当`Single`被发送到`Port`上时，`Port`将会接收到包含这些`Signal`信息的数据包给`Thread`作处理。
+如果`Thread`需要等待大量的句柄时，一种更高效的方式是使用`Port`。`Port`是一种其他对象可以加以绑定的`Object`，绑定的结果是当`Single`被发送到`Port`上时，`Port`将会接收到包含这些待处理`Signal`信息的数据包给`Thread`作处理。
 
 <!---
 See: [port_create](syscalls/port_create.md),

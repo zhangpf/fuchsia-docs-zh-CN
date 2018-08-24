@@ -25,13 +25,13 @@ zx_status_t zx_timer_cancel(zx_handle_t handle);
 
 <!-- **zx_timer_cancel**() cancels a pending timer that was started with
 **timer_set**(). -->
-**zx_timer_cancel()** 的功能是取消之前通过**timer_set()** 启动的计时器。
+**zx_timer_cancel()** 的功能是取消之前通过**timer_set()** 启动的待触发的计时器。
 
 <!-- Upon success the pending timer is canceled and the **ZX_TIMER_SIGNALED**
 signal is de-asserted. If a new pending timer is immediately needed
 rather than calling **timer_cancel**() first, call **timer_set**()
 with the new deadline. -->
-调用成功后，等待被触发的定时器被取消，并且**ZX_TIMER_SIGNALED** 信号不再发出。如果需要立即使用新的等待计时器而无需先调用**timer_cancel()**，请用新的截止时间参数(deadline)对同一定时器调用**timer_set()**。
+调用成功后，待触发的定时器被取消，并且**ZX_TIMER_SIGNALED** 信号不再发出。如果需要立即使用新的待触发的计时器而无需先调用**timer_cancel()**，请用新的截止时间参数(deadline)对同一定时器调用**timer_set()**。
 
 <!-- ## RIGHTS -->
 ## 权限

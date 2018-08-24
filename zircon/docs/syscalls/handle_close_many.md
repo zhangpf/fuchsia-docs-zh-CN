@@ -29,7 +29,7 @@ it exist. -->
 
 <!-- If a *handle* was used in a pending [object_wait_one](syscalls/object_wait_one.md) or a
 [object_wait_many](syscalls/object_wait_many.md) call, the wait will be aborted. -->
-如果*handles*在挂起的[object_wait_one](object_wait_one.md)或[object_wait_many](object_wait_many.md)调用中使用，则等待将被中止。
+如果*handles*在待处理的[object_wait_one](object_wait_one.md)或[object_wait_many](object_wait_many.md)调用中使用，则等待将被中止。
 
 <!-- This operation closes all handles presented to it, even if one or more
 of the handles is duplicate or invalid. -->
