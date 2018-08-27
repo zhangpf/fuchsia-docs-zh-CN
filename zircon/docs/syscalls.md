@@ -313,11 +313,12 @@
 
 ## 驱动开发工具
 + [cache_flush（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/cache_flush.md) - 刷新CPU数据和（或）指令缓存
-+ [interrupt_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/interrupt_create.md) - 创建中断对象
-+ [interrupt_bind（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/interrupt_bind.md) - 绑定中断向量到中断对象上
-+ [interrupt_wait（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/interrupt_wait.md) - 等待中断向量上发生中断
-+ [interrupt_get_timestamp（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/interrupt_get_timestamp.md) - 获取中断的时间戳
-+ [interrupt_signal（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/interrupt_signal.md) - 向中断对象发送虚拟中断信号
++ [interrupt_create](syscalls/interrupt_create.md) - 创建中断对象
++ [interrupt_bind](/syscalls/interrupt_bind.md) - 绑定中断向量到中断对象句柄
++ [interrupt_wait](syscalls/interrupt_wait.md) - 等待中断对象句柄产生中断
++ [interrupt_ack](syscalls/interrupt_ack.md) - 确认应答并重新启动中断。
++ [interrupt_destry](syscalls/interrupt_destroy.md) - 销毁中断对象
++ [interrupt_trigger](syscalls/interrupt_trigger.md) - 触发虚拟中断对象
 + acpi_uefi_rsdp
 + mmap_device_io
 + set_framebuffer
