@@ -312,7 +312,7 @@
 --->
 
 ## 驱动开发工具
-+ [cache_flush（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/cache_flush.md) - 刷新CPU数据和（或）指令缓存
++ [cache_flush](syscalls/cache_flush.md) - 刷新CPU数据和/或指令缓存
 + [interrupt_create](syscalls/interrupt_create.md) - 创建中断对象
 + [interrupt_bind](/syscalls/interrupt_bind.md) - 绑定中断向量到中断对象句柄
 + [interrupt_wait](syscalls/interrupt_wait.md) - 等待中断对象句柄产生中断
