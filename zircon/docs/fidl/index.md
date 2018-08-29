@@ -35,14 +35,14 @@ This document is a description of the Fuchsia Interface Definition Language
 
 *   [FIDL: 传输格式规范（英文原文）][FIDL: Wire Format Specification]
 *   [FIDL: 语言规范（英文原文）][FIDL: Language Specification]
-*   [FIDL: 编译规范（英文原文）][FIDL: Compiler Specification]
+*   [FIDL: 编译规范][FIDL: Compiler Specification]
 *   [FIDL: 绑定C语言（英文原文）][FIDL: C Language Bindings]
 *   [FIDL: 绑定C++语言（英文原文）][FIDL: C++ Language Bindings]
 *   [FIDL示例（英文原文）][FIDL Examples]
 
 [FIDL: Wire Format Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/wire-format/index.md
 [FIDL: Language Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/language.md
-[FIDL: Compiler Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/compiler.md
+[FIDL: Compiler Specification]: compiler.md
 [FIDL: C Language Bindings]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/c-language-bindings.md
 [FIDL: C++ Language Bindings]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/c++-language-bindings.md
 [FIDL Examples]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/host/fidl/examples
@@ -61,7 +61,7 @@ the Fuchsia Operating System. FIDL is supported by a toolchain (compiler) and
 runtime support libraries (bindings) to help developers use IPC effectively.
 -->
 
-Fuchsia接口定义语言（FIDL）是用来描述Fuchsia操作系统中进程间通信协议（IPC）的语言。FIDL的工具链（编译   器）和运行时支持库(绑定)用于帮助开发者高效的使用IPC。
+Fuchsia接口定义语言（FIDL）是用来描述Fuchsia操作系统中进程间通信协议（IPC）的语言。FIDL的工具链（编译器）和运行时支持库(绑定)用于帮助开发者高效的使用IPC。
 
 <!--
 Goals
