@@ -13,25 +13,15 @@
 purpose, goals, and requirements, as well as links to related documents. -->
 有关FIDL的总体目的、目标和要求，以及相关文档的链接的更多信息，请参阅[FIDL概述](index.md)。
 
-<!-- TOC -->
-
-- [FIDL：语言规范](#fidl语言规范)
-    - [语法](#语法)
-        - [令牌(Token)](#令牌token)
-            - [注释](#注释)
-            - [限定标识符](#限定标识符)
-            - [枚举(Enum)](#枚举enum)
-                - [声明](#声明)
-            - [向量](#向量)
-                - [使用](#使用)
-            - [结构体](#结构体)
-                - [声明](#声明-1)
-            - [使用](#使用-1)
-        - [常量声明](#常量声明)
-
-<!-- /TOC -->
+  * [句法](#%E5%8F%A5%E6%B3%95)
+    * [令牌(Token)](#%E4%BB%A4%E7%89%8Ctoken)
+    * [库](#%E5%BA%93)
+    * [类型和类型声明](#%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E)
+    * [常量声明](#%E5%B8%B8%E9%87%8F%E5%A3%B0%E6%98%8E)
+    * [常量表达式](#%E5%B8%B8%E9%87%8F%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+  * [语法](#%E8%AF%AD%E6%B3%95)
 <!-- ## Syntax -->
-## 语法
+## 句法
 <!-- 
 The Fuchsia Interface Definition Language provides a syntax for declaring named
 constants, enums, structs, unions, and interfaces. These declarations are
@@ -71,6 +61,7 @@ struct Foo { // 这里也是
 ```
 <!-- #### Document Comments -->
 #### 文档注释
+
 <!-- TODO(TO-504): We will generate online documentation from FIDL
 files. Perhaps the compiler can emit document contents together with
 the declarations in a machine-readable FIDL IR format that could be
