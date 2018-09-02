@@ -47,8 +47,20 @@ This document is a description of the Fuchsia Interface Definition Language
 [FIDL: C++ Language Bindings]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/c++-language-bindings.md
 [FIDL Examples]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/../../system/host/fidl/examples
 
-[TOC]
-
+<!-- [TOC] -->
+- [相关文档](#相关文档)
+- [目的](#目的)
+- [性能](#性能)
+- [人类工程学](#人类工程学)
+- [代码位置](#代码位置)
+- [规范的组成部分](#规范的组成部分)
+    - [FIDL传输格式](#fidl传输格式)
+    - [FIDL语言](#fidl语言)
+    - [FIDL编译器](#fidl编译器)
+    - [FIDL绑定](#fidl绑定)
+- [创作 FIDL](#创作-fidl)
+- [发布 FIDL](#发布-fidl)
+- [使用FIDL](#使用fidl)
 <!--
 Overview
 -->
