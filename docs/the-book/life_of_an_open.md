@@ -136,7 +136,7 @@ the “arg” field of the rio structure. However, if the operation was changed
 (to, for example, `write`), the interpretation of this message would be
 altered. -->
 
-[RemoteIO协议（RIO）](https://github.com/fuchsia-mirror/zircon/blob/master/system/ulib/fdio/include/lib/fdio/remoteio.h)描述了在两个实体之间传送时，这些编排格式的字节和句柄，实际上应该意味着什么。该协议描述了诸如“期望的句柄数”，“枚举操作”和“数据”之类的内容。在我们的例子中，`open（“foo”）`创建一个`ZXRIO_OPEN`消息，并将RIO消息的“data”字段设置为字符串“foo”。此外，如果任何标志被传递`open`操作（例如`O_RDONLY，O_RDWR，O_CREAT`等），这些标志将被放置在rio结构的“arg”字段中。但是，如果操作被改变（例如，`write`操作），则该消息的解释也将同时被改变。
+[RemoteIO协议（RIO）](https://github.com/fuchsia-mirror/zircon/blob/master/system/ulib/fdio/include/lib/fdio/remoteio.h)描述了在两个实体之间传送时，这些有线格式的字节和句柄，实际上应该意味着什么。该协议描述了诸如“期望的句柄数”，“枚举操作”和“数据”之类的内容。在我们的例子中，`open（“foo”）`创建一个`ZXRIO_OPEN`消息，并将RIO消息的“data”字段设置为字符串“foo”。此外，如果任何标志被传递`open`操作（例如`O_RDONLY，O_RDWR，O_CREAT`等），这些标志将被放置在rio结构的“arg”字段中。但是，如果操作被改变（例如，`write`操作），则该消息的解释也将同时被改变。
 
 <!-- Exact byte agreement at this layer is critical, as it allows communication
 between drastically different runtimes: **processes which understand RIO can
@@ -199,7 +199,7 @@ language) than the client. By using an agreed-upon wire-format, the
 interprocess dependencies are bottlenecked at the thin communication layer that
 occurs over channels. -->
 
-一旦消息从channel的客户端发送出去，它就将驻留在channel的服务端并等待被读取。服务段由“持有channel另一端的人员”来标识 -- 它可能与客户端位于同一个（或不同的）进程中，使用与客户端相同（或不同）的运行时，并且使用与客户相同的（或不同的编程语言）实现。通过使用商定的编排格式，进程间依赖性在channel上发生，并在精简通信层上成为瓶颈。
+一旦消息从channel的客户端发送出去，它就将驻留在channel的服务端并等待被读取。服务段由“持有channel另一端的人员”来标识 -- 它可能与客户端位于同一个（或不同的）进程中，使用与客户端相同（或不同）的运行时，并且使用与客户相同的（或不同的编程语言）实现。通过使用商定的有线格式，进程间依赖性在channel上发生，并在精简通信层上成为瓶颈。
 
 
 <!-- At some point in the future, this server-side end of the CWD handle will need
@@ -263,7 +263,7 @@ two well-known implementations exist: one written in C++ within the [libfs
 library](https://fuchsia.googlesource.com/zircon/+/master/system/ulib/fs/),
 and another written in Go in the [rpc package of
 ThinFS](https://fuchsia.googlesource.com/garnet/+/master/go/src/thinfs/zircon/rpc/rpc.go)] -->
-在Fuchsia中，“VFS层”是独立于文件系统的代码库，它可以分派和解释服务端消息，并在适当的地方调用底层文件系统中的操作。值得注意的是，该层是完全可选的：如果文件系统服务器不想链接到这个库，它们便没有义务使用它。要成为文件系统服务器，进程仅必须了解Remote IO的编排格式，因此，一种编程语言中尽管可以有任意数量的“VFS”实现，但在撰写本文时已有两个众所周知的实现：用C++编写实现的[libfs库](https://github.com/fuchsia-mirror/zircon/tree/master/system/ulib/fs)，另一个是在Go中用编写的[ThinFS的rpc包](https://github.com/fuchsia-mirror/garnet/blob/master/go/src/thinfs/zircon/rpc/rpc.go)。
+在Fuchsia中，“VFS层”是独立于文件系统的代码库，它可以分派和解释服务端消息，并在适当的地方调用底层文件系统中的操作。值得注意的是，该层是完全可选的：如果文件系统服务器不想链接到这个库，它们便没有义务使用它。要成为文件系统服务器，进程仅必须了解Remote IO的有线格式，因此，一种编程语言中尽管可以有任意数量的“VFS”实现，但在撰写本文时已有两个众所周知的实现：用C++编写实现的[libfs库](https://github.com/fuchsia-mirror/zircon/tree/master/system/ulib/fs)，另一个是在Go中用编写的[ThinFS的rpc包](https://github.com/fuchsia-mirror/garnet/blob/master/go/src/thinfs/zircon/rpc/rpc.go)。
 
 <!-- 
 The VFS layer defines the interface of operations which may be routed to the

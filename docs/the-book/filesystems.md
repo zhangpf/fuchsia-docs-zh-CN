@@ -72,7 +72,7 @@ open requests, a Fuchsia process must transmit an RPC message over an existing
 handle to a directory; for more detail on this process, refer to the [life of an
 open document](life_of_an_open.md). -->
 
-为了打开文件，Fuchsia应用程序（客户端）通过名为[RemoteIO](life_of_an_open.md＃remoteio)的协议将RPC请求发送到文件系统服务上。RemoteIO定义了用于在文件系统客户端和服务之间传输消息和句柄的编排格式。Fuchsia进程不是与内核实现的VFS层交互，而是向实现了文件，目录和设备的协议的文件系统服务发送请求。为了向其中之一的实体发送`Open`请求，Fuchsia进程必须通过现有句柄将RPC消息传输到目录上; 关于此过程的更多详细信息，请参阅[文件打开操作的生命周期](life_of_an_open.md)。
+为了打开文件，Fuchsia应用程序（客户端）通过名为[RemoteIO](life_of_an_open.md＃remoteio)的协议将RPC请求发送到文件系统服务上。RemoteIO定义了用于在文件系统客户端和服务之间传输消息和句柄的有线格式。Fuchsia进程不是与内核实现的VFS层交互，而是向实现了文件，目录和设备的协议的文件系统服务发送请求。为了向其中之一的实体发送`Open`请求，Fuchsia进程必须通过现有句柄将RPC消息传输到目录上; 关于此过程的更多详细信息，请参阅[文件打开操作的生命周期](life_of_an_open.md)。
 
 <!-- ### Namespaces -->
 ### 命名空间
@@ -129,7 +129,7 @@ the server validates and understands. -->
 <!-- In the case of files, directories, and devices, these operations use the
 RemoteIO protocol; in the case of services, these operations use the FIDL
 protocol, though there are plans to unify all operations into the FIDL protocol. -->
-建立连接后，无论是文件、目录、设备还是服务，都可以使用RPC消息传输后续操作。这些消息使用服务能够验证和理解的编排格式，在一个或多个句柄上传输。对于文件、目录和设备，这些操作使用RemoteIO协议，而在服务的情况下，这些操作则使用FIDL协议。尽管有计划将所有操作统一到FIDL协议中。
+建立连接后，无论是文件、目录、设备还是服务，都可以使用RPC消息传输后续操作。这些消息使用服务能够验证和理解的有线格式，在一个或多个句柄上传输。对于文件、目录和设备，这些操作使用RemoteIO协议，而在服务的情况下，这些操作则使用FIDL协议。尽管有计划将所有操作统一到FIDL协议中。
 
 <!-- 
 As an example, to seek within a file, a client would send an `ZXRIO_SEEK`

@@ -33,7 +33,7 @@ This document is a description of the Fuchsia Interface Definition Language
 -->
 ## 相关文档
 
-*   [FIDL: 传输格式规范（英文原文）][FIDL: Wire Format Specification]
+*   [FIDL: 有线格式规范（英文原文）][FIDL: Wire Format Specification]
 *   [FIDL: 语言规范][FIDL: Language Specification]
 *   [FIDL: 编译规范][FIDL: Compiler Specification]
 *   [FIDL: 绑定C语言（英文原文）][FIDL: C Language Bindings]
@@ -92,7 +92,7 @@ predictable ways. The FIDL wire format must offer strong static guarantees such
 as ensuring that structure size and layout is invariant thereby alleviating the
 need for dynamic memory allocation or complex validation rules.
 -->
-**IPC的确定性**衡量在已知的封装资源大小的执行事务能力。IPC将被广泛的用于关键系统服务，例如，服务于许多客户端的文件系统，必须按照可预测的方式进行工作。FIDL的传输格式必须对确保结构体大小与布局的不变性提供强静态保证，从而减轻对动态内存分配或复杂验证规则的需求。
+**IPC的确定性**衡量在已知的封装资源大小的执行事务能力。IPC将被广泛的用于关键系统服务，例如，服务于许多客户端的文件系统，必须按照可预测的方式进行工作。FIDL的有线格式必须对确保结构体大小与布局的不变性提供强静态保证，从而减轻对动态内存分配或复杂验证规则的需求。
 
 <!--
 **IPC robustness** pertains to the need to consider IPC as an essential part of
@@ -176,7 +176,7 @@ Requirements
 -->
 
 *   与使用手动定义数据的方式一样（在速度与内存使用上）高效。
-*   在传输格式上，使用未压缩的本地主机大小端数据类型，并纠正数据对齐来支持消息内容的原地访问。
+*   在有线格式上，使用未压缩的本地主机大小端数据类型，并纠正数据对齐来支持消息内容的原地访问。
 *   如果消息大小静态已知或者有界时，无需分配动态内存以产生或消费消息。
 *   利用move-only语义来显式处理所有权
 *   数据结构打包顺序是规范的，无歧义的，并且是最小对齐的。
@@ -267,9 +267,9 @@ transmission over IPC.
 The fidl wire format is documented [FIDL: Wire Format Specification].
 -->
 
-FIDL传输格式规范了FIDL消息是如何在内存中表示以支持IPC传输。
+FIDL有线格式规范了FIDL消息是如何在内存中表示以支持IPC传输。
 
-[FIDL传输格式的文档（英文原文）][FIDL: Wire Format Specification]
+[FIDL：有线格式的文档（英文原文）][FIDL: Wire Format Specification]
 
 <!--
 ### FIDL Language
@@ -344,7 +344,7 @@ Bindings are available in various flavors depending on the language:
     strings or vectors), but correspondingly somewhat less efficient as a
     result.
 -->
-*   **惯用绑定**: 通过将数据从传输格式拷贝到易于使用的数据类型上（例如堆上字符串或者向量），来提供更开发者友好的放好似，但是这种方式对应的效率较低。
+*   **惯用绑定**: 通过将数据从有线格式拷贝到易于使用的数据类型上（例如堆上字符串或者向量），来提供更开发者友好的放好似，但是这种方式对应的效率较低。
 
 <!--
 Bindings offer several various ways of invoking interface methods depending on
@@ -383,8 +383,8 @@ Bindings provide some or all of the following principal operations:
     move-only types)
 *   **Call**: invoke interface method
 -->
-*   **编码**: 将本地数据结构原地转换为传输格式（与验证相结合）
-*   **解码**: 将传输格式原地转换为本地数据结构（与验证相结合）
+*   **编码**: 将本地数据结构原地转换为有线格式（与验证相结合）
+*   **解码**: 将有线格式原地转换为本地数据结构（与验证相结合）
 *   **复制/移动到惯用形式**: 把本地数据结构的内容复制为惯用数据结构中，同时移除handle。
 *   **复制/移动到本机格式**: 把惯用数据结构的内容复制为本地数据结构中，同时移除handle。
 *   **克隆**: 复制本地或惯用数据结构 (不包含只可移动的类型)
@@ -466,7 +466,7 @@ language runtimes, the consumer may have a choice of a few different flavors of
 generated code all of which are interoperable at the wire format level but
 perhaps not at the source level.
 -->
-基于FIDL的协议使用者利用FIDL编译器生成适用于他们语言运行时特定绑定的代码。对于某些语言运行时，使用者可以选择几种不同风格来生成代码，他们可以传输格式上互操作，但可能在源码级别上可能不行。
+基于FIDL的协议使用者利用FIDL编译器生成适用于他们语言运行时特定绑定的代码。对于某些语言运行时，使用者可以选择几种不同风格来生成代码，他们可以有线格式上互操作，但可能在源码级别上可能不行。
 
 <!--
 In the Fuchsia world build environment, generating code from FIDL libraries will
