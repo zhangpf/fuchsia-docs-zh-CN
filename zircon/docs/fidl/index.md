@@ -33,14 +33,14 @@ This document is a description of the Fuchsia Interface Definition Language
 -->
 ## 相关文档
 
-*   [FIDL: 有线格式规范（英文原文）][FIDL: Wire Format Specification]
+*   [FIDL: 有线格式规范][FIDL: Wire Format Specification]
 *   [FIDL: 语言规范][FIDL: Language Specification]
 *   [FIDL: 编译规范][FIDL: Compiler Specification]
 *   [FIDL: 绑定C语言（英文原文）][FIDL: C Language Bindings]
 *   [FIDL: 绑定C++语言（英文原文）][FIDL: C++ Language Bindings]
 *   [FIDL示例（英文原文）][FIDL Examples]
 
-[FIDL: Wire Format Specification]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/wire-format/index.md
+[FIDL: Wire Format Specification]: wire-format/index.md
 [FIDL: Language Specification]: language.md
 [FIDL: Compiler Specification]: compiler.md
 [FIDL: C Language Bindings]: https://github.com/fuchsia-mirror/zircon/blob/00faaac908ed4c5a59bfab95b6831b33df6a5cb0/docs/fidl/c-language-bindings.md

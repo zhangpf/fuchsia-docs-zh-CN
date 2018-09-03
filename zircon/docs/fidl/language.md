@@ -35,9 +35,9 @@ FIDL declarations are stored in plain text UTF-8 files. Each file consists of a
 sequence of semicolon delimited declarations. The order of declarations within a
 FIDL file or among FIDL files within a library is irrelevant. FIDL does not
 require (or support) forward declarations of any kind. -->
-FIDL声明存储在纯文本UTF-8文件中，每个文件都由一系列以分号分隔的声明组成。 
+FIDL声明存储在UTF-8纯文本文件中，每个文件都由一系列以分号分隔的声明组成。 
 库中的FIDL文件顺序或FIDL文件中的声明顺序是无关紧要的。
-FIDL不要求（或不支持）任何类型的前向声明。
+FIDL不要求（且不支持）任何类型的前向声明。
 
 <!-- ### Tokens -->
 ### 令牌(Token)
@@ -47,7 +47,7 @@ FIDL不要求（或不支持）任何类型的前向声明。
 
 <!-- FIDL supports C++-style comments. These go from `//` to the end of the
 line. They may contain UTF-8 content (which is of course ignored). -->
-FIDL支持C++风格的注释，注释从`//`开始到行尾结束，并包含UTF-8的内容（它们当然会被FIDL编译器作为注释忽略）。
+FIDL支持C++风格的注释，注释是从`//`开始到行尾结束，其中所包含UTF-8的文本内容（它们当然会被FIDL编译器作为注释忽略）。
 
 <!-- ```
 // this is a comment
@@ -86,7 +86,7 @@ uint32, uint64, union, using, vector
 <!-- To use these words as identifiers, they must be escaped by prepending an "@".
 For example "interface" is a reserved word but "@interface" is an identifier
 whose name is "interface". -->
-如果要将这些单词用作标识符，必须通过添加“@”来转义它们。 
+如果要将这些单词用作标识符，必须通过添加`@`来转义它们。 
 例如，`interface`是关键字，但`@interface`是名称为`interface`的标识符。
 
 <!-- #### Identifiers -->
@@ -114,13 +114,13 @@ struct Foo { };
 struct @struct { };
 ``` -->
 ```
-// 名为“foo”的库
+// 名为"foo"的库
 library foo;
 
-// 名为“Foo”的结构
+// 名为"Foo"的结构体
 struct Foo { };
 
-// 名为“struct”的结构
+// 名为"struct"的结构体
 struct @struct { };
 ```
 
@@ -132,7 +132,7 @@ struct @struct { };
 library. To reference symbols in other libraries, they must be qualified by
 prefixing the identifier with the library name or alias. -->
 FIDL始终在当前库的作用域内查找未限定的符号。 
-要引用其他库中的符号，必须通过在标识符前添加库名或别名来限定它们。
+要引用其他库中的符号，必须在标识符前添加库名或别名来限定它们。
 
 **objects.fidl:**
 
@@ -155,8 +155,8 @@ FIDL始终在当前库的作用域内查找未限定的符号。
     using textures as tex;
 
     interface Frob {
-        // “Thing”指的是“objects”库中的“Thing”
-        // “tex.Color”指的是“textures”库中的“Color”
+        // "Thing"指的是"objects"库中的"Thing"
+        // "tex.Color"指的是"textures"库中的"Color"
         Paint(Thing thing, tex.Color color);
     };
 
@@ -213,7 +213,7 @@ This allows the library to refer to symbols defined in other libraries upon whic
 they depend. Symbols which are imported this way may be accessed either by
 qualifying them with the library name as in _"mozart.geometry.Rect"_ or by
 qualifying them with the library alias as in _"geo.Rect"_. -->
-库使用“using”来声明它们使用的其他库，这允许库引用它们所依赖的其他库中定义的符号。 
+库使用`using`来声明它们使用的其他库，这允许库引用它们所依赖的其他库中定义的符号。 
 以这种方式导入的符号可以通过使用 _`mozart.geometry.Rect`_ 中的库名称限定它们，也可以通过使用库的别名来访问它们，例如 *`geo.Rect`*。
 
 ```
@@ -483,7 +483,7 @@ struct Record {
     maximum 40 element vector.
 *   There is no special case for vectors of bools. Each bool element takes one
     byte as usual. -->
-*   可变长度的同一类型元素序列。
+*   同一类型元素的可变长度序列。
 *   可以为`null`，`null`向量和空向量是不同的。
 *   可以指定最大容量，例如。 **`vector<T>:40`**表示最多40个元素的向量。
 *   `bool`类型的向量也不例外，每个`bool`元素像往常一样占用一个字节。
@@ -570,13 +570,12 @@ struct Record {
 * **`handle`**：未指定类型的不可为`null`的Zircon句柄
 * **`handle?`**：未指定类型的可为`null`的Zircon句柄
 * **`handle<H>`**：_H_ 类型不可为`null`的Zircon句柄
-* **`handle<H>?`**：_H_ 型可为`null`的Zircon句柄
+* **`handle<H>?`**：_H_ 类型可为`null`的Zircon句柄
 
 <!-- _H_ can be one of: `channel, event, eventpair, fifo, job,
 process, port, resource, socket, thread, vmo`. New types will
 be added to the fidl language as they are added to Zircon. -->
-_H_ 可以是以下类型之一：`channel, event, eventpair, fifo, job,
-process, port, resource, socket, thread, vmo`。 
+_H_ 可以是以下类型之一：`channel, event, eventpair, fifo, job, process, port, resource, socket, thread, vmo`。 
 如果有新句柄类型被添加到Zircon中，那么它们也会被添加到FIDL语言中。
 
 <!-- ```
