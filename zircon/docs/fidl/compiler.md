@@ -10,7 +10,7 @@
 
 <!-- Information on the internals of that tool lives
 [alongside the source of the tool](../../system/host/fidl/README.md). -->
-有关该工具的内部相关信息与[它的源码在一起（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/system/host/fidl/README.md)。
+有关该工具的内部相关信息与[它的源码在同一目录下](/zircon/system/host/fidl/README.md)。
 
 <!-- See [FIDL: Overview](index.md) for more information about FIDL's overall
 purpose, goals, and requirements, as well as links to related documents. -->
