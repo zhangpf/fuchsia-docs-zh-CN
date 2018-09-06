@@ -74,8 +74,8 @@ Fuchsia为FIDL库设计了[可读性编程规范（英文原文）](https://gith
 language bindings) are described in [FIDL Tuning Proposals]. These
 decisions are recorded here for posterity. This includes both accepted
 and rejected designs. [FTP-001] describes the proposal process itself. -->
-[FIDL修改提案（英文原文）][FIDL Tuning Proposals]中描述了对FIDL（无论是语言，有线格式还是语言绑定）的重要修改，这些决定记录在这里供后来者参考，包括已接受和被拒绝的设计提案。
-[FTP-001（英文原文）][FTP-001]描述了提案流程本身。
+[FIDL修改提案][FIDL Tuning Proposals]中描述了对FIDL（无论是语言，有线格式还是语言绑定）的重要修改，这些决定记录在这里供后来者参考，包括已接受和被拒绝的设计提案。
+[FTP-001][FTP-001]描述了提案流程本身。
 
-[FIDL Tuning Proposals]: https://github.com/fuchsia-mirror/docs/blob/master/development/languages/fidl/ftp/README.md
-[FTP-001]: https://github.com/fuchsia-mirror/docs/blob/master/development/languages/fidl/ftp/ftp-001.md
+[FIDL Tuning Proposals]: ftp/README.md
+[FTP-001]: ftp/ftp-001.md
