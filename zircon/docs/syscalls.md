@@ -83,9 +83,9 @@
 + [job_set_relative_importance](syscalls/job_set_relative_importance.md) - update a global ordering of jobs
 --->
 ## Job
-+ [job_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/job_create.md) - 在任务中创建新的任务
-+ [job_set_policy（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/job_set_policy.md) - 改变任务的策略和它的子任务
-+ [job_set_relative_importance（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/job_set_relative_importance.md) - 更新任务的全局排序
++ [job_create](syscalls/job_create.md) - 在任务中创建新的子任务
++ [job_set_policy](syscalls/job_set_policy.md) - 改变任务和它的子任务的策略
+<!-- + [job_set_relative_importance（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/job_set_relative_importance.md) - 更新任务的全局排序 -->
 
 <!---
 ## Tasks (Thread, Process, or Job)
