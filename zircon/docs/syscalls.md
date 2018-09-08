@@ -70,11 +70,11 @@
 + [process_exit](syscalls/process_exit.md) - exit the current process
 --->
 ## Process
-+ [process_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_create.md) - 在任务中创建新进程
-+ [process_read_memory（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_read_memory.md) - 从进程的地址空间中读取数据
-+ [process_start（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md) - 运行新进程
-+ [process_write_memory（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_write_memory.md) - 向进程的地址空间中写入数据
-+ [process_exit（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_exit.md) - 退出当前进程
++ [process_create](syscalls/process_create.md) - 在作业中创建新进程
++ [process_read_memory](syscalls/process_read_memory.md) - 从进程的地址空间中读取数据
++ [process_start](syscalls/process_start.md) - 启动新进程
++ [process_write_memory](syscalls/process_write_memory.md) - 向进程的地址空间中写入数据
++ [process_exit](syscalls/process_exit.md) - 退出当前进程
 
 <!---
 ## Jobs

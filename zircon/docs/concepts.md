@@ -97,7 +97,7 @@ Handles may be moved from one Process to another by writing them into a Channel
 [*zx_process_start()*](syscalls/process_start.md) to pass a Handle as the argument
 of the first thread in a new Process.
 --->
-可以通过向`Channel`写入`Handle`的方式，将`Handle`从一个`Process`移动到另外一个`Process`（使用 [*zx_channel_write()*](syscalls/channel_write.md)函数），或通过使用[*zx_process_start()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md)函数，作为新`Process`的第一个线程的启动参数的形式传递一个`Handle`。
+可以通过向`Channel`写入`Handle`的方式，将`Handle`从一个`Process`移动到另外一个`Process`（使用 [*zx_channel_write()*](syscalls/channel_write.md)函数），或通过使用[*zx_process_start()*](syscalls/process_start.md)函数，作为新`Process`的第一个线程的启动参数的形式传递一个`Handle`。
 
 <!---
 
@@ -178,7 +178,7 @@ See: [process_create](syscalls/process_create.md),
 and [thread_start](syscalls/thread_start.md). 
 --->
 
-请查看：[process_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_create.md)，[process_start（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/process_start.md)，[thread_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_create.md)和[thread_start（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_start.md)。 
+请查看：[process_create](syscalls/process_create.md)，[process_start](syscalls/process_start.md)，[thread_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_create.md)和[thread_start（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_start.md)。 
 
 <!-- ## Message Passing: Sockets and Channels -->
 ## 消息传递：Socket和Channel
