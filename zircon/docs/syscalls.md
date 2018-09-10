@@ -54,7 +54,7 @@
 + [thread_start](syscalls/thread_start.md) - cause a new thread to start executing
 + [thread_write_state](syscalls/thread_write_state.md) - modify register state of a thread
 --->
-## Thread
+## Thread（线程）
 + [thread_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_create.md) - 在进程中创建新线程
 + [thread_exit（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_exit.md) - 退出当前线程
 + [thread_read_state（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_read_state.md) - 从线程中读取寄存器状态
@@ -69,7 +69,7 @@
 + [process_write_memory](syscalls/process_write_memory.md) - write to a process's address space
 + [process_exit](syscalls/process_exit.md) - exit the current process
 --->
-## Process
+## Process（进程）
 + [process_create](syscalls/process_create.md) - 在作业中创建新进程
 + [process_read_memory](syscalls/process_read_memory.md) - 从进程的地址空间中读取数据
 + [process_start](syscalls/process_start.md) - 启动新进程
@@ -82,9 +82,9 @@
 + [job_set_policy](syscalls/job_set_policy.md) - modify policies for a job and its descendants
 + [job_set_relative_importance](syscalls/job_set_relative_importance.md) - update a global ordering of jobs
 --->
-## Job
-+ [job_create](syscalls/job_create.md) - 在任务中创建新的子任务
-+ [job_set_policy](syscalls/job_set_policy.md) - 改变任务和它的子任务的策略
+## Job（作业）
++ [job_create](syscalls/job_create.md) - 在作业中创建新的子作业
++ [job_set_policy](syscalls/job_set_policy.md) - 改变作业和它的子作业的策略
 <!-- + [job_set_relative_importance（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/job_set_relative_importance.md) - 更新任务的全局排序 -->
 
 <!---
@@ -94,11 +94,11 @@
 + [task_resume](syscalls/task_resume.md) - cause a suspended task to continue running
 + [task_suspend](syscalls/task_suspend.md) - cause a task to be suspended
 --->
-## 作业（Tasks），包括Thread, Process和Job
-+ [task_bind_exception_port（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/task_bind_exception_port.md) - 向一个作业上挂载异常端口
-+ [task_kill（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/task_kill.md) - 作业终止运行
-+ [task_resume（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/task_resume.md) - 挂起的作业继续运行
-+ [task_suspend（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/task_suspend.md) - 将一个作业中断挂起
+## Task（任务），包括线程, 进程和作业
++ [task_bind_exception_port](syscalls/task_bind_exception_port.md) - 向任务上挂载异常端口
++ [task_kill](syscalls/task_kill.md) - 终止任务的运行
++ [task_resume](syscalls/task_resume.md) - 继续执行挂起的任务
++ [task_suspend](syscalls/task_suspend.md) - 将一个任务中断挂起
 
 <!---
 ## Channels
