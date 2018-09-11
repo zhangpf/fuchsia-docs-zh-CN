@@ -178,7 +178,7 @@ See: [process_create](syscalls/process_create.md),
 and [thread_start](syscalls/thread_start.md). 
 --->
 
-请查看：[process_create](syscalls/process_create.md)，[process_start](syscalls/process_start.md)，[thread_create（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_create.md)和[thread_start（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_start.md)。 
+请查看：[process_create](syscalls/process_create.md)，[process_start](syscalls/process_start.md)，[thread_create](syscalls/thread_create.md)和[thread_start](syscalls/thread_start.md)。 
 
 <!-- ## Message Passing: Sockets and Channels -->
 ## 消息传递：Socket和Channel

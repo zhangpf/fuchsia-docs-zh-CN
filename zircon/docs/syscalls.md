@@ -55,11 +55,12 @@
 + [thread_write_state](syscalls/thread_write_state.md) - modify register state of a thread
 --->
 ## Thread（线程）
-+ [thread_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_create.md) - 在进程中创建新线程
-+ [thread_exit（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_exit.md) - 退出当前线程
-+ [thread_read_state（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_read_state.md) - 从线程中读取寄存器状态
-+ [thread_start（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_start.md) - 运行新线程
-+ [thread_write_state（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/thread_write_state.md) - 修改线程的寄存器状态
+
++ [thread_create](syscalls/thread_create.md) - 在进程中创建新线程
++ [thread_exit](syscalls/thread_exit.md) - 退出当前线程
++ [thread_read_state](syscalls/thread_read_state.md) - 从线程中读取寄存器状态
++ [thread_start](syscalls/thread_start.md) - 运行新线程
++ [thread_write_state](syscalls/thread_write_state.md) - 修改线程的寄存器状态
 
 <!---
 ## Processes
