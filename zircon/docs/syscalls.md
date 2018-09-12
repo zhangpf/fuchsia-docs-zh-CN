@@ -212,8 +212,8 @@
 + [cprng_add_entropy](syscalls/cprng_add_entropy.md)
 --->
 ## 加密安全的随机数发生器
-+ [cprng_draw（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/cprng_draw.md)
-+ [cprng_add_entropy（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/cprng_add_entropy.md)
++ [cprng_draw](syscalls/cprng_draw.md)
++ [cprng_add_entropy](syscalls/cprng_add_entropy.md)
 
 <!---
 ## Time
