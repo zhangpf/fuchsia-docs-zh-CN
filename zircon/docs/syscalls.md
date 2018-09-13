@@ -245,8 +245,8 @@
 + [guest_set_trap](syscalls/guest_set_trap.md) - set a trap in a hypervisor guest
 --->
 ## 虚拟机监视器管理的客户机
-+ [guest_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/guest_create.md) - 创建虚拟客户机
-+ [guest_set_trap（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/guest_set_trap.md) - 在虚拟机客户机中设置陷入中断
++ [guest_create](syscalls/guest_create.md) - 创建客户虚拟机
++ [guest_set_trap](syscalls/guest_set_trap.md) - 在客户虚拟机机中设置陷入中断
 
 <!---
 ## Virtual CPUs
