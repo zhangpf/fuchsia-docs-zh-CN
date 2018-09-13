@@ -32,7 +32,7 @@ zx_status_t zx_thread_write_state(
 state may only be written when the thread is halted for an exception or the
 thread is suspended. -->
 **thread_write_state()** 写入线程状态的一个方面的值。 
-但只有当线程因异常而暂停或被挂起时，才能读取线程的状态。
+但只有当线程因异常而暂停或被挂起时，才能写入线程的状态。
 
 <!-- The thread state is highly processor specific. See the structures in
 zircon/syscalls/debug.h for the contents of the structures on each platform. -->
