@@ -257,11 +257,11 @@
 + [vcpu_write_state](syscalls/vcpu_write_state.md) - write state to a virtual cpu
 --->
 ## 虚拟CPU
-+ [vcpu_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vcpu_create.md) - 创建虚拟cpu
-+ [vcpu_resume（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vcpu_resume.md) - 恢复虚拟cpu的继续运行
-+ [vcpu_interrupt（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vcpu_interrupt.md) - 在虚拟cpu上产生中断
-+ [vcpu_read_state（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vcpu_read_state.md) - 读取虚拟cpu的状态
-+ [vcpu_write_state（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vcpu_write_state.md) - 向虚拟cpu写入状态信息
++ [vcpu_create](syscalls/vcpu_create.md) - 创建虚拟cpu
++ [vcpu_resume](syscalls/vcpu_resume.md) - 恢复虚拟cpu的运行
++ [vcpu_interrupt](syscalls/vcpu_interrupt.md) - 在虚拟cpu上触发中断
++ [vcpu_read_state](syscalls/vcpu_read_state.md) - 读取虚拟cpu的状态
++ [vcpu_write_state](syscalls/vcpu_write_state.md) - 向虚拟cpu写入状态信息
 
 <!---
 ## Global system information
