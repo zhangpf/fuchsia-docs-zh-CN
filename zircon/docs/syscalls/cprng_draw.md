@@ -1,7 +1,7 @@
 # zx_cprng_draw
 ---
 
-[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/b1ee78419ac2dc207a2f5b2e8fc69fa56101df90/docs/syscalls/cprng_add_entropy.md)
+[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/b1ee78419ac2dc207a2f5b2e8fc69fa56101df90/docs/syscalls/cprng_draw.md)
 
 ---
 <!-- ## NAME -->

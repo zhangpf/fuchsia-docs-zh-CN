@@ -1,8 +1,7 @@
 # zx_cache_flush
 ---
 
-[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/a9ff88e1fd77ac9146e98980080a246418057ad5/docs/syscalls/cache_flush.md
-)
+[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/a9ff88e1fd77ac9146e98980080a246418057ad5/docs/syscalls/cache_flush.md)
 
 ---
 <!-- ## NAME -->

@@ -1,7 +1,7 @@
 # zx_system_num_cpus
 ---
 
-[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/9b1d42b6f62ed4a4fe443eb03e020c74abcc8875/docs/syscalls/system_get_features.md)
+[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/9b1d42b6f62ed4a4fe443eb03e020c74abcc8875/docs/syscalls/system_get_num_cpus.md)
 
 ---
 

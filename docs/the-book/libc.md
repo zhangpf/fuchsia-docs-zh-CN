@@ -1,7 +1,7 @@
 # libc
 ---
 
-[*英文原文快照*](https://github.com/fuchsia-mirror/docs/blob/a774512b9d926ee438a77ddc6a5f362b71e0cc4b/the-book/README.md)
+[*英文原文快照*](https://github.com/fuchsia-mirror/docs/blob/a774512b9d926ee438a77ddc6a5f362b71e0cc4b/the-book/libc.md)
 
 ---
 

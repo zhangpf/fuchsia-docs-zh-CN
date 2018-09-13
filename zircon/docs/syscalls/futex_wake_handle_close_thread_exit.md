@@ -1,5 +1,9 @@
 # zx_futex_wake_handle_close_thread_exit
+---
 
+[*英文原文快照*](https://github.com/fuchsia-mirror/zircon/blob/9b1d42b6f62ed4a4fe443eb03e020c74abcc8875/docs/syscalls/futex_wake_handle_close_thread_exit.md)
+
+---
 <!-- ## NAME -->
 ## 名称
 
