@@ -428,7 +428,7 @@ VMAR(Virtual Memory Address Range)是Zircon内核对象，它负责VMO的位置�
 a process, or shared with another process by passing a Handle over a Channel. -->
 VMO(Virtual Memory Object)是Zircon内核对象，它表示可以读取、写入、映射到进程的地址空间，或通过传递Channel传递的Handle进行共享的一组页面（或潜在的页面）集合。
 <!-- - [VMO Overview](https://fuchsia.googlesource.com/zircon/+/master/docs/objects/vm_object.md) -->
-- [VMO概览](https://github.com/fuchsia-mirror/zircon/blob/master/docs/objects/vm_object.md)
+- [VMO概览](/zircon/docs/objects/vm_object.md)
 
 #### **Zedboot** ####
 
