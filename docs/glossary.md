@@ -419,7 +419,7 @@ VDSO是一个虚拟共享库——它由[Zircon](#zircon)内核提供，且不�
 VMOs may be mapped into the address space of a process. -->
 VMAR(Virtual Memory Address Range)是Zircon内核对象，它负责VMO的位置以及如何将其映射到进程的地址空间上。
 <!-- - [VMAR Overview](https://fuchsia.googlesource.com/zircon/+/master/docs/objects/vm_address_region.md) -->
-- [VMAR概览](https://github.com/fuchsia-mirror/zircon/blob/master/docs/objects/vm_address_region.md)
+- [VMAR概览](/zircon/docs/objects/vm_address_region.md)
 
 #### **VMO**
 
