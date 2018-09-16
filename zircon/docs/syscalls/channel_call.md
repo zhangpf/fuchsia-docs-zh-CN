@@ -135,7 +135,7 @@ to contain the reply message. -->
 **ZX_ERR_NOT_SUPPORTED**: *handles*中的一个句柄是（正在被写入的通道句柄的）*handle*本身。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- The facilities provied by **channel_call**() can interoperate with message dispatchers
 using **channel_read**() and **channel_write**() directly, provided the following rules

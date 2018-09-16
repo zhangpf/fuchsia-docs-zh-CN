@@ -126,7 +126,7 @@ set, then the message is discarded. -->
 **ZX_ERR_BUFFER_TOO_SMALL**：提供的*bytes*或*handles*缓冲区太小（在这种情况下，接收消息所需的最小大小将写入*actual_bytes*和*actual_handles*中，前提是它们为非NULL）。如果*options*设置了**ZX_CHANNEL_READ_MAY_DISCARD**选项，则丢弃该消息。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- *num_handles* and *actual_handles* are counts of the number of elements
 in the *handles* array, not its size in bytes. -->

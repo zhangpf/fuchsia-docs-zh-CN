@@ -86,7 +86,7 @@ has drained some packets a new **port_queue**() call will likely succeed. -->
 **ZX_ERR_SHOULD_WAIT**：端口有太多待处理的数据包，只有线程排空一些数据包后，后续的**port_queue()** 调用才可能会成功。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- The queue is drained by calling **port_wait**(). -->
 通过调用**port_wait()** 来排空队列。

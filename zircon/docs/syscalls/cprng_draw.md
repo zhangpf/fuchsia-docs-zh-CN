@@ -37,7 +37,7 @@ bytes to seed a user-space random number generator for better performance. -->
 TODO(ZX-2399)
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- **zx_cprng_draw**() triggers terminates the calling process if **buffer** is not
 a valid userspace pointer. -->

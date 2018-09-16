@@ -45,7 +45,7 @@ TODO(ZX-2399)
 **system_get_num_cpus()** 不会产生失败。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- ## SEE ALSO -->
 ## 另见

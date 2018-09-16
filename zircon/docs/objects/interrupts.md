@@ -25,7 +25,7 @@ hardware interrupts. -->
 TODO
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 <!-- 
 Interrupt Objects are private to the DDK and not generally available
 to userspace processes. -->

@@ -141,7 +141,7 @@ a negative error value is returned. -->
 **zx_job_set_policy()** 调用成功返回**ZX_OK**。如果调用失败，则返回负的错误码。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 <!-- 
 The **ZX_POL_BAD_HANDLE** policy does not apply when calling ``zx_object_get_info()``
 with the topic ZX_INFO_HANDLE_VALID.  All other topics and all other syscalls that

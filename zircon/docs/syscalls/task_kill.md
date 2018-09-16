@@ -48,7 +48,7 @@ this syscall to kill itself, this syscall does not return. -->
 如果进程或线程使用此系统调用来终止自己的执行，则此调用将不会返回。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- When using this syscall on a process, the return code for the process
 is -1 as reported by **object_get_info**() via the ZX_INFO_PROCESS topic. -->

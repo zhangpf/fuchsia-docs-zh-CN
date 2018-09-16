@@ -108,7 +108,7 @@ largest allowable size for channel messages. -->
 **ZX_ERR_OUT_OF_RANGE**： *num_bytes*或*num_handles*大于channel最大允许的消息大小。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- 
 *num_handles* is a count of the number of elements in the *handles*

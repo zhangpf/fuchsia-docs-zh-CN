@@ -45,7 +45,7 @@ TODO(ZX-2399)
 **ZX_ERR_BUFFER_TOO_SMALL**：*version_size*长度太短。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- ## SEE ALSO -->
 ## 另见

@@ -64,7 +64,7 @@ not keep it alive. -->
 通过资源创建的对象不保存对资源的引用，因此不会使其保持活动状态。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- Resources are typically private to the DDK and platform bus drivers. Presently,
 this means ACPI and platform bus hold the root resource respectively and hand out more

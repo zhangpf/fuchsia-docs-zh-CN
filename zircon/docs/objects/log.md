@@ -22,7 +22,7 @@ Log对象允许用户空间读取和写入内核调试日志。
 TODO
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- Log objects will likely cease being generally available to userspace
 processes in the future.  They are intended for internal logging of

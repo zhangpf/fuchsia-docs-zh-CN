@@ -58,7 +58,7 @@ TODO(ZX-2399)
 无
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- The intended use for this is for a dying thread to alert another thread
 waiting for its completion, close its own thread handle, and exit.

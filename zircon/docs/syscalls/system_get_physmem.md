@@ -46,7 +46,7 @@ TODO(ZX-2399)
 **system_get_physmem()** 不会失败。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- Currently the total size of physical memory cannot change during a run of
 the system, only at boot time.  This might change in the future. -->

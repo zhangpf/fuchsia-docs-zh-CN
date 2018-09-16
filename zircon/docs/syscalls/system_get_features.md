@@ -49,7 +49,8 @@ platform. -->
 **ZX_ERR_NOT_SUPPORTED**：此平台不提供所请求的功能类型。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
+
 
 <!-- Refer to [Architecture Support](../architecture_support.md) for supported
 processor architectures. -->

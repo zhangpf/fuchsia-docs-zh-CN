@@ -122,7 +122,7 @@ handle to a port. -->
 **ZX_ERR_WRONG_TYPE**：*guest*不是虚拟机类型句柄，或者*port*不是端口类型句柄。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 <!-- *ZX_GUEST_TRAP_BELL* shares the same address space as *ZX_GUEST_TRAP_MEM*. -->
 *ZX_GUEST_TRAP_BELL*与*ZX_GUEST_TRAP_MEM*共享相同的地址空间。
 
