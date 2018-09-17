@@ -47,7 +47,7 @@ TODO(ZX-2399)
 **zx_tick_get()** 不会报告任何错误情况。
 
 <!-- ## NOTES -->
-## 注意
+## 注释
 
 <!-- The returned value may be highly variable. Factors that can affect it include:
 - Changes in processor frequency

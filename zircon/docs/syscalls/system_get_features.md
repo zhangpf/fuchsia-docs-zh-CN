@@ -51,7 +51,6 @@ platform. -->
 <!-- ## NOTES -->
 ## 注释
 
-
 <!-- Refer to [Architecture Support](../architecture_support.md) for supported
 processor architectures. -->
 关于支持的处理器体系结构，请参阅[体系结构支持](../architecture_support.md)。

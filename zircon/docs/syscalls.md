@@ -200,11 +200,11 @@
 + [vmar_destroy](syscalls/vmar_destroy.md) - destroy a VMAR and all of its children
 --->
 ## 虚拟动态内存对象（VMAR）
-+ [vmar_allocate（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md) -创建子VMAR
-+ [vmar_map（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md) - 将VMO对象映射到某个进程中
-+ [vmar_unmap（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap.md) - 将某个内存区域从进程中取消映射
-+ [vmar_protect（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_protect.md) - 调整内存访问的权限
-+ [vmar_destroy（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_destroy.md) - 销毁VMAR和它所有的子代VMAR
++ [vmar_allocate](syscalls/vmar_allocate.md) -创建子VMAR
++ [vmar_map](syscalls/vmar_map.md) - 将VMO对象映射到某个进程中
++ [vmar_unmap](syscalls/vmar_unmap.md) - 将某个内存区域从进程中取消映射
++ [vmar_protect](syscalls/vmar_protect.md) - 调整内存访问的权限
++ [vmar_destroy](syscalls/vmar_destroy.md) - 销毁VMAR和它所有的子代VMAR
 
 <!---
 ## Cryptographically Secure RNG
@@ -293,7 +293,7 @@
 + [futex_wake_handle_close_thread_exit](syscalls/futex_wake_handle_close_thread_exit.md) - three-in-one
 --->
 ## 操作合并函数
-+ [vmar_unmap_handle_close_thread_exit（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap_handle_close_thread_exit.md) - 三合一操作（取消vmar映射，关闭句柄和退出线程）
++ [vmar_unmap_handle_close_thread_exit](syscalls/vmar_unmap_handle_close_thread_exit.md) - 三合一操作（取消vmar映射，关闭句柄和退出线程）
 + [futex_wake_handle_close_thread_exit](syscalls/futex_wake_handle_close_thread_exit.md) - 三合一操作（唤醒futex，关闭句柄和退出线程）
 
 <!---

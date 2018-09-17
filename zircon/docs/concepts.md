@@ -319,7 +319,7 @@ They may be mapped into the address space of a Process with
 [*zx_vmar_unmap()*](syscalls/vmar_unmap.md).  Permissions of
 mapped pages may be adjusted with [*zx_vmar_protect()*](syscalls/vmar_protect.md).
 --->
-VMO可以通过[*zx_vmar_map()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)被映射到某个`Process`的地址空间，或者通过[*zx_vmar_unmap()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap.md)解除映射。这些映射页的权限可通过[*zx_vmar_protect()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_protect.md)函数进行调整。
+VMO可以通过[*zx_vmar_map()*](syscalls/vmar_map.md)被映射到某个`Process`的地址空间，或者通过[*zx_vmar_unmap()*](syscalls/vmar_unmap.md)解除映射。这些映射页的权限可通过[*zx_vmar_protect()*](syscalls/vmar_protect.md)函数进行调整。
 
 <!---
 VMOs may also be read from and written to directly with
@@ -346,7 +346,7 @@ entire address space.  This space can be carved up via the
 VMARs (called subregions or children) which can be used to group together
 parts of the address space.
 --->
-虚拟内存地址区域（Virtual Memory Address Regions，即VMAR）提供了管理进程地址空间的抽象。在进程创建时，根VMAR的句柄被提供给进程的创建者。该句柄指向一个涵盖整个地址空间的VMAR，该空间可通过[*zx_vmar_map()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)和[*zx_vmar_allocate()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)接口进行分割操作。同时，[*zx_vmar_allocate()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)可以被用作生成新的VMAR（被称为子区域或子代）以将地址空间的多个部分组合在一起。
+虚拟内存地址区域（Virtual Memory Address Regions，即VMAR）提供了管理进程地址空间的抽象。在进程创建时，根VMAR的句柄被提供给进程的创建者。该句柄指向一个涵盖整个地址空间的VMAR，该空间可通过[*zx_vmar_map()*](syscalls/vmar_map.md)和[*zx_vmar_allocate()*](syscalls/vmar_allocate.md)接口进行分割操作。同时，[*zx_vmar_allocate()*](syscalls/vmar_allocate.md)可以被用作生成新的VMAR（被称为子区域或子代）以将地址空间的多个部分组合在一起。
 
 <!---
 See: [vmar_map](syscalls/vmar_map.md),
@@ -355,7 +355,7 @@ See: [vmar_map](syscalls/vmar_map.md),
 [vmar_unmap](syscalls/vmar_unmap.md),
 [vmar_destroy](syscalls/vmar_destroy.md),
 --->
-请查看：[vmar_map（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_map.md)，[vmar_allocate（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_allocate.md)，[vmar_protect（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_protect.md)，[vmar_unmap（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_unmap.md)和[vmar_destroy（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmar_destroy.md)。
+请查看：[vmar_map](syscalls/vmar_map.md)，[vmar_allocate](syscalls/vmar_allocate.md)，[vmar_protect](syscalls/vmar_protect.md)，[vmar_unmap](syscalls/vmar_unmap.md)和[vmar_destroy](syscalls/vmar_destroy.md)。
 
 <!---
 ## Futexes
