@@ -57,7 +57,7 @@ ZX_RIGHT_READ and ZX_RIGHT_WRITE right. -->
 
 <!-- **timer_create**() returns **ZX_OK** on success. In the event
 of failure, a negative error value is returned. -->
-**timer_create()**调用成功则返回**ZX_OK**，如果发生错误，则返回负的错误码。
+**timer_create()** 调用成功则返回**ZX_OK**，如果发生错误，则返回负的错误码。
 
 
 <!-- ## ERRORS -->

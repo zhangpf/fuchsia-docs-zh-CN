@@ -183,13 +183,13 @@
 + [vmo_op_range](syscalls/vmo_op_range.md) - perform an operation on a range of a vmo
 --->
 ## 虚拟内存对象（VMO）
-+ [vmo_create（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_create.md) - 创建vmo
-+ [vmo_read（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_read.md) - 读取vmo
-+ [vmo_write（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_write.md) - 写入vmo
-+ [vmo_clone（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_clone.md) - 关闭vmo
-+ [vmo_get_size（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_get_size.md) - 获取vmo的大小
-+ [vmo_set_size（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_set_size.md) - 调整vmo的大小
-+ [vmo_op_range（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_op_range.md) - 在vmo的一段区域内执行操作
++ [vmo_create](syscalls/vmo_create.md) - 创建vmo
++ [vmo_read](syscalls/vmo_read.md) - 读取vmo
++ [vmo_write](syscalls/vmo_write.md) - 写入vmo
++ [vmo_clone](syscalls/vmo_clone.md) - 关闭vmo
++ [vmo_get_size](syscalls/vmo_get_size.md) - 获取vmo的大小
++ [vmo_set_size](syscalls/vmo_set_size.md) - 调整vmo的大小
++ [vmo_op_range](syscalls/vmo_op_range.md) - 在vmo的一段区域内执行操作
 
 <!---
 ## Virtual Memory Address Regions (VMARs)

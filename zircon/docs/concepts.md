@@ -327,7 +327,7 @@ VMOs may also be read from and written to directly with
 Thus the cost of mapping them into an address space may be avoided for one-shot operations
 like "create a VMO, write a dataset into it, and hand it to another Process to use."
 --->
-VMO可通过[*zx_vmo_read()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_read.md)和[*zx_vmo_write()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/vmo_write.md)操作对它们进行直接的读写操作。因此，通过一次合并操作可以避免映射到地址空间的开销，例如”创建VMO，向其写入数据集后，传入另一进程供其使用“。
+VMO可通过[*zx_vmo_read()*](syscalls/vmo_read.md)和[*zx_vmo_write()*](vmo_write.md)操作对它们进行直接的读写操作。因此，通过一次合并操作可以避免映射到地址空间的开销，例如”创建VMO，向其写入数据集后，传入另一进程供其使用“。
 
 
 <!---
