@@ -349,7 +349,7 @@ fortune
 --->
 当Fuchsia启动并且显示"$"命令行提示符时，你即可运行程序了！
 
-例如，你可以运行如下命令~~悟得慧根~~：
+例如，你可以运行如下命令~~悟得慧根~~（*译者注：Things that are impossible just take longer.*）：
 
 ```
 fortune
