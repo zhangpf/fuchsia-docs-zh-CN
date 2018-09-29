@@ -8,7 +8,7 @@
 ## 名称
 
 <!-- object_get_info - query information about an object -->
-object_get_info —— 查询有关对象的信息
+object_get_info —— 查询对象的相关信息
 
 <!-- ## SYNOPSIS -->
 ## 概要
@@ -29,11 +29,11 @@ zx_status_t zx_object_get_info(zx_handle_t handle, uint32_t topic,
 object the handle refers to). The *topic* parameter indicates what specific
 information is desired. -->
 **object_get_info()** 请求获取提供的句柄（或句柄引用的对象）的相关信息。 
-*topic*参数表示所需要的特定信息。
+*topic*参数表示所需要的特定信息的主题。
 <!-- 
 *buffer* is a pointer to a buffer of size *buffer_size* to return the
 information. -->
-*buffer*是指向大小为*buffer_size*的缓冲区的指针，用于返回的信息。
+*buffer*是指向大小为*buffer_size*的缓冲区指针，用于存放返回的信息。
 
 <!-- *actual* is an optional pointer to return the number of records that were
 written to buffer. -->
@@ -50,7 +50,7 @@ available to read. -->
 - [名称](#名称)
 - [概要](#概要)
 - [描述](#描述)
-- [主题词](#主题词)
+- [主题](#主题)
     - [ZX_INFO_HANDLE_VALID](#zx_info_handle_valid)
     - [ZX_INFO_HANDLE_BASIC](#zx_info_handle_basic)
     - [ZX_INFO_HANDLE_COUNT](#zx_info_handle_count)
@@ -79,7 +79,7 @@ available to read. -->
 - [另见](#另见)
 
 <!-- ## TOPICS -->
-## 主题词
+## 主题
 
 ### ZX_INFO_HANDLE_VALID
 
@@ -141,7 +141,7 @@ typedef struct zx_info_handle_basic {
     // 对象类型：通道，事件，套接字等。
     uint32_t type;                // zx_obj_type_t;
 
-    // 如果句柄引用的对象与另一个对象（例如通道的另一端或父作业）相关，那么|related_koid| 是该对象的koid，否则为零。
+    // 如果句柄引用的对象与另一个对象（例如通道的另一端或父级作业）相关，那么|related_koid| 是该对象的koid，否则为零。
     // 这种关系是不可变的：即使相关对象不再存在，对象的|related_koid|也不会改变。
     zx_koid_t related_koid;
 
@@ -228,7 +228,7 @@ typedef struct zx_info_process {
 ```
 typedef struct zx_info_process {
     // 进程的返回码；仅在|exited|为true时有效。
-    // 如果进程被|zx_task_kill|杀死，则保证该字段为非零。
+    // 如果进程被|zx_task_kill|强制结束，则保证该字段为非零。
     int64_t return_code;
 
     // 如果进程已结束创建状态，则即使该进程已退出，该字段也为true。
@@ -252,7 +252,7 @@ typedef struct zx_info_process {
 <!-- 
 Returns an array of *zx_koid_t*, one for each running thread in the Process at
 that moment in time. -->
-返回*zx_koid_t*类型的数组，在该时刻为进程中的每个正在运行的线程返回一个数组。
+返回*zx_koid_t*类型的数组，其中每一个对应于提供的进程句柄的其中一个线程。
 
 <!-- N.B. Getting the list of threads is inherently racy.
 This can be somewhat mitigated by first suspending all the threads,
@@ -261,10 +261,10 @@ but note that an external thread can create new threads.
 *avail* will contain the total number of threads of the process at
 the time the list of threads was obtained, it could be larger than *actual*. -->
 
-注：获取线程列表本质上是有趣的。 
-首先暂停所有线程可以稍微减轻这一点，但请注意外部线程也可以创建新线程。
-*actual*将包含*buffer*中返回的线程数。 
-*avail*将包含获取线程列表时进程的线程总数，所以实际线程数可能大于*actual*。
+注：获取线程列表会带来本质上的竞争。 
+在此之前暂停所有线程可以稍微减轻这个问题，但请注意外部线程也可以创建新线程。
+*actual*包含*buffer*中返回的线程数。 
+*avail*包含获取线程列表时进程的线程总数，因此实际线程数可能大于*actual*。
 
 ### ZX_INFO_THREAD
 
@@ -299,7 +299,7 @@ typedef struct zx_info_thread {
 
 <!-- The values in this struct are mainly for informational and debugging
 purposes at the moment. -->
-此结构中的值主要用于信息和调试目的。
+此结构中的值主要用于提供信息和调试目的。
 
 <!-- The **ZX_THREAD_STATE_\*** values are defined by -->
 **ZX_THREAD_STATE_\*** 值由以下头文件定义：
@@ -373,7 +373,7 @@ exception, the value returned in **state** is one of the following: -->
 <!-- If the thread is currently in an exception and is waiting for an exception
 response, then this returns the exception report as a single
 *zx_exception_report_t*, with status ZX_OK. -->
-如果线程当前处于异常中并且正在等待异常响应，则会将异常报告作为单个*zx_exception_report_t*返回，状态为*ZX_OK*。
+如果线程当前处于异常中并且正在等待异常响应，则调用会将异常报告作为单个*zx_exception_report_t*和状态*ZX_OK*一起返回。
 
 <!-- Returns **ZX_ERR_BAD_STATE** if the thread is not in an exception and waiting for
 an exception response. -->
@@ -403,12 +403,12 @@ typedef struct zx_info_thread_stats {
 ### ZX_INFO_CPU_STATS
 
 <!-- Note: many values of this topic are being retired in favor of a different mechanism. -->
-注意：该主题的许多值正在退出，以支持不同的机制。
+注意：因考虑使用不同的机制，该主题的许多值正在被弃用中。
 <!-- *handle* type: **Resource** (Specifically, the root resource) -->
-*handle*类型：**资源**（具体来说，是根资源）
+*handle*类型：**资源**（具体来讲是根资源）
 <!-- *buffer* type: **zx_info_cpu_stats_t[1]** -->
 *buffer*类型：**zx_info_cpu_stats_t[1]**
-
+<!-- 
 ```
 typedef struct zx_info_cpu_stats {
     uint32_t cpu_number;
@@ -436,8 +436,36 @@ typedef struct zx_info_cpu_stats {
     uint64_t reschedule_ipis;
     uint64_t generic_ipis;
 } zx_info_cpu_stats_t;
-```
+``` -->
 
+```
+typedef struct zx_info_cpu_stats {
+    uint32_t cpu_number;
+    uint32_t flags;
+
+    zx_duration_t idle_time;
+
+    // 内核调度程序计数器
+    uint64_t reschedules;
+    uint64_t context_switches;
+    uint64_t irq_preempts;
+    uint64_t preempts;
+    uint64_t yields;
+
+    // cpu级别的中断和异常
+    uint64_t ints;          // 硬件中断次数，减去定时器中
+                            // 断和处理器间中断次数
+    uint64_t timer_ints;    // 定时器中断次数
+    uint64_t timers;        // 定时器回调次数
+    uint64_t page_faults;   // （已弃用，并返回0）
+    uint64_t exceptions;    // （已弃用，并返回0）
+    uint64_t syscalls;
+
+    // 处理器间中断次数
+    uint64_t reschedule_ipis;
+    uint64_t generic_ipis;
+} zx_info_cpu_stats_t;
+```
 ### ZX_INFO_VMAR
 
 <!-- *handle* type: **VM Address Region** -->
@@ -468,7 +496,7 @@ typedef struct zx_info_vmar {
 
 <!-- This returns a single *zx_info_vmar_t* that describes the range of address
 space that the VMAR occupies. -->
-调用返回单个*zx_info_vmar_t*类型，描述了VMAR占用的地址空间范围。
+调用返回单个*zx_info_vmar_t*类型，它描述了VMAR占用的地址空间的范围。
 
 ### ZX_INFO_VMO
 
@@ -519,52 +547,52 @@ typedef struct zx_info_vmo {
     uint32_t create_options;
 } zx_info_vmo_t;
 ``` -->
-
 ```
+// 描述VMO。
 typedef struct zx_info_vmo {
-    // 该VMO的koid。
+    // 该VMO的koid值。
     zx_koid_t koid;
 
-    // 该VMO的名称。
+    // 该VMO的名称
     char name[ZX_MAX_NAME_LEN];
 
-    // 该VMO的大小。
+    // 该VMO的大小，即映射时它消耗的虚拟地址空间大小。
     uint64_t size_bytes;
 
-    // 如果该VMO是其他对象的副本，则该字段为其父对象的koid。 
-    // 否则的话，该值为零。
+    // 如果此VMO是其他某个VMO的副本，则为其父VMO的koid值，否则为零。
+    // 关于副本的类型，参见|flags|。
     zx_koid_t parent_koid;
 
-    // 该VMO的克隆副本数（如果有的化）。
+    // 该VMO的副本数（如果有的话）。
     size_t num_children;
 
-    // 此VMO当前映射到VMAR的次数。
+    // 此VMO当前映射到VMAR的次数。 
+    // 请注意，相同的进程通常会将同一个VMO映射两次，并且这两个映射都将计入此处。 （即，这不是映射此VMO的进程数的计数;请参阅share_count。）
     size_t num_mappings;
 
-    // 此VMO映射到的同一地址空间的估计数量。
+    // 估计此VMO映射到的唯一地址空间的数量。 
+    // 每个进程都有自己的地址空间，内核也是如此。
     size_t share_count;
 
-    // ZX_INFO_VMO_*按位取或值。
+    // ZX_INFO_VMO_*的按位取或值。
     uint32_t flags;
 
-    // 如果|ZX_INFO_VMO_TYPE(flags) == ZX_INFO_VMO_TYPE_PAGED|，则当前分配给此VMO的内存量。
+    // 如果|ZX_INFO_VMO_TYPE(flags) == ZX_INFO_VMO_TYPE_PAGED|成立，该字段表示当前分配给此VMO的内存量，即它消耗的物理内存量，否则是未定义值。
     uint64_t committed_bytes;
 
-    // 如果|flags&ZX_INFO_VMO_VIA_HANDLE|，则该字段表示句柄的权限。 
-    // 否则是未定义的值。
-    zx_rights_t handle_rights;
+    // 如果|flags & ZX_INFO_VMO_VIA_HANDLE|成立，该字段表示句柄的权限，否则是未定义值。
+    zx_rights_t handle_rights;‘
 
-    // VMO的创建选项。
-    // 是如下两个选项的位掩码：
-    //     kResizable = (1u << 0);
-    //     kContiguous = (1u << 1);
+    // VMO创建的标志位，是以下标识为的取或值：
+    // kResizable    = (1u << 0);
+    // kContiguous   = (1u << 1);
     uint32_t create_options;
 } zx_info_vmo_t;
 ```
 
 <!-- This returns a single *zx_info_vmo_t* that describes various attrubutes of
 the VMO. -->
-调用返回单个*zx_info_vmo_t*类型的值，描述了VMO的各种属性。
+调用返回单个*zx_info_vmo_t*类型的值，它描述了VMO的各种属性。
 
 ### ZX_INFO_SOCKET
 
@@ -598,7 +626,7 @@ typedef struct zx_info_socket {
 ``` -->
 ```
 typedef struct zx_info_socket {
-    // 传递给zx_socket_create()调用时的选项。
+    // 创建时传递给zx_socket_create()的选项。
     uint32_t options;
 
     // ZX_PROP_SOCKET_RX_BUF_MAX的值。
@@ -620,26 +648,26 @@ typedef struct zx_info_socket {
 ### ZX_INFO_JOB_CHILDREN
 
 <!-- *handle* type: **Job** -->
-*handle*类型：**任务**
+*handle*类型：**作业**
 
 <!-- *buffer* type: **zx_koid_t[n]** -->
 *buffer*类型：**zx_koid_t[n]**
 <!-- 
 Returns an array of *zx_koid_t*, one for each direct child Job of the provided
 Job handle. -->
-返回*zx_koid_t*类型的数组，一个用于提供的Job句柄的每个直接子Job。
+返回*zx_koid_t*类型的数组，其中每一个对应于提供的作业句柄的其中一个子作业。
 
 ### ZX_INFO_JOB_PROCESSES
 
 <!-- *handle* type: **Job** -->
-*handle*类型：**任务**
+*handle*类型：**作业**
 
 <!-- *buffer* type: **zx_koid_t[n]** -->
 *buffer*类型：**zx_koid_t[n]**
 
 <!-- Returns an array of *zx_koid_t*, one for each direct child Process of the
 provided Job handle. -->
-返回*zx_koid_t*类型的数组，每个直接子进程提供一个Job句柄。
+返回*zx_koid_t*类型的数组，其中每一个对应于提供的作业句柄的其中一个子进程。
 
 ### ZX_INFO_TASK_STATS
 
@@ -681,46 +709,45 @@ typedef struct zx_info_task_stats {
 ``` -->
 ```
 typedef struct zx_info_task_stats {
-    // 任务中映射内存范围的总大小。 
-    // 并非所有都将由物理内存支持。
+    // 任务中映射的内存范围的总量 
+    // 但并非所有都将由物理内存提供。
     size_t mem_mapped_bytes;
 
-    // 对于下面的字段，如果该字节由物理内存提供，则认为该字节已提交。 一些存储器可以是双映射的，因此可以重复计算。
+    // 对于下面的字段，如果该字节由物理内存提供，则认为该字节已提交。
+    // 其中部分内存可能会被重复映射，并产生重复计算。
 
-    // 提交的内存仅映射到此任务。
+    // 仅映射到此任务中已提交部分的内存。
     size_t mem_private_bytes;
 
-    // 映射到此和至少一个其他任务的已提交内存。
+    // 映射到此任务和至少一个其他任务的已提交内存。
     size_t mem_shared_bytes;
 
-    // A number that estimates the fraction of mem_shared_bytes that this
-    // task is responsible for keeping alive.
+    // 用于估计此任务|mem_shared_bytes|内存中负责保持活跃的比例值
     //
-    // An estimate of:
-    //   For each shared, committed byte:
-    //   mem_scaled_shared_bytes += 1 / (number of tasks mapping this byte)
-    //
-    // This number is strictly smaller than mem_shared_bytes.
+    // 是以下值的一个估计：
+    // 对于每个共享的，已提交的字节：
+    // mem_scaled_shared_bytes + = 1 /(映射此字节的任务数量)
+    //
+    // 该数值会严格小于mem_shared_bytes。
     size_t mem_scaled_shared_bytes;
 } zx_info_task_stats_t;
 ```
 
 其他错误码：
-
 <!-- *   **ZX_ERR_BAD_STATE**: If the target process is not currently running. -->
-* **ZX_ERR_BAD_STATE**：如果目标进程当前未运行。
-* 
+* **ZX_ERR_BAD_STATE**：目标进程当前未处于运行状态。
+
 ### ZX_INFO_PROCESS_MAPS
 
 <!-- *handle* type: **Process** other than your own, with **ZX_RIGHT_READ** -->
-*handle*类型：**Process** other than your own, with **ZX_RIGHT_READ**
+*handle*类型：除了自身之外的其他带有**ZX_RIGHT_READ**权限的**进程**
 
 <!-- *buffer* type: **zx_info_maps_t[n]** -->
 *buffer*类型：**zx_info_maps_t[n]**
 
 <!-- The *zx_info_maps_t* array is a depth-first pre-order walk of the target
 process's Aspace/VMAR/Mapping tree. -->
-*zx_info_maps_t*数组是目标进程的ASpace/VMWAR/Mapping树的深度优先前序遍历数组。
+*zx_info_maps_t*数组是目标进程的地址空间(ASpace)/VMAR/映射(Mapping)树的深度优先前序遍历数组。
  
 <!-- ```
 typedef struct zx_info_maps {
@@ -745,22 +772,21 @@ typedef struct zx_info_maps {
 ``` -->
 ```
 typedef struct zx_info_maps {
-    // Name if available; empty string otherwise.
+    // 名称（如果有的话），否则为空字符串
     char name[ZX_MAX_NAME_LEN];
-    // Base address.
+    // 基地址
     zx_vaddr_t base;
-    // Size in bytes.
+    // 以字节为单位的映射总量
     size_t size;
 
-    // The depth of this node in the tree.
-    // Can be used for indentation, or to rebuild the tree from an array
-    // of zx_info_maps_t entries, which will be in depth-first pre-order.
+    // 遍历树中此节点的深度。
+    // 该字段可用于缩进，或从zx_info_maps_t类型的数组中以深度优先前序遍历重建出树
     size_t depth;
-    // The type of this entry; indicates which union entry is valid.
+    // 该项的类型，用于表示联合体中的哪一项是有效的。
     uint32_t type; // zx_info_maps_type_t
     union {
         zx_info_maps_mapping_t mapping;
-        // No additional fields for other types.
+        // 对其他类型来讲，没有其他字段。
     } u;
 } zx_info_maps_t;
 ```
@@ -768,16 +794,17 @@ typedef struct zx_info_maps {
 The *depth* field of each entry describes its relationship to the nodes that
 come before it. Depth 0 is the root Aspace, depth 1 is the root VMAR, and all
 other entries have depth 2 or greater. -->
-每个条目的* depth *字段描述了它与之前的节点之间的关系。 深度0是根Aspace，深度1是根VMAR，所有其他条目的深度为2或更大。
+每一项的*depth*字段描述了它与前一节点之间的关系。 
+其中深度为0的是根地址空间，深度为1的是根VMAR，所有其他项的深度至少为2。
 
 <!-- To get a full picture of how a process uses its VMOs and how a VMO is used
 by various processes, you may need to combine this information with
 ZX_INFO_PROCESS_VMOS. -->
-要全面了解进程如何使用其VMO以及各种进程如何使用VMO，您可能需要将此信息与ZX_INFO_PROCESS_VMOS结合使用。
+要全面了解进程如何使用其VMO以及VMO如何被各种进程使用，你需要将此信息与ZX_INFO_PROCESS_VMOS结合使用。
 
 <!-- See the `vmaps` command-line tool for an example user of this topic, and to dump
 the maps of arbitrary processes by koid. -->
-请参阅本主题的示例用户的`vmaps`命令行工具，并通过koid转储任意进程的映射。
+有关此主题的示例用法，请参阅`vmaps`命令行工具，并通过koid转储任意进程的内存映射。
 
 <!-- Additional errors: -->
 其他错误码：
@@ -787,11 +814,11 @@ the maps of arbitrary processes by koid. -->
     examine yourself: *buffer* will live inside the Aspace being examined, and
     the kernel can't safely fault in pages of the buffer while walking the
     Aspace. -->
-* **ZX_ERR_ACCESS_DENIED**：如果缺少适当的权限，或者进程尝试在自己的句柄上调用此权限。 
-  检查自己是不安全的：* buffer *将存在于正在检查的Aspace中，并且内核在行走Aspace时不能安全地在缓冲区的页面中出错。
+* **ZX_ERR_ACCESS_DENIED**：缺少适当的权限，或者进程试图在指向自己的句柄上调用此主题。 
+  在自己的进程中调用本身是不安全的：*buffer*将存在于正在调用的地址空间中，并且内核在遍历地址空间时不能在缓冲区的页面中安全地触发错误。
 <!-- *   **ZX_ERR_BAD_STATE**: If the target process is not currently running, or if
     its address space has been destroyed. -->
-* ** ZX_ERR_BAD_STATE **：如果目标进程当前未运行，或者其地址空间已被破坏。
+* **ZX_ERR_BAD_STATE**：目标进程当前未运行，或者其地址空间已被破坏。
 
 ### ZX_INFO_PROCESS_VMOS
 
@@ -805,17 +832,21 @@ the maps of arbitrary processes by koid. -->
 The *zx_info_vmos_t* array is list of all VMOs pointed to by the target process.
 Some VMOs are mapped, some are pointed to by handles, and some are both. -->
 *zx_info_vmos_t*数组是目标进程指向的所有VMO的列表。 
-其中部分VMO是映射的，部分是由句柄指向的，部分是两者同时。
+其中部分VMO是已映射的，部分是由句柄所指向的，部分是两者皆存在。
 
-**Note**: The same VMO may appear multiple times due to multiple
+<!-- **Note**: The same VMO may appear multiple times due to multiple
 mappings/handles. Also, because VMOs can change as the target process runs,
 the same VMO may have different values each time it appears. It is the
-caller's job to resolve any duplicates.
-
+caller's job to resolve any duplicates. -->
+**注意**：由于存在多个映射/句柄，同一个VMO可能会出现多次。 
+此外，由于VMO可以在目标进程运行时改变，因此在VMO的不同时刻，相同的VMO可能具有不同的值。 
+消解其中的任何重复项将留给调用者来处理。
+<!-- 
 To get a full picture of how a process uses its VMOs and how a VMO is used
 by various processes, you may need to combine this information with
-ZX_INFO_PROCESS_MAPS.
-
+ZX_INFO_PROCESS_MAPS. -->
+要全面了解进程如何使用其VMO以及VMO如何被多个进程使用，你需要将该内容与*ZX_INFO_PROCESS_MAPS*结合使用。
+<!-- 
 ```
 // Describes a VMO.
 typedef struct zx_info_vmo {
@@ -857,6 +888,44 @@ typedef struct zx_info_vmo {
 
     // If |flags & ZX_INFO_VMO_VIA_HANDLE|, the handle rights.
     // Undefined otherwise.
+    zx_rights_t handle_rights;
+} zx_info_vmo_t;
+``` -->
+
+```
+// 描述VMO。
+typedef struct zx_info_vmo {
+    // 该VMO的koid值。
+    zx_koid_t koid;
+
+    // 该VMO的名称
+    char name[ZX_MAX_NAME_LEN];
+
+    // 该VMO的大小，即映射时它消耗的虚拟地址空间大小。
+    uint64_t size_bytes;
+
+    // 如果此VMO是其他某个VMO的副本，则为其父VMO的koid值，否则为零。
+    // 关于副本的类型，参见|flags|。
+    zx_koid_t parent_koid;
+
+    // 该VMO的副本数（如果有的话）。
+    size_t num_children;
+
+    // 此VMO当前映射到VMAR的次数。 
+    // 请注意，相同的进程通常会将同一个VMO映射两次，并且这两个映射都将计入此处。 （即，这不是映射此VMO的进程数的计数;请参阅share_count。）
+    size_t num_mappings;
+
+    // 估计此VMO映射到的唯一地址空间的数量。 
+    // 每个进程都有自己的地址空间，内核也是如此。
+    size_t share_count;
+
+    // ZX_INFO_VMO_*的按位取或值。
+    uint32_t flags;
+
+    // 如果|ZX_INFO_VMO_TYPE(flags) == ZX_INFO_VMO_TYPE_PAGED|成立，该字段表示当前分配给此VMO的内存量，即它消耗的物理内存量，否则是未定义值。
+    uint64_t committed_bytes;
+
+    // 如果|flags & ZX_INFO_VMO_VIA_HANDLE|成立，该字段表示句柄的权限，否则是未定义值。
     zx_rights_t handle_rights;
 } zx_info_vmo_t;
 ```
@@ -918,11 +987,11 @@ typedef struct zx_info_kmem_stats {
     // 系统可用的物理内存总量。
     size_t total_bytes;
 
-    // 未分配内存的总量。
+    // 未分配的内存总量。
     size_t free_bytes;
 
-    // 由于此结构中其他字段未涵盖的原因而保留并映射到内核的内存量。 
-    // 通常用于读取磁盘和内核映像等只读数据，以及早期启动动态内存。
+    // 保留并映射到内核，但此结构体中其他字段未涵盖的内存量。 
+    // 这部分内存通常用于读取磁盘和内核映像等只读数据，以及早期启动的动态内存。
     size_t wired_bytes;
 
     // 分配给内核堆空间的内存量。
@@ -988,8 +1057,7 @@ typedef struct zx_info_resource {
 ### ZX_INFO_BTI
 
 <!-- *handle* type: **Bus Transaction Initiator** -->
-*handle*类型：**Bus Transaction Initiator**
-
+*handle*类型：**总线事务启动器（BTI）**
 <!-- *buffer* type: **zx_info_bti_t[1]** -->
 *buffer*类型：**zx_info_bti_t[1]**
 
