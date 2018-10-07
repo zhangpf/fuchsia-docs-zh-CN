@@ -105,7 +105,7 @@ accomplished? The program has the following tools: -->
    * 一个或多个**handle**表示与CWD的连接
    * [zx_channel_write](/zircon/docs/syscalls/channel_write.md)：发送字节和句柄（通过channel）的系统调用
    * [zx_channel_read](/zircon/docs/syscalls/channel_read.md)：接收字节和句柄（通过channel）的系统调用
-   * [zx_object_wait_one（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/master/docs/syscalls/object_wait_one.md)：等待句柄变成可读/可写状态的系统调用
+   * [zx_object_wait_one](/zircon/docs/syscalls/object_wait_one.md)：等待句柄变成可读/可写状态的系统调用
 <!-- 
 Using these primitives, the client can write a message to the filesystem server
 on the CWD handle, which the server can read and then respond to with a

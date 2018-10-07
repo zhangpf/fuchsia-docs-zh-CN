@@ -260,7 +260,7 @@ to wait for a signal to be active on a single handle or
 signals on multiple handles.  Both calls allow for a timeout after
 which they'll return even if no signals are pending.
 --->
-`Thread`可以使用[*zx_object_wait_one()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_one.md)来等待某个句柄被收到信号，或者使用[*zx_object_wait_many()*（英文原文）](https://github.com/fuchsia-mirror/zircon/blob/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_many.md)方法来等待多个句柄收到信号。两种调用都允许设置超时点，即没有信号待处理，它们也会因超时而返回。
+`Thread`可以使用[*zx_object_wait_one()*](syscalls/object_wait_one.md)来等待某个句柄被收到信号，或者使用[*zx_object_wait_many()*](syscalls/object_wait_many.md)方法来等待多个句柄收到信号。两种调用都允许设置超时点，即没有信号待处理，它们也会因超时而返回。
 
 <!---
 If a Thread is going to wait on a large set of handles, it is more efficient to use

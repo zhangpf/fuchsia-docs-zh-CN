@@ -34,17 +34,17 @@
 + [object_wait_async](syscalls/object_wait_async.md) - asynchronous notifications on signal change
 --->
 ## Object
-+ [object_get_child（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_get_child.md) - 通过koid，查找某个对象的子对象
-+ [object_get_cookie（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_get_cookie.md) - 读取对象的cookie值
-+ [object_get_info（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_get_info.md) - 获取对象的信息
-+ [object_get_property（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_get_property.md) - 读取对象的属性值
-+ [object_set_cookie（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_set_cookie.md) - 向对象的cookie中写入值
-+ [object_set_property（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_set_property.md) - 修改对象属性值
-+ [object_signal（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_signal.md) - 设置或清除某个对象上的用户信号
-+ [object_signal_peer（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_signal.md) - 设置或清除相反对等方向上的用户信号
-+ [object_wait_many（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_many.md) - 等待多个对象上的信号产生
-+ [object_wait_one（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_one.md) - 等待单个对象上的信号产生
-+ [object_wait_async（英文原文）](https://raw.githubusercontent.com/fuchsia-mirror/zircon/3adf3875541d28ad944637f753f8e454fa91dceb/docs/syscalls/object_wait_async.md) - 在信号改变时进行异步通知
++ [object_get_child](syscalls/object_get_child.md) - 通过koid，查找某个对象的子对象
++ [object_get_cookie](syscalls/object_get_cookie.md) - 读取对象的cookie值
++ [object_get_info](syscalls/object_get_info.md) - 获取对象的信息
++ [object_get_property](syscalls/object_get_property.md) - 读取对象的属性值
++ [object_set_cookie](syscalls/object_set_cookie.md) - 向对象的cookie中写入值
++ [object_set_property](syscalls/object_set_property.md) - 修改对象属性值
++ [object_signal](syscalls/object_signal.md) - 设置或清除某个对象上的用户信号
++ [object_signal_peer](syscalls/object_signal.md) - 设置或清除相反对等方向上的用户信号
++ [object_wait_many](syscalls/object_wait_many.md) - 等待多个对象上的信号产生
++ [object_wait_one](syscalls/object_wait_one.md) - 等待单个对象上的信号产生
++ [object_wait_async](syscalls/object_wait_async.md) - 在信号改变时进行异步通知
 
 <!---
 ## Threads
