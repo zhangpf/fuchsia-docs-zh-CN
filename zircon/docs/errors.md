@@ -179,8 +179,7 @@ not satisfied or the system is unable to complete the operation in its current s
   An object with the specified identifier already exists.
   Example: Attempting to create a file when a file already exists with that name. 
 -->
-**ALREADY\_EXISTS** 给定的标识符已存在。
->例如：试图用一个已存在的文件名创建一个文件。
+**ALREADY\_EXISTS** 给定的标识符已存在。例如：试图用一个已存在的文件名创建一个文件。
 
 <!-- 
 **ALREADY\_BOUND**
@@ -218,8 +217,7 @@ not satisfied or the system is unable to complete the operation in its current s
   remote will return **SHOULD\_WAIT**. Attempting to read from a channel that has no messages
   waiting and has a closed remote end will return **REMOTE\_CLOSED**. 
 -->
-**SHOULD\_WAIT** 当前无法执行操作，但如果调用者等待满足先决条件，则可能会成功，例如等待句柄可读或可写。
->例如：尝试从一个空的`channel`里读取消息，则会返回**SHOULD\_WAIT**；尝试从一个空的`channel`里读取消息，并且远端已经关闭，则会返回**REMOTE\_CLOSED**。
+**SHOULD\_WAIT** 当前无法执行操作，但如果调用者等待满足先决条件，则可能会成功，例如等待句柄可读或可写。例如：尝试从一个空的`channel`里读取消息，则会返回**SHOULD\_WAIT**；尝试从一个空的`channel`里读取消息，并且远端已经关闭，则会返回**REMOTE\_CLOSED**。
 
 <!-- ### Permission errors -->
 ### 权限错误
@@ -244,21 +242,18 @@ not satisfied or the system is unable to complete the operation in its current s
   The entity the I/O operation is being performed on rejected the operation.
   Example: an I2C device NAK'ing a transaction or a disk controller rejecting an invalid command. 
 -->
-**IO\_REFUSED** 操作IO实例时被拒绝。
->例如：I2C设备发送一个无回应信号NAK；磁盘控制器拒绝无效命令。
+**IO\_REFUSED** 操作IO实例时被拒绝。例如：I2C设备发送一个无回应信号NAK；磁盘控制器拒绝无效命令。
 
 <!-- 
 **IO\_DATA\_INTEGRITY**
   The data in the operation failed an integrity check and is possibly corrupted.
   Example: CRC or Parity error. 
 -->
-**IO\_DATA\_INTEGRITY** 数据不完整或被破坏导致检查失败。
->例如：CRC或奇偶校验错误。
+**IO\_DATA\_INTEGRITY** 数据不完整或被破坏导致检查失败。例如：CRC或奇偶校验错误。
 
 <!-- 
 **IO\_DATA\_LOSS**
   The data in the operation is currently unavailable and may be permanently lost.
   Example: A disk block is irrecoverably damaged. 
 -->
-**IO\_DATA\_LOSS** 数据不可获得，或永久丢失。
->例如：磁盘块被永久损坏。
+**IO\_DATA\_LOSS** 数据不可获得，或永久丢失。例如：磁盘块被永久损坏。
