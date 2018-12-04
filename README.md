@@ -33,6 +33,7 @@
 
 感谢支持:heart:
 
++ [B2Kylin](https://github.com/B2Kylin)
 + [feixhan](https://github.com/feixhan)
 
 ## LICENSE
